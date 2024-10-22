@@ -43,5 +43,14 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QLTour.DAL\QLTour.DAL.csproj">
+      <Project>{347f55cc-e7a3-49bc-8563-ce051aca7e2e}</Project>
+      <Name>QLTour.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

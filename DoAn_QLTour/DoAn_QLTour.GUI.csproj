@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\NguyenTienPhat_Chieu4\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\NguyenTienPhat_Chieu4\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net48\MaterialSkin.dll</HintPath>
     </Reference>
@@ -50,16 +56,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmHome.cs">
+    <Compile Include="Forms\frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHome.Designer.cs">
+    <Compile Include="Forms\frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTour.Designer.cs">
+      <DependentUpon>frmTour.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmHome.resx">
+    <EmbeddedResource Include="Forms\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTour.resx">
+      <DependentUpon>frmTour.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -83,6 +98,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QLTour.BUS\QLTour.BUS.csproj">
+      <Project>{f150bf55-e096-41e0-8e2e-e235c2cf1341}</Project>
+      <Name>QLTour.BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QLTour.DAL\QLTour.DAL.csproj">
+      <Project>{347f55cc-e7a3-49bc-8563-ce051aca7e2e}</Project>
+      <Name>QLTour.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
