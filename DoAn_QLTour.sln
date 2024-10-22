@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoAn_QLTour", "DoAn_QLTour\DoAn_QLTour.csproj", "{A9D1AA7B-E41E-4AFA-AB0D-6652F8D18EDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9D1AA7B-E41E-4AFA-AB0D-6652F8D18EDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9D1AA7B-E41E-4AFA-AB0D-6652F8D18EDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9D1AA7B-E41E-4AFA-AB0D-6652F8D18EDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9D1AA7B-E41E-4AFA-AB0D-6652F8D18EDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6DEC8FFE-56C0-4D60-8374-C3FDCE09B23F}
+	EndGlobalSection
+EndGlobal
