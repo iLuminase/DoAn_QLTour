@@ -70,12 +70,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControl\HomeControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\HomeControl.Designer.cs">
-      <DependentUpon>HomeControl.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Forms\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +108,10 @@
       <Project>{347f55cc-e7a3-49bc-8563-ce051aca7e2e}</Project>
       <Name>QLTour.DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Img\hn_halong.jpg" />
+    <Content Include="Img\phuquoc.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

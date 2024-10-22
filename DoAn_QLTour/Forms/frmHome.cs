@@ -1,4 +1,5 @@
-﻿using MaterialSkin;
+﻿using DoAn_QLTour.Forms;
+using MaterialSkin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,14 +18,12 @@ namespace DoAn_QLTour
         {
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);  // Pass 'this' to manage the current form
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(
                 Primary.Blue600,   // Primary Color
                 Primary.Blue700,   // Darker Primary
                 Primary.Blue200,   // Lighter Primary
-                Accent.Pink200,    // Accent Color
-                TextShade.WHITE    // Text color (Black or White)
+                Accent.Blue200,  // Accent Color
+                TextShade.WHITE    // Text color
             );
         }
         private void hideForm()
@@ -32,7 +31,7 @@ namespace DoAn_QLTour
             foreach (Form f in this.MdiChildren)
             {
                 f.Hide();
-
+                panel1.Visible = false;
             }
 
         }
@@ -66,6 +65,10 @@ namespace DoAn_QLTour
 
         }
 
-
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            panel1.Visible = true;
+        }
     }
 }
