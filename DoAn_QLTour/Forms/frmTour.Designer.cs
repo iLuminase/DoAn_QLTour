@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTour));
             this.materialFloatingActionButton1 = new MaterialSkin.Controls.MaterialFloatingActionButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -408,12 +409,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(253, 542);
             this.panel2.TabIndex = 14;
+
             // 
             // frmTour
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1091, 609);
+
             this.Controls.Add(this.materialFloatingActionButton1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.materialDrawer1);
@@ -423,12 +426,14 @@
             this.Text = "frmTour";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
 
         private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton1;
         private System.Windows.Forms.TextBox textBox1;
@@ -454,5 +459,6 @@
         private MaterialSkin.Controls.MaterialButton btnHome;
         private MaterialSkin.Controls.MaterialCard materialCard3;
         private System.Windows.Forms.Panel panel2;
+
     }
 }
