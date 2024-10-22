@@ -1,6 +1,6 @@
-﻿namespace DoAn_QLTour.Forms
+﻿namespace DoAn_QLTour
 {
-    partial class frmTour
+    partial class frmHome
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTour));
-            this.materialFloatingActionButton1 = new MaterialSkin.Controls.MaterialFloatingActionButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.materialDrawer1 = new MaterialSkin.Controls.MaterialDrawer();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
+            this.materialScrollBar1 = new MaterialSkin.Controls.MaterialScrollBar();
             this.btnDangXuat = new MaterialSkin.Controls.MaterialButton();
             this.btnTaiKhoan = new MaterialSkin.Controls.MaterialButton();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
@@ -41,64 +38,29 @@
             this.btnDichVu = new MaterialSkin.Controls.MaterialButton();
             this.btnTour = new MaterialSkin.Controls.MaterialButton();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.materialScrollBar1 = new MaterialSkin.Controls.MaterialScrollBar();
             this.btnHome = new MaterialSkin.Controls.MaterialButton();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.materialFloatingActionButton1 = new MaterialSkin.Controls.MaterialFloatingActionButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.materialDrawer1 = new MaterialSkin.Controls.MaterialDrawer();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // materialFloatingActionButton1
+            // materialScrollBar1
             // 
-            this.materialFloatingActionButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.materialFloatingActionButton1.Depth = 0;
-            this.materialFloatingActionButton1.Icon = ((System.Drawing.Image)(resources.GetObject("materialFloatingActionButton1.Icon")));
-            this.materialFloatingActionButton1.Image = ((System.Drawing.Image)(resources.GetObject("materialFloatingActionButton1.Image")));
-            this.materialFloatingActionButton1.Location = new System.Drawing.Point(896, 21);
-            this.materialFloatingActionButton1.Mini = true;
-            this.materialFloatingActionButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFloatingActionButton1.Name = "materialFloatingActionButton1";
-            this.materialFloatingActionButton1.Size = new System.Drawing.Size(45, 43);
-            this.materialFloatingActionButton1.TabIndex = 16;
-            this.materialFloatingActionButton1.Text = "materialFloatingActionButton1";
-            this.materialFloatingActionButton1.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.textBox1.Location = new System.Drawing.Point(942, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 20);
-            this.textBox1.TabIndex = 15;
-            // 
-            // materialDrawer1
-            // 
-            this.materialDrawer1.AutoHide = false;
-            this.materialDrawer1.AutoShow = false;
-            this.materialDrawer1.BackgroundWithAccent = false;
-            this.materialDrawer1.BaseTabControl = null;
-            this.materialDrawer1.Depth = 0;
-            this.materialDrawer1.HighlightWithAccent = true;
-            this.materialDrawer1.IndicatorWidth = 0;
-            this.materialDrawer1.IsOpen = false;
-            this.materialDrawer1.Location = new System.Drawing.Point(-202, 27);
-            this.materialDrawer1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDrawer1.Name = "materialDrawer1";
-            this.materialDrawer1.ShowIconsWhenHidden = false;
-            this.materialDrawer1.Size = new System.Drawing.Size(202, 575);
-            this.materialDrawer1.TabIndex = 13;
-            this.materialDrawer1.Text = "materialDrawer1";
-            this.materialDrawer1.UseColors = false;
+            this.materialScrollBar1.Depth = 0;
+            this.materialScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.materialScrollBar1.Location = new System.Drawing.Point(820, 0);
+            this.materialScrollBar1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialScrollBar1.Name = "materialScrollBar1";
+            this.materialScrollBar1.Orientation = MaterialSkin.Controls.MaterialScrollOrientation.Vertical;
+            this.materialScrollBar1.ScrollbarSize = 18;
+            this.materialScrollBar1.Size = new System.Drawing.Size(18, 566);
+            this.materialScrollBar1.TabIndex = 5;
+            this.materialScrollBar1.Text = "materialScrollBar1";
             // 
             // btnDangXuat
             // 
@@ -267,92 +229,6 @@
             this.materialCard1.Size = new System.Drawing.Size(253, 37);
             this.materialCard1.TabIndex = 3;
             // 
-            // panel10
-            // 
-            this.panel10.Location = new System.Drawing.Point(575, 475);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(238, 144);
-            this.panel10.TabIndex = 9;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.panel10);
-            this.panel1.Controls.Add(this.panel9);
-            this.panel1.Controls.Add(this.panel8);
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.materialScrollBar1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(256, 64);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(832, 542);
-            this.panel1.TabIndex = 17;
-            // 
-            // panel9
-            // 
-            this.panel9.Location = new System.Drawing.Point(307, 475);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(250, 144);
-            this.panel9.TabIndex = 8;
-            // 
-            // panel8
-            // 
-            this.panel8.Location = new System.Drawing.Point(17, 475);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(264, 144);
-            this.panel8.TabIndex = 7;
-            // 
-            // panel7
-            // 
-            this.panel7.Location = new System.Drawing.Point(435, 308);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(378, 161);
-            this.panel7.TabIndex = 7;
-            // 
-            // panel5
-            // 
-            this.panel5.Location = new System.Drawing.Point(281, 9);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(276, 277);
-            this.panel5.TabIndex = 7;
-            // 
-            // panel4
-            // 
-            this.panel4.Location = new System.Drawing.Point(571, 9);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(242, 277);
-            this.panel4.TabIndex = 7;
-            // 
-            // panel6
-            // 
-            this.panel6.Location = new System.Drawing.Point(17, 308);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(378, 161);
-            this.panel6.TabIndex = 6;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(17, 9);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(253, 277);
-            this.panel3.TabIndex = 6;
-            // 
-            // materialScrollBar1
-            // 
-            this.materialScrollBar1.Depth = 0;
-            this.materialScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.materialScrollBar1.Location = new System.Drawing.Point(814, 0);
-            this.materialScrollBar1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialScrollBar1.Name = "materialScrollBar1";
-            this.materialScrollBar1.Orientation = MaterialSkin.Controls.MaterialScrollOrientation.Vertical;
-            this.materialScrollBar1.ScrollbarSize = 18;
-            this.materialScrollBar1.Size = new System.Drawing.Size(18, 542);
-            this.materialScrollBar1.TabIndex = 5;
-            this.materialScrollBar1.Text = "materialScrollBar1";
-            // 
             // btnHome
             // 
             this.btnHome.AutoSize = false;
@@ -391,6 +267,39 @@
             this.materialCard3.Size = new System.Drawing.Size(253, 37);
             this.materialCard3.TabIndex = 11;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.materialScrollBar1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(256, 64);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(838, 566);
+            this.panel1.TabIndex = 12;
+            // 
+            // materialFloatingActionButton1
+            // 
+            this.materialFloatingActionButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.materialFloatingActionButton1.Depth = 0;
+            this.materialFloatingActionButton1.Icon = ((System.Drawing.Image)(resources.GetObject("materialFloatingActionButton1.Icon")));
+            this.materialFloatingActionButton1.Image = ((System.Drawing.Image)(resources.GetObject("materialFloatingActionButton1.Image")));
+            this.materialFloatingActionButton1.Location = new System.Drawing.Point(898, 18);
+            this.materialFloatingActionButton1.Mini = true;
+            this.materialFloatingActionButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFloatingActionButton1.Name = "materialFloatingActionButton1";
+            this.materialFloatingActionButton1.Size = new System.Drawing.Size(45, 43);
+            this.materialFloatingActionButton1.TabIndex = 11;
+            this.materialFloatingActionButton1.Text = "materialFloatingActionButton1";
+            this.materialFloatingActionButton1.UseVisualStyleBackColor = false;
+            this.materialFloatingActionButton1.Click += new System.EventHandler(this.materialFloatingActionButton1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.textBox1.Location = new System.Drawing.Point(944, 29);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(125, 20);
+            this.textBox1.TabIndex = 10;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -407,37 +316,51 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(3, 64);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(253, 542);
-            this.panel2.TabIndex = 14;
-
+            this.panel2.Size = new System.Drawing.Size(253, 566);
+            this.panel2.TabIndex = 9;
             // 
-            // frmTour
+            // materialDrawer1
+            // 
+            this.materialDrawer1.AutoHide = false;
+            this.materialDrawer1.AutoShow = false;
+            this.materialDrawer1.BackgroundWithAccent = false;
+            this.materialDrawer1.BaseTabControl = null;
+            this.materialDrawer1.Depth = 0;
+            this.materialDrawer1.HighlightWithAccent = true;
+            this.materialDrawer1.IndicatorWidth = 0;
+            this.materialDrawer1.IsOpen = false;
+            this.materialDrawer1.Location = new System.Drawing.Point(-202, 43);
+            this.materialDrawer1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDrawer1.Name = "materialDrawer1";
+            this.materialDrawer1.ShowIconsWhenHidden = false;
+            this.materialDrawer1.Size = new System.Drawing.Size(202, 575);
+            this.materialDrawer1.TabIndex = 8;
+            this.materialDrawer1.Text = "materialDrawer1";
+            this.materialDrawer1.UseColors = false;
+            // 
+            // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1091, 609);
-
+            this.ClientSize = new System.Drawing.Size(1097, 633);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.materialFloatingActionButton1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.materialDrawer1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Name = "frmTour";
-            this.Text = "frmTour";
+            this.Controls.Add(this.materialDrawer1);
+            this.IsMdiContainer = true;
+            this.Name = "frmHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "TRANG CHỦ";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-
-        private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton1;
-        private System.Windows.Forms.TextBox textBox1;
-        private MaterialSkin.Controls.MaterialDrawer materialDrawer1;
+        private MaterialSkin.Controls.MaterialScrollBar materialScrollBar1;
         private MaterialSkin.Controls.MaterialButton btnDangXuat;
         private MaterialSkin.Controls.MaterialButton btnTaiKhoan;
         private MaterialSkin.Controls.MaterialCard materialCard2;
@@ -446,19 +369,13 @@
         private MaterialSkin.Controls.MaterialButton btnDichVu;
         private MaterialSkin.Controls.MaterialButton btnTour;
         private MaterialSkin.Controls.MaterialCard materialCard1;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel3;
-        private MaterialSkin.Controls.MaterialScrollBar materialScrollBar1;
         private MaterialSkin.Controls.MaterialButton btnHome;
         private MaterialSkin.Controls.MaterialCard materialCard3;
+        private System.Windows.Forms.Panel panel1;
+        private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton1;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel2;
-
+        private MaterialSkin.Controls.MaterialDrawer materialDrawer1;
     }
 }
+

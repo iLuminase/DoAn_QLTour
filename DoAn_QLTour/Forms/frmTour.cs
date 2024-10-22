@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DoAn_QLTour
+namespace DoAn_QLTour.Forms
 {
-    public partial class Form1 : Form
+    public partial class frmTour : MaterialSkin.Controls.MaterialForm
     {
-        public Form1()
+        public frmTour()
         {
             InitializeComponent();
         }
