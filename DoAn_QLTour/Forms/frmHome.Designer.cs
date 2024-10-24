@@ -220,7 +220,7 @@
             this.btnHome.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnHome.Depth = 0;
             this.btnHome.Font = new System.Drawing.Font("Microsoft JhengHei UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.ForeColor = System.Drawing.Color.Transparent;
             this.btnHome.HighEmphasis = true;
             this.btnHome.Icon = ((System.Drawing.Image)(resources.GetObject("btnHome.Icon")));
             this.btnHome.Location = new System.Drawing.Point(0, 37);
