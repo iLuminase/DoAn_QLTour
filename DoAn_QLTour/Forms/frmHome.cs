@@ -26,8 +26,30 @@ namespace DoAn_QLTour
                 Primary.Blue200,   // Lighter Primary
                 Accent.Pink200,    // Accent Color
                 TextShade.WHITE    // Text color (Black or White)
+                
             );
+            //thiet ket nut Dat tour
+            btnDatTour_pn1.BackColor = Color.FromArgb(255, 128, 0);
+            btnDatTour_pn2.BackColor = Color.FromArgb(255, 128, 0);
+            btnDatTour_pn3.BackColor = Color.FromArgb(255, 128, 0);
+
+            btnDatTour_pn1.ForeColor = Color.White;
+            btnDatTour_pn2.ForeColor = Color.White;
+            btnDatTour_pn3.ForeColor = Color.White;
+
+            // Set the ForeColor property for label1
+            //this.label1.ForeColor = System.Drawing.Color.Red;
+            //this.label1.Text = "10.000.000VND";
+
+            //// Set the ForeColor property for label2
+            //this.label2.ForeColor = System.Drawing.Color.Red;
+            //this.label2.Text = "9.000.000VND";
+
+            //// Set the ForeColor property for label3
+            //this.label3.ForeColor = System.Drawing.Color.Red;
+            //this.label3.Text = "11.000.000VND";
         }
+
         private void hideForm()
         {
             foreach (Form f in this.MdiChildren)
@@ -35,10 +57,6 @@ namespace DoAn_QLTour
                 f.Hide();
 
             }
-
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
         }
         //form Tour show
@@ -62,11 +80,14 @@ namespace DoAn_QLTour
             frm.Show();
         }
 
-        private void materialFloatingActionButton1_Click(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
 
         }
 
- 
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
