@@ -29,76 +29,62 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
-            this.materialScrollBar1 = new MaterialSkin.Controls.MaterialScrollBar();
             this.btnTaiKhoan = new MaterialSkin.Controls.MaterialButton();
             this.btnThanhToan = new MaterialSkin.Controls.MaterialButton();
             this.btnDatCho = new MaterialSkin.Controls.MaterialButton();
             this.btnDichVu = new MaterialSkin.Controls.MaterialButton();
             this.btnTour = new MaterialSkin.Controls.MaterialButton();
             this.btnHome = new MaterialSkin.Controls.MaterialButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDangXuat = new MaterialSkin.Controls.MaterialButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnDatTour_pn3 = new System.Windows.Forms.Button();
-            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
-            this.btnDatTour_pn2 = new System.Windows.Forms.Button();
-            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnDatTour_pn1 = new System.Windows.Forms.Button();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnDatTour_pn2 = new System.Windows.Forms.Button();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnDatTour_pn3 = new System.Windows.Forms.Button();
+            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.lblNguoiDaPhucVu = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnDatTour_pn4 = new System.Windows.Forms.Button();
+            this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnDangXuat = new MaterialSkin.Controls.MaterialButton();
-            this.materialDrawer1 = new MaterialSkin.Controls.MaterialDrawer();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // materialScrollBar1
-            // 
-            this.materialScrollBar1.Depth = 0;
-            this.materialScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.materialScrollBar1.Location = new System.Drawing.Point(1008, 0);
-            this.materialScrollBar1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialScrollBar1.Name = "materialScrollBar1";
-            this.materialScrollBar1.Orientation = MaterialSkin.Controls.MaterialScrollOrientation.Vertical;
-            this.materialScrollBar1.ScrollbarSize = 18;
-            this.materialScrollBar1.Size = new System.Drawing.Size(18, 611);
-            this.materialScrollBar1.TabIndex = 5;
-            this.materialScrollBar1.Text = "materialScrollBar1";
             // 
             // btnTaiKhoan
             // 
@@ -236,192 +222,58 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.btnDangXuat);
+            this.panel2.Controls.Add(this.btnTaiKhoan);
+            this.panel2.Controls.Add(this.btnThanhToan);
+            this.panel2.Controls.Add(this.btnDatCho);
+            this.panel2.Controls.Add(this.btnDichVu);
+            this.panel2.Controls.Add(this.btnTour);
+            this.panel2.Controls.Add(this.btnHome);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(3, 64);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(253, 727);
+            this.panel2.TabIndex = 9;
+            // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.AutoSize = false;
+            this.btnDangXuat.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDangXuat.BackColor = System.Drawing.Color.Transparent;
+            this.btnDangXuat.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnDangXuat.Depth = 0;
+            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.HighEmphasis = true;
+            this.btnDangXuat.Icon = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.Icon")));
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 453);
+            this.btnDangXuat.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDangXuat.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnDangXuat.Size = new System.Drawing.Size(253, 54);
+            this.btnDangXuat.TabIndex = 10;
+            this.btnDangXuat.Text = "Đăng Xuất";
+            this.btnDangXuat.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnDangXuat.UseAccentColor = false;
+            this.btnDangXuat.UseVisualStyleBackColor = false;
+            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.groupBox5);
-            this.panel1.Controls.Add(this.groupBox3);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.materialScrollBar1);
-            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.AutoSize = true;
             this.panel1.Controls.Add(this.groupBox4);
+            this.panel1.Controls.Add(this.groupBox3);
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(256, 64);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1026, 611);
-            this.panel1.TabIndex = 12;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.panel5);
-            this.groupBox3.Location = new System.Drawing.Point(678, 0);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(324, 336);
-            this.groupBox3.TabIndex = 11;
-            this.groupBox3.TabStop = false;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.btnDatTour_pn3);
-            this.panel5.Controls.Add(this.materialLabel7);
-            this.panel5.Controls.Add(this.materialLabel8);
-            this.panel5.Controls.Add(this.materialLabel9);
-            this.panel5.Controls.Add(this.pictureBox3);
-            this.panel5.Location = new System.Drawing.Point(13, 12);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(296, 316);
-            this.panel5.TabIndex = 7;
-            // 
-            // btnDatTour_pn3
-            // 
-            this.btnDatTour_pn3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnDatTour_pn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDatTour_pn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDatTour_pn3.ForeColor = System.Drawing.Color.White;
-            this.btnDatTour_pn3.Location = new System.Drawing.Point(187, 279);
-            this.btnDatTour_pn3.Name = "btnDatTour_pn3";
-            this.btnDatTour_pn3.Size = new System.Drawing.Size(101, 31);
-            this.btnDatTour_pn3.TabIndex = 5;
-            this.btnDatTour_pn3.Text = "Đặt Ngay";
-            this.btnDatTour_pn3.UseVisualStyleBackColor = false;
-            // 
-            // materialLabel7
-            // 
-            this.materialLabel7.AutoSize = true;
-            this.materialLabel7.Depth = 0;
-            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel7.FontType = MaterialSkin.MaterialSkinManager.fontType.SubtleEmphasis;
-            this.materialLabel7.Location = new System.Drawing.Point(5, 246);
-            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(281, 14);
-            this.materialLabel7.TabIndex = 3;
-            this.materialLabel7.Text = "Phú Quốc cùng nhiều địa điểm tham quan hấp dẫn.";
-            // 
-            // materialLabel8
-            // 
-            this.materialLabel8.AutoSize = true;
-            this.materialLabel8.Depth = 0;
-            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel8.FontType = MaterialSkin.MaterialSkinManager.fontType.SubtleEmphasis;
-            this.materialLabel8.Location = new System.Drawing.Point(4, 232);
-            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(273, 14);
-            this.materialLabel8.TabIndex = 2;
-            this.materialLabel8.Text = "Tận hưởng buổi nghỉ dưỡng 3 ngày 2 đêm tại đảo ";
-            // 
-            // materialLabel9
-            // 
-            this.materialLabel9.AutoSize = true;
-            this.materialLabel9.Depth = 0;
-            this.materialLabel9.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel9.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.materialLabel9.Location = new System.Drawing.Point(6, 204);
-            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel9.Name = "materialLabel9";
-            this.materialLabel9.Size = new System.Drawing.Size(197, 24);
-            this.materialLabel9.TabIndex = 1;
-            this.materialLabel9.Text = "Nghỉ Dưỡng Phú Quốc";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(296, 200);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.materialLabel10);
-            this.panel4.Controls.Add(this.btnDatTour_pn2);
-            this.panel4.Controls.Add(this.materialLabel4);
-            this.panel4.Controls.Add(this.materialLabel5);
-            this.panel4.Controls.Add(this.materialLabel6);
-            this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(355, 9);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(296, 316);
-            this.panel4.TabIndex = 7;
-            // 
-            // materialLabel10
-            // 
-            this.materialLabel10.AutoSize = true;
-            this.materialLabel10.Depth = 0;
-            this.materialLabel10.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel10.FontType = MaterialSkin.MaterialSkinManager.fontType.SubtleEmphasis;
-            this.materialLabel10.Location = new System.Drawing.Point(4, 260);
-            this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel10.Name = "materialLabel10";
-            this.materialLabel10.Size = new System.Drawing.Size(72, 14);
-            this.materialLabel10.TabIndex = 6;
-            this.materialLabel10.Text = "nhất thế giới.";
-            // 
-            // btnDatTour_pn2
-            // 
-            this.btnDatTour_pn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnDatTour_pn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDatTour_pn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDatTour_pn2.ForeColor = System.Drawing.Color.White;
-            this.btnDatTour_pn2.Location = new System.Drawing.Point(187, 279);
-            this.btnDatTour_pn2.Name = "btnDatTour_pn2";
-            this.btnDatTour_pn2.Size = new System.Drawing.Size(101, 31);
-            this.btnDatTour_pn2.TabIndex = 5;
-            this.btnDatTour_pn2.Text = "Đặt Ngay";
-            this.btnDatTour_pn2.UseVisualStyleBackColor = false;
-            // 
-            // materialLabel4
-            // 
-            this.materialLabel4.AutoSize = true;
-            this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.FontType = MaterialSkin.MaterialSkinManager.fontType.SubtleEmphasis;
-            this.materialLabel4.Location = new System.Drawing.Point(3, 246);
-            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(290, 14);
-            this.materialLabel4.TabIndex = 3;
-            this.materialLabel4.Text = "Tham quan 1 trong những danh lam thắng cảnh đẹp ";
-            // 
-            // materialLabel5
-            // 
-            this.materialLabel5.AutoSize = true;
-            this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel5.FontType = MaterialSkin.MaterialSkinManager.fontType.SubtleEmphasis;
-            this.materialLabel5.Location = new System.Drawing.Point(4, 232);
-            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(275, 14);
-            this.materialLabel5.TabIndex = 2;
-            this.materialLabel5.Text = "Khám phá văn hóa thủ đô và đặc sản vùng Bắc Bộ";
-            // 
-            // materialLabel6
-            // 
-            this.materialLabel6.AutoSize = true;
-            this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel6.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.materialLabel6.Location = new System.Drawing.Point(6, 204);
-            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(180, 24);
-            this.materialLabel6.TabIndex = 1;
-            this.materialLabel6.Text = "Du Ngoạn Phố - Đảo";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(296, 200);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.panel1.Size = new System.Drawing.Size(1293, 727);
+            this.panel1.TabIndex = 14;
             // 
             // panel3
             // 
@@ -431,10 +283,21 @@
             this.panel3.Controls.Add(this.materialLabel2);
             this.panel3.Controls.Add(this.materialLabel1);
             this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(9, 9);
+            this.panel3.Location = new System.Drawing.Point(10, 10);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(296, 316);
-            this.panel3.TabIndex = 6;
+            this.panel3.Size = new System.Drawing.Size(292, 316);
+            this.panel3.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(6, 285);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(161, 22);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "10.000.000VND";
             // 
             // btnDatTour_pn1
             // 
@@ -442,7 +305,7 @@
             this.btnDatTour_pn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDatTour_pn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDatTour_pn1.ForeColor = System.Drawing.Color.White;
-            this.btnDatTour_pn1.Location = new System.Drawing.Point(187, 280);
+            this.btnDatTour_pn1.Location = new System.Drawing.Point(184, 278);
             this.btnDatTour_pn1.Name = "btnDatTour_pn1";
             this.btnDatTour_pn1.Size = new System.Drawing.Size(101, 31);
             this.btnDatTour_pn1.TabIndex = 5;
@@ -490,271 +353,388 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(296, 200);
+            this.pictureBox1.Size = new System.Drawing.Size(292, 200);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.panel3);
+            this.groupBox1.Location = new System.Drawing.Point(7, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(313, 336);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(345, 0);
+            this.groupBox2.Controls.Add(this.panel4);
+            this.groupBox2.Location = new System.Drawing.Point(326, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(317, 334);
-            this.groupBox2.TabIndex = 11;
+            this.groupBox2.Size = new System.Drawing.Size(313, 336);
+            this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             // 
-            // groupBox4
+            // panel4
             // 
-            this.groupBox4.Controls.Add(this.panel6);
-            this.groupBox4.Location = new System.Drawing.Point(7, 340);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(450, 180);
-            this.groupBox4.TabIndex = 12;
-            this.groupBox4.TabStop = false;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.lblNguoiDaPhucVu);
-            this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.pictureBox4);
-            this.panel6.Location = new System.Drawing.Point(10, 16);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(431, 155);
-            this.panel6.TabIndex = 8;
-            // 
-            // lblNguoiDaPhucVu
-            // 
-            this.lblNguoiDaPhucVu.AutoSize = true;
-            this.lblNguoiDaPhucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNguoiDaPhucVu.Location = new System.Drawing.Point(286, 47);
-            this.lblNguoiDaPhucVu.Name = "lblNguoiDaPhucVu";
-            this.lblNguoiDaPhucVu.Size = new System.Drawing.Size(36, 39);
-            this.lblNguoiDaPhucVu.TabIndex = 2;
-            this.lblNguoiDaPhucVu.Text = "0";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label4.Location = new System.Drawing.Point(242, 113);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 22);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "người đã phục vụ";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(32, 13);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(171, 133);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1105, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 24);
-            this.textBox1.TabIndex = 10;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.btnDangXuat);
-            this.panel2.Controls.Add(this.btnTaiKhoan);
-            this.panel2.Controls.Add(this.btnThanhToan);
-            this.panel2.Controls.Add(this.btnDatCho);
-            this.panel2.Controls.Add(this.btnDichVu);
-            this.panel2.Controls.Add(this.btnTour);
-            this.panel2.Controls.Add(this.btnHome);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(3, 64);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(253, 611);
-            this.panel2.TabIndex = 9;
-            // 
-            // btnDangXuat
-            // 
-            this.btnDangXuat.AutoSize = false;
-            this.btnDangXuat.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDangXuat.BackColor = System.Drawing.Color.Transparent;
-            this.btnDangXuat.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnDangXuat.Depth = 0;
-            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.HighEmphasis = true;
-            this.btnDangXuat.Icon = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.Icon")));
-            this.btnDangXuat.Location = new System.Drawing.Point(0, 453);
-            this.btnDangXuat.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnDangXuat.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnDangXuat.Size = new System.Drawing.Size(253, 54);
-            this.btnDangXuat.TabIndex = 10;
-            this.btnDangXuat.Text = "Đăng Xuất";
-            this.btnDangXuat.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnDangXuat.UseAccentColor = false;
-            this.btnDangXuat.UseVisualStyleBackColor = false;
-            // 
-            // materialDrawer1
-            // 
-            this.materialDrawer1.AutoHide = false;
-            this.materialDrawer1.AutoShow = false;
-            this.materialDrawer1.BackgroundWithAccent = false;
-            this.materialDrawer1.BaseTabControl = null;
-            this.materialDrawer1.Depth = 0;
-            this.materialDrawer1.HighlightWithAccent = true;
-            this.materialDrawer1.IndicatorWidth = 0;
-            this.materialDrawer1.IsOpen = false;
-            this.materialDrawer1.Location = new System.Drawing.Point(-202, 43);
-            this.materialDrawer1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDrawer1.Name = "materialDrawer1";
-            this.materialDrawer1.ShowIconsWhenHidden = false;
-            this.materialDrawer1.Size = new System.Drawing.Size(202, 575);
-            this.materialDrawer1.TabIndex = 8;
-            this.materialDrawer1.Text = "materialDrawer1";
-            this.materialDrawer1.UseColors = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(6, 285);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 22);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "10.000.000VND";
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.btnDatTour_pn2);
+            this.panel4.Controls.Add(this.materialLabel4);
+            this.panel4.Controls.Add(this.materialLabel5);
+            this.panel4.Controls.Add(this.materialLabel6);
+            this.panel4.Controls.Add(this.pictureBox2);
+            this.panel4.Location = new System.Drawing.Point(10, 10);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(292, 316);
+            this.panel4.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(8, 284);
+            this.label2.Location = new System.Drawing.Point(6, 285);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(161, 22);
-            this.label2.TabIndex = 7;
+            this.label2.TabIndex = 6;
             this.label2.Text = "10.000.000VND";
+            // 
+            // btnDatTour_pn2
+            // 
+            this.btnDatTour_pn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDatTour_pn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDatTour_pn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatTour_pn2.ForeColor = System.Drawing.Color.White;
+            this.btnDatTour_pn2.Location = new System.Drawing.Point(184, 278);
+            this.btnDatTour_pn2.Name = "btnDatTour_pn2";
+            this.btnDatTour_pn2.Size = new System.Drawing.Size(101, 31);
+            this.btnDatTour_pn2.TabIndex = 5;
+            this.btnDatTour_pn2.Text = "Đặt Ngay";
+            this.btnDatTour_pn2.UseVisualStyleBackColor = false;
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel4.FontType = MaterialSkin.MaterialSkinManager.fontType.SubtleEmphasis;
+            this.materialLabel4.Location = new System.Drawing.Point(5, 246);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(281, 14);
+            this.materialLabel4.TabIndex = 3;
+            this.materialLabel4.Text = "Phú Quốc cùng nhiều địa điểm tham quan hấp dẫn.";
+            // 
+            // materialLabel5
+            // 
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel5.FontType = MaterialSkin.MaterialSkinManager.fontType.SubtleEmphasis;
+            this.materialLabel5.Location = new System.Drawing.Point(4, 232);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(273, 14);
+            this.materialLabel5.TabIndex = 2;
+            this.materialLabel5.Text = "Tận hưởng buổi nghỉ dưỡng 3 ngày 2 đêm tại đảo ";
+            // 
+            // materialLabel6
+            // 
+            this.materialLabel6.AutoSize = true;
+            this.materialLabel6.Depth = 0;
+            this.materialLabel6.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel6.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.materialLabel6.Location = new System.Drawing.Point(6, 204);
+            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel6.Name = "materialLabel6";
+            this.materialLabel6.Size = new System.Drawing.Size(197, 24);
+            this.materialLabel6.TabIndex = 1;
+            this.materialLabel6.Text = "Nghỉ Dưỡng Phú Quốc";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(292, 200);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.panel5);
+            this.groupBox3.Location = new System.Drawing.Point(645, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(313, 336);
+            this.groupBox3.TabIndex = 9;
+            this.groupBox3.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.btnDatTour_pn3);
+            this.panel5.Controls.Add(this.materialLabel7);
+            this.panel5.Controls.Add(this.materialLabel8);
+            this.panel5.Controls.Add(this.materialLabel9);
+            this.panel5.Controls.Add(this.pictureBox3);
+            this.panel5.Location = new System.Drawing.Point(10, 10);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(292, 316);
+            this.panel5.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(8, 284);
+            this.label3.Location = new System.Drawing.Point(6, 285);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(161, 22);
-            this.label3.TabIndex = 8;
+            this.label3.TabIndex = 6;
             this.label3.Text = "10.000.000VND";
             // 
-            // groupBox1
+            // btnDatTour_pn3
             // 
-            this.groupBox1.Location = new System.Drawing.Point(263, 64);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(317, 334);
-            this.groupBox1.TabIndex = 12;
-            this.groupBox1.TabStop = false;
+            this.btnDatTour_pn3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDatTour_pn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDatTour_pn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatTour_pn3.ForeColor = System.Drawing.Color.White;
+            this.btnDatTour_pn3.Location = new System.Drawing.Point(184, 278);
+            this.btnDatTour_pn3.Name = "btnDatTour_pn3";
+            this.btnDatTour_pn3.Size = new System.Drawing.Size(101, 31);
+            this.btnDatTour_pn3.TabIndex = 5;
+            this.btnDatTour_pn3.Text = "Đặt Ngay";
+            this.btnDatTour_pn3.UseVisualStyleBackColor = false;
             // 
-            // groupBox5
+            // materialLabel7
             // 
-            this.groupBox5.Controls.Add(this.panel3);
-            this.groupBox5.Location = new System.Drawing.Point(11, -1);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(317, 334);
-            this.groupBox5.TabIndex = 12;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
+            this.materialLabel7.AutoSize = true;
+            this.materialLabel7.Depth = 0;
+            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel7.FontType = MaterialSkin.MaterialSkinManager.fontType.SubtleEmphasis;
+            this.materialLabel7.Location = new System.Drawing.Point(5, 246);
+            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel7.Name = "materialLabel7";
+            this.materialLabel7.Size = new System.Drawing.Size(281, 14);
+            this.materialLabel7.TabIndex = 3;
+            this.materialLabel7.Text = "Phú Quốc cùng nhiều địa điểm tham quan hấp dẫn.";
+            // 
+            // materialLabel8
+            // 
+            this.materialLabel8.AutoSize = true;
+            this.materialLabel8.Depth = 0;
+            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel8.FontType = MaterialSkin.MaterialSkinManager.fontType.SubtleEmphasis;
+            this.materialLabel8.Location = new System.Drawing.Point(4, 232);
+            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel8.Name = "materialLabel8";
+            this.materialLabel8.Size = new System.Drawing.Size(273, 14);
+            this.materialLabel8.TabIndex = 2;
+            this.materialLabel8.Text = "Tận hưởng buổi nghỉ dưỡng 3 ngày 2 đêm tại đảo ";
+            // 
+            // materialLabel9
+            // 
+            this.materialLabel9.AutoSize = true;
+            this.materialLabel9.Depth = 0;
+            this.materialLabel9.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel9.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.materialLabel9.Location = new System.Drawing.Point(6, 204);
+            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel9.Name = "materialLabel9";
+            this.materialLabel9.Size = new System.Drawing.Size(197, 24);
+            this.materialLabel9.TabIndex = 1;
+            this.materialLabel9.Text = "Nghỉ Dưỡng Phú Quốc";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(292, 200);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.panel6);
+            this.groupBox4.Location = new System.Drawing.Point(964, 3);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(313, 336);
+            this.groupBox4.TabIndex = 9;
+            this.groupBox4.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label4);
+            this.panel6.Controls.Add(this.btnDatTour_pn4);
+            this.panel6.Controls.Add(this.materialLabel10);
+            this.panel6.Controls.Add(this.materialLabel11);
+            this.panel6.Controls.Add(this.materialLabel12);
+            this.panel6.Controls.Add(this.pictureBox4);
+            this.panel6.Location = new System.Drawing.Point(10, 10);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(292, 316);
+            this.panel6.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label4.Location = new System.Drawing.Point(6, 285);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(161, 22);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "10.000.000VND";
+            // 
+            // btnDatTour_pn4
+            // 
+            this.btnDatTour_pn4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDatTour_pn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDatTour_pn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatTour_pn4.ForeColor = System.Drawing.Color.White;
+            this.btnDatTour_pn4.Location = new System.Drawing.Point(184, 278);
+            this.btnDatTour_pn4.Name = "btnDatTour_pn4";
+            this.btnDatTour_pn4.Size = new System.Drawing.Size(101, 31);
+            this.btnDatTour_pn4.TabIndex = 5;
+            this.btnDatTour_pn4.Text = "Đặt Ngay";
+            this.btnDatTour_pn4.UseVisualStyleBackColor = false;
+            // 
+            // materialLabel10
+            // 
+            this.materialLabel10.AutoSize = true;
+            this.materialLabel10.Depth = 0;
+            this.materialLabel10.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel10.FontType = MaterialSkin.MaterialSkinManager.fontType.SubtleEmphasis;
+            this.materialLabel10.Location = new System.Drawing.Point(5, 246);
+            this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel10.Name = "materialLabel10";
+            this.materialLabel10.Size = new System.Drawing.Size(281, 14);
+            this.materialLabel10.TabIndex = 3;
+            this.materialLabel10.Text = "Phú Quốc cùng nhiều địa điểm tham quan hấp dẫn.";
+            // 
+            // materialLabel11
+            // 
+            this.materialLabel11.AutoSize = true;
+            this.materialLabel11.Depth = 0;
+            this.materialLabel11.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel11.FontType = MaterialSkin.MaterialSkinManager.fontType.SubtleEmphasis;
+            this.materialLabel11.Location = new System.Drawing.Point(4, 232);
+            this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel11.Name = "materialLabel11";
+            this.materialLabel11.Size = new System.Drawing.Size(273, 14);
+            this.materialLabel11.TabIndex = 2;
+            this.materialLabel11.Text = "Tận hưởng buổi nghỉ dưỡng 3 ngày 2 đêm tại đảo ";
+            // 
+            // materialLabel12
+            // 
+            this.materialLabel12.AutoSize = true;
+            this.materialLabel12.Depth = 0;
+            this.materialLabel12.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel12.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.materialLabel12.Location = new System.Drawing.Point(6, 204);
+            this.materialLabel12.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel12.Name = "materialLabel12";
+            this.materialLabel12.Size = new System.Drawing.Size(197, 24);
+            this.materialLabel12.TabIndex = 1;
+            this.materialLabel12.Text = "Nghỉ Dưỡng Phú Quốc";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(292, 200);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
             // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1285, 678);
+            this.ClientSize = new System.Drawing.Size(1552, 794);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.materialDrawer1);
-            this.Controls.Add(this.groupBox1);
             this.IsMdiContainer = true;
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TRANG CHỦ";
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialScrollBar materialScrollBar1;
         private MaterialSkin.Controls.MaterialButton btnTaiKhoan;
         private MaterialSkin.Controls.MaterialButton btnThanhToan;
         private MaterialSkin.Controls.MaterialButton btnDatCho;
         private MaterialSkin.Controls.MaterialButton btnDichVu;
         private MaterialSkin.Controls.MaterialButton btnTour;
         private MaterialSkin.Controls.MaterialButton btnHome;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel2;
-        private MaterialSkin.Controls.MaterialDrawer materialDrawer1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialButton btnDangXuat;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnDatTour_pn2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel4;
-        private MaterialSkin.Controls.MaterialLabel materialLabel5;
-        private MaterialSkin.Controls.MaterialLabel materialLabel6;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnDatTour_pn1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel10;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnDatTour_pn4;
+        private MaterialSkin.Controls.MaterialLabel materialLabel10;
+        private MaterialSkin.Controls.MaterialLabel materialLabel11;
+        private MaterialSkin.Controls.MaterialLabel materialLabel12;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label lblNguoiDaPhucVu;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnDatTour_pn3;
         private MaterialSkin.Controls.MaterialLabel materialLabel7;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
         private MaterialSkin.Controls.MaterialLabel materialLabel9;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button btnDatTour_pn2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
+        private MaterialSkin.Controls.MaterialLabel materialLabel6;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDatTour_pn1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
