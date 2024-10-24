@@ -62,19 +62,28 @@
     <Compile Include="Forms\frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmTour.cs">
+    <Compile Include="Forms\frmQLTour.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmTour.Designer.cs">
-      <DependentUpon>frmTour.cs</DependentUpon>
+    <Compile Include="Forms\frmQLTour.Designer.cs">
+      <DependentUpon>frmQLTour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmThemHoacSuaTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmThemHoacSuaTour.Designer.cs">
+      <DependentUpon>frmThemHoacSuaTour.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmTour.resx">
-      <DependentUpon>frmTour.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmQLTour.resx">
+      <DependentUpon>frmQLTour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmThemHoacSuaTour.resx">
+      <DependentUpon>frmThemHoacSuaTour.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
