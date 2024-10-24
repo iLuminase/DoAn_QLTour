@@ -35,14 +35,14 @@ namespace DoAn_QLTour.Forms
                 dgvTour.Rows[index].Cells[2].Value = item.LichTrinh;
                 dgvTour.Rows[index].Cells[3].Value = item.GiaTien;
                 dgvTour.Rows[index].Cells[4].Value = item.MoTa;
-                dgvTour.Rows[index].Cells[5].Value = item.NgayBatDau != null
-                     ? item.NgayBatDau.Value.ToString("dd/MM/yyyy")
-                     : string.Empty;
+                //dgvTour.Rows[index].Cells[5].Value = item.NgayBatDau != null
+                //     ? item.NgayBatDau.Value.ToString("dd/MM/yyyy")
+                //     : string.Empty;
 
-                dgvTour.Rows[index].Cells[6].Value = item.NgayKetThuc != null
-                    ? item.NgayKetThuc.Value.ToString("dd/MM/yyyy")
-                    : string.Empty;
-                dgvTour.Rows[index].Cells[7].Value = item.TrangThai;
+                //dgvTour.Rows[index].Cells[6].Value = item.NgayKetThuc != null
+                //    ? item.NgayKetThuc.Value.ToString("dd/MM/yyyy")
+                //    : string.Empty;
+                dgvTour.Rows[index].Cells[5].Value = item.TrangThai;
             }
         }
         public void setGridViewStyle(DataGridView dgview)
@@ -59,8 +59,7 @@ namespace DoAn_QLTour.Forms
             txtTenTour.Text = "";
 
             txtMaTour.Text = "";
-            dtpNgayBD.Text = "";
-            dtpNgayKT.Text = "";
+
         }
 
         private void dgvTour_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -71,22 +70,10 @@ namespace DoAn_QLTour.Forms
                 txtMaTour.Text = row.Cells[0].Value.ToString();
                 txtTenTour.Text = row.Cells[1].Value.ToString();
 
-                // Ép kiểu datetime từ csdl vào dtp
-                dtpNgayBD.Value = DateTime.ParseExact(row.Cells[5].Value.ToString(), "dd/MM/yyyy", null);
-                dtpNgayKT.Value = DateTime.ParseExact(row.Cells[6].Value.ToString(), "dd/MM/yyyy", null);
+                //// Ép kiểu datetime từ csdl vào dtp
+                //dtpNgayBD.Value = DateTime.ParseExact(row.Cells[5].Value.ToString(), "dd/MM/yyyy", null);
+                //dtpNgayKT.Value = DateTime.ParseExact(row.Cells[6].Value.ToString(), "dd/MM/yyyy", null);
             }
-        }
-
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            setNull();
-            var listTour = db.Tours.ToList();
-            BindGrid(listTour);
-        }
-
-        private void btnDong_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -102,6 +89,19 @@ namespace DoAn_QLTour.Forms
                 query = query.Where(t => t.TenTour.Contains(txtTenTour.Text.Trim()));
             }
 
+            //// Parse the dates from the date pickers
+            //DateTime? ngayBatDau = dtpNgayBD.Checked ? (DateTime?)dtpNgayBD.Value : null;
+            //DateTime? ngayKetThuc = dtpNgayKT.Checked ? (DateTime?)dtpNgayKT.Value : null;
+
+            //// Add conditions to filter by date range
+            //if (ngayBatDau.HasValue)
+            //{
+            //    query = query.Where(t => t.NgayBatDau >= ngayBatDau.Value);
+            //}
+            //if (ngayKetThuc.HasValue)
+            //{
+            //    query = query.Where(t => t.NgayKetThuc <= ngayKetThuc.Value);
+            //}
 
             var listTour = query.ToList();
             BindGrid(listTour);
@@ -127,6 +127,13 @@ namespace DoAn_QLTour.Forms
             this.Close();
             // Đóng tất cả các form con & cha
             //Environment.Exit(0);
+        }
+
+        private void btnHuy_Click_1(object sender, EventArgs e)
+        {
+            setNull();
+            var listTour = db.Tours.ToList();
+            BindGrid(listTour);
         }
     }
 }

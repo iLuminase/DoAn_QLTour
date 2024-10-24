@@ -24,6 +24,9 @@ namespace QLTour.DAL.Entities
         [StringLength(255)]
         public string MoTa { get; set; }
 
+        [StringLength(10)]
+        public string TinhTrang { get; set; }
+
         public decimal GiaTien { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

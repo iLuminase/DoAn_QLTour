@@ -35,6 +35,9 @@ namespace QLTour.DAL.Entities
         [Column(TypeName = "date")]
         public DateTime? NgayKetThuc { get; set; }
 
+        [StringLength(10)]
+        public string TrangThai { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DatTour> DatTours { get; set; }
 
