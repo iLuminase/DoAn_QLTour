@@ -1,4 +1,5 @@
-﻿using MaterialSkin;
+﻿using DoAn_QLTour.Forms;
+using MaterialSkin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -66,6 +67,6 @@ namespace DoAn_QLTour
 
         }
 
-
+ 
     }
 }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DoAn_QLTour.Forms
 {
-    public partial class frmTour : MaterialSkin.Controls.MaterialForm
+    public partial class frmTour : Form
     {
         public frmTour()
         {
