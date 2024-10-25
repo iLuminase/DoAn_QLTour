@@ -38,23 +38,44 @@ namespace DoAn_QLTour
             btnDatTour_pn2.ForeColor = Color.White;
             btnDatTour_pn3.ForeColor = Color.White;
             btnDatTour_pn4.ForeColor = Color.White;
+
+            //thiết kế label
+            label1.Font = new Font("Lucida Bright", 15, FontStyle.Bold);
+            label2.Font = new Font("Lucida Bright", 15, FontStyle.Bold);
+            label3.Font = new Font("Lucida Bright", 15, FontStyle.Bold);
+            label4.Font = new Font("Lucida Bright", 15, FontStyle.Bold);
+
+            label1.ForeColor = Color.FromArgb(192, 64, 0);
+            label2.ForeColor = Color.FromArgb(192, 64, 0);
+            label3.ForeColor = Color.FromArgb(192, 64, 0);
+            label4.ForeColor = Color.FromArgb(192, 64, 0);
         }
 
-        private void hideForm()
+        private void hideForm(Form child)
         {
+
             panel1.Visible = false;
             foreach (Form f in this.MdiChildren)
             {
                 f.Hide();
             }
+            if (child != null)
+            { this.Size = new Size(child.Width, child.Height); }
+            else
+            {
+                this.Size = new Size(1552, 794);
+            } 
+                
+            
         }
 
         //form Tour show
         private void btnTour_Click(object sender, EventArgs e)
         {
-            hideForm();
-
-            frmTour frm = new frmTour();
+            
+            
+            frmQLTour frm = new frmQLTour();
+            hideForm(frm);
             frm.MdiParent = this; // Giúp giao diện MDI chỉ nằm trong form cha (frmMain)
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
@@ -62,7 +83,7 @@ namespace DoAn_QLTour
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            hideForm();
+            hideForm(null);
             panel1.Visible = true;
         }
 

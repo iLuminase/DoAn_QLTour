@@ -41,6 +41,10 @@ namespace QLTour.DAL.Entities
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<DichVu>()
+                .Property(e => e.TinhTrang)
+                .IsFixedLength();
+
+            modelBuilder.Entity<DichVu>()
                 .HasMany(e => e.DatDichVus)
                 .WithRequired(e => e.DichVu)
                 .HasForeignKey(e => e.MaDichVu)
@@ -65,6 +69,19 @@ namespace QLTour.DAL.Entities
                 .WithRequired(e => e.KhuyenMai)
                 .HasForeignKey(e => e.MaKhuyenMai)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<NhanVien>()
+                .Property(e => e.TrangThai)
+                .IsFixedLength();
+
+            modelBuilder.Entity<NhanVien>()
+                .HasMany(e => e.DatTours)
+                .WithRequired(e => e.NhanVien)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Tour>()
+                .Property(e => e.TrangThai)
+                .IsFixedLength();
 
             modelBuilder.Entity<Tour>()
                 .HasMany(e => e.DatTours)

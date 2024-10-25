@@ -9,6 +9,12 @@ namespace QLTour.DAL.Entities
     [Table("NhanVien")]
     public partial class NhanVien
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public NhanVien()
+        {
+            DatTours = new HashSet<DatTour>();
+        }
+
         public int NhanVienID { get; set; }
 
         [Required]
@@ -37,5 +43,11 @@ namespace QLTour.DAL.Entities
         [Required]
         [StringLength(12)]
         public string CMND { get; set; }
+
+        [StringLength(10)]
+        public string TrangThai { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DatTour> DatTours { get; set; }
     }
 }

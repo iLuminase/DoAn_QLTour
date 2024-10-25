@@ -34,10 +34,14 @@ namespace QLTour.DAL.Entities
         [StringLength(50)]
         public string TinhTrang { get; set; }
 
+        public int NhanVienID { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DatDichVu> DatDichVus { get; set; }
 
         public virtual KhachHang KhachHang { get; set; }
+
+        public virtual NhanVien NhanVien { get; set; }
 
         public virtual Tour Tour { get; set; }
 
