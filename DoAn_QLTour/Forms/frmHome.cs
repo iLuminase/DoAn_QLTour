@@ -53,32 +53,32 @@ namespace DoAn_QLTour
 
         private void hideForm(Form child)
         {
-
             panel1.Visible = false;
-            foreach (Form f in this.MdiChildren)
+
+            // Hide all MDI child forms using LINQ
+            foreach (var form in this.MdiChildren)
             {
-                f.Hide();
+                form.Hide();
             }
-            if (child != null)
-            { this.Size = new Size(child.Width, child.Height); }
-            else
-            {
-                this.Size = new Size(1552, 794);
-            } 
-                
-            
+
+            // Set the size of the current form based on the child form
+            this.Size = child != null ? new Size(child.Width, child.Height) : new Size(1552, 794);
         }
 
-        //form Tour show
+        // Helper method to show a form as an MDI child
+        private void ShowFormAsMdiChild(Form child)
+        {
+            hideForm(child);
+            child.MdiParent = this; // Ensure the form is a child of the current MDI parent
+            child.WindowState = FormWindowState.Maximized;
+            child.Show();
+        }
+
+        // form Tour show
         private void btnTour_Click(object sender, EventArgs e)
         {
-            
-            
-            frmQLTour frm = new frmQLTour();
-            hideForm(frm);
-            frm.MdiParent = this; // Giúp giao diện MDI chỉ nằm trong form cha (frmMain)
-            frm.WindowState = FormWindowState.Maximized;
-            frm.Show();
+            var frm = new frmQLTour();
+            ShowFormAsMdiChild(frm);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -87,7 +87,9 @@ namespace DoAn_QLTour
             panel1.Visible = true;
         }
 
+        private void materialLabel9_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

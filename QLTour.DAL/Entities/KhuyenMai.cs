@@ -29,7 +29,7 @@ namespace QLTour.DAL.Entities
 
         public decimal GiaTriKhuyenMai { get; set; }
 
-        public int SoLuong { get; set; }
+        public int? SoLuong { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KhachHangKhuyenMai> KhachHangKhuyenMais { get; set; }

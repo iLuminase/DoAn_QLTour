@@ -38,6 +38,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnDangXuat = new MaterialSkin.Controls.MaterialButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.materialScrollBar1 = new MaterialSkin.Controls.MaterialScrollBar();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -70,7 +71,6 @@
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.materialScrollBar1 = new MaterialSkin.Controls.MaterialScrollBar();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -277,6 +277,18 @@
             this.panel1.Size = new System.Drawing.Size(1293, 727);
             this.panel1.TabIndex = 14;
             // 
+            // materialScrollBar1
+            // 
+            this.materialScrollBar1.Depth = 0;
+            this.materialScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.materialScrollBar1.Location = new System.Drawing.Point(1283, 0);
+            this.materialScrollBar1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialScrollBar1.Name = "materialScrollBar1";
+            this.materialScrollBar1.Orientation = MaterialSkin.Controls.MaterialScrollOrientation.Vertical;
+            this.materialScrollBar1.Size = new System.Drawing.Size(10, 727);
+            this.materialScrollBar1.TabIndex = 10;
+            this.materialScrollBar1.Text = "materialScrollBar1";
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.panel6);
@@ -457,6 +469,7 @@
             this.materialLabel9.Size = new System.Drawing.Size(197, 24);
             this.materialLabel9.TabIndex = 1;
             this.materialLabel9.Text = "Nghỉ Dưỡng Phú Quốc";
+            this.materialLabel9.Click += new System.EventHandler(this.materialLabel9_Click);
             // 
             // pictureBox3
             // 
@@ -660,18 +673,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // materialScrollBar1
-            // 
-            this.materialScrollBar1.Depth = 0;
-            this.materialScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.materialScrollBar1.Location = new System.Drawing.Point(1283, 0);
-            this.materialScrollBar1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialScrollBar1.Name = "materialScrollBar1";
-            this.materialScrollBar1.Orientation = MaterialSkin.Controls.MaterialScrollOrientation.Vertical;
-            this.materialScrollBar1.Size = new System.Drawing.Size(10, 727);
-            this.materialScrollBar1.TabIndex = 10;
-            this.materialScrollBar1.Text = "materialScrollBar1";
             // 
             // frmHome
             // 

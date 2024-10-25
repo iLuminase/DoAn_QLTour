@@ -45,6 +45,7 @@
             this.colGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colHDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTour)).BeginInit();
@@ -61,7 +62,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1255, 80);
+            this.panel1.Size = new System.Drawing.Size(1445, 80);
             this.panel1.TabIndex = 50;
             // 
             // groupBox1
@@ -96,7 +97,7 @@
             this.btnThemHoacSua.Size = new System.Drawing.Size(86, 35);
             this.btnThemHoacSua.TabIndex = 7;
             this.btnThemHoacSua.TabStop = false;
-            this.btnThemHoacSua.Text = "Thêm/Sửa";
+            this.btnThemHoacSua.Text = "Thêm";
             this.btnThemHoacSua.UseVisualStyleBackColor = true;
             this.btnThemHoacSua.Click += new System.EventHandler(this.btnThemHoacSua_Click);
             // 
@@ -174,13 +175,15 @@
             this.colLichTrinh,
             this.colGia,
             this.colMoTa,
-            this.colTrangThai});
+            this.colTrangThai,
+            this.colHDV});
             this.dgvTour.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTour.Location = new System.Drawing.Point(0, 80);
             this.dgvTour.Name = "dgvTour";
-            this.dgvTour.Size = new System.Drawing.Size(1255, 653);
+            this.dgvTour.Size = new System.Drawing.Size(1445, 653);
             this.dgvTour.TabIndex = 58;
             this.dgvTour.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTour_CellClick);
+            this.dgvTour.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTour_CellDoubleClick);
             // 
             // colMaTour
             // 
@@ -215,12 +218,19 @@
             // 
             this.colTrangThai.HeaderText = "Trạng Thái";
             this.colTrangThai.Name = "colTrangThai";
+            this.colTrangThai.Width = 120;
+            // 
+            // colHDV
+            // 
+            this.colHDV.HeaderText = "HDV";
+            this.colHDV.Name = "colHDV";
+            this.colHDV.Width = 120;
             // 
             // frmQLTour
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1255, 733);
+            this.ClientSize = new System.Drawing.Size(1445, 733);
             this.Controls.Add(this.dgvTour);
             this.Controls.Add(this.panel1);
             this.Name = "frmQLTour";
@@ -252,5 +262,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMoTa;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTrangThai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colHDV;
     }
 }

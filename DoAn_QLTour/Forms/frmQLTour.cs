@@ -9,17 +9,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity.Migrations;
-using QLTour.BUS.Properties;
+using QLTour.BUS;
 namespace DoAn_QLTour.Forms
 {
     public partial class frmQLTour : Form
     {
         private readonly TourService tourService = new TourService();
+        private readonly huongDanVienService huongDanVienService = new huongDanVienService();
         ModelTourDB db = new ModelTourDB();
         public frmQLTour()
         {
             InitializeComponent();
-            setGridViewStyle(dgvTour);
+
             var listTour = tourService.GetAll();
             BindGrid(listTour);
         }
@@ -29,30 +30,42 @@ namespace DoAn_QLTour.Forms
             dgvTour.Rows.Clear();
             foreach (var item in listTour)
             {
+                // Skip tours that are not active if the user is a customer
+                if (item.TinhTrang != 1 && IsCustomerUser())
+                {
+                    continue;
+                }
+
                 int index = dgvTour.Rows.Add();
                 dgvTour.Rows[index].Cells[0].Value = item.MaTour;
                 dgvTour.Rows[index].Cells[1].Value = item.TenTour;
                 dgvTour.Rows[index].Cells[2].Value = item.LichTrinh;
                 dgvTour.Rows[index].Cells[3].Value = item.GiaTien;
                 dgvTour.Rows[index].Cells[4].Value = item.MoTa;
-                //dgvTour.Rows[index].Cells[5].Value = item.NgayBatDau != null
-                //     ? item.NgayBatDau.Value.ToString("dd/MM/yyyy")
-                //     : string.Empty;
-
-                //dgvTour.Rows[index].Cells[6].Value = item.NgayKetThuc != null
-                //    ? item.NgayKetThuc.Value.ToString("dd/MM/yyyy")
-                //    : string.Empty;
-                dgvTour.Rows[index].Cells[5].Value = item.TrangThai;
+                dgvTour.Rows[index].Cells[5].Value = item.TinhTrang == 1 ? "Còn Hoạt Động" : "Ngưng Hoạt Động";
+                // Fetch and display the tour guide's name if HuongDanVienID is present
+                if (item.HuongDanVienID.HasValue)
+                {
+                    var huongDanVien = huongDanVienService.GetById(item.HuongDanVienID.Value);
+                    dgvTour.Rows[index].Cells[6].Value = huongDanVien != null ? huongDanVien.HoTen : string.Empty;
+                }
+                else
+                {
+                    dgvTour.Rows[index].Cells[6].Value = string.Empty;
+                }
             }
         }
-        public void setGridViewStyle(DataGridView dgview)
+
+        // Helper method to determine if the current user is a customer
+        private bool IsCustomerUser()
         {
-            dgview.BorderStyle = BorderStyle.Fixed3D;
-            dgview.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
-            dgview.CellBorderStyle = DataGridViewCellBorderStyle.SunkenVertical;
-            dgview.BackgroundColor = Color.White;
-            dgview.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            // Implement your logic to determine if the current user is a customer
+            // For example, you might check the user's role or permissions
+            // Return true if the user is a customer, otherwise false
+            return true; // Placeholder implementation
         }
+
+
 
         private void setNull()
         {
@@ -70,9 +83,6 @@ namespace DoAn_QLTour.Forms
                 txtMaTour.Text = row.Cells[0].Value.ToString();
                 txtTenTour.Text = row.Cells[1].Value.ToString();
 
-                //// Ép kiểu datetime từ csdl vào dtp
-                //dtpNgayBD.Value = DateTime.ParseExact(row.Cells[5].Value.ToString(), "dd/MM/yyyy", null);
-                //dtpNgayKT.Value = DateTime.ParseExact(row.Cells[6].Value.ToString(), "dd/MM/yyyy", null);
             }
         }
 
@@ -89,19 +99,7 @@ namespace DoAn_QLTour.Forms
                 query = query.Where(t => t.TenTour.Contains(txtTenTour.Text.Trim()));
             }
 
-            //// Parse the dates from the date pickers
-            //DateTime? ngayBatDau = dtpNgayBD.Checked ? (DateTime?)dtpNgayBD.Value : null;
-            //DateTime? ngayKetThuc = dtpNgayKT.Checked ? (DateTime?)dtpNgayKT.Value : null;
-
-            //// Add conditions to filter by date range
-            //if (ngayBatDau.HasValue)
-            //{
-            //    query = query.Where(t => t.NgayBatDau >= ngayBatDau.Value);
-            //}
-            //if (ngayKetThuc.HasValue)
-            //{
-            //    query = query.Where(t => t.NgayKetThuc <= ngayKetThuc.Value);
-            //}
+       
 
             var listTour = query.ToList();
             BindGrid(listTour);
@@ -125,8 +123,6 @@ namespace DoAn_QLTour.Forms
         private void btnDong_Click_1(object sender, EventArgs e)
         {
             this.Close();
-            // Đóng tất cả các form con & cha
-            //Environment.Exit(0);
         }
 
         private void btnHuy_Click_1(object sender, EventArgs e)
@@ -134,6 +130,29 @@ namespace DoAn_QLTour.Forms
             setNull();
             var listTour = db.Tours.ToList();
             BindGrid(listTour);
+        }
+        private void dgvTour_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && dgvTour.Rows[e.RowIndex].Cells[0].Value != null)
+            {
+                DataGridViewRow row = dgvTour.Rows[e.RowIndex];
+                frmEditTour editForm = new frmEditTour();
+
+                // Pass data to the edit form using public properties
+         
+                editForm.TenTour = row.Cells[1].Value.ToString();
+                editForm.LichTrinh = row.Cells[2].Value.ToString();
+                editForm.GiaTien = row.Cells[3].Value.ToString();
+                editForm.MoTa = row.Cells[4].Value.ToString();
+                
+
+                // Show the edit form
+                editForm.ShowDialog();
+
+                // Refresh the grid after editing
+                var listTour = tourService.GetAll();
+                BindGrid(listTour);
+            }
         }
     }
 }

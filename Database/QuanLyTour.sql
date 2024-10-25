@@ -1,6 +1,3 @@
-﻿
-
-
 ﻿USE MASTER
 GO
 CREATE DATABASE QuanLyTour
@@ -275,7 +272,7 @@ VALUES
 GO
 INSERT INTO KhachHangKhuyenMai (MaKhuyenMai, MaDatTour, NgaySuDung)
 VALUES
-(1, 11, '2024-10-02'),
+(1, 1, '2024-10-02'),
 (2, 2, '2024-10-06'),
 (3, 3, '2024-10-10'),
 (4, 4, '2024-10-15'),
@@ -290,7 +287,7 @@ GO
 
 INSERT INTO ThanhToan (MaDatTour, SoTien, NgayThanhToan, PhuongThucThanhToan)
 VALUES
-(11, 500000.00, '2024-10-01', N'Thẻ tín dụng'),
+(1, 500000.00, '2024-10-01', N'Thẻ tín dụng'),
 (2, 700000.00, '2024-10-02', N'Tiền mặt'),
 (3, 1000000.00, '2024-10-03', N'Chuyển khoản'),
 (4, 300000.00, '2024-10-04', N'Thẻ tín dụng'),
@@ -303,7 +300,7 @@ VALUES
 GO
 INSERT INTO ChiTietDatTour (MaKhachHang, MaDatTour, SoLuongNguoiDat, SoTienCoc, TinhTrang)
 VALUES
-(1, 11, 2, 500000.00, N'Chờ xác nhận'),
+(1, 1, 2, 500000.00, N'Chờ xác nhận'),
 (2, 2, 3, 700000.00, N'Đã xác nhận'),
 (3, 3, 4, 1000000.00, N'Hoàn tất'),
 (4, 4, 1, 300000.00, N'Chờ thanh toán'),
@@ -330,9 +327,22 @@ VALUES
 
 
 Go
+INSERT INTO Tour ( TenTour, LichTrinh, GiaTien, MoTa, TinhTrang, HuongDanVienID)
+VALUES (N'Tour Phú Quốc', N'Lịch trình khám phá Phú Quốc trong 3 ngày', 6000000.00, N'Tour khám phá đảo ngọc Phú Quốc', 1, 8);
+Go
+INSERT INTO Tour ( TenTour, LichTrinh, GiaTien, MoTa, TinhTrang, HuongDanVienID)
+VALUES ( N'Tour Côn Đảo', N'Lịch trình khám phá Côn Đảo trong 3 ngày', 6500000.00, N'Tour thiên nhiên và lịch sử Côn Đảo', 1, 9);
+GO
+INSERT INTO Tour ( TenTour, LichTrinh, GiaTien, MoTa, TinhTrang, HuongDanVienID)
+VALUES ( N'Tour Nha Trang', N'Lịch trình khám phá Nha Trang trong 4 ngày', 7000000.00, N'Tour khám phá biển Nha Trang', 1, 10);
+GO
+INSERT INTO Tour ( TenTour, LichTrinh, GiaTien, MoTa, TinhTrang, HuongDanVienID)
+VALUES (N'Tour Hạ Long - Hà Nội', N'Lịch trình khám phá Hạ Long và Hà Nội trong 4 ngày', 8000000.00, N'Tour văn hóa và thiên nhiên Hạ Long - Hà Nội', 1, 10);
+
+Go
 INSERT INTO DatDichVu (MaDatTour, MaDichVu, SoLuong)
 VALUES
-(11, 1, 2),
+(1, 1, 2),
 (2, 2, 1),
 (3, 3, 3),
 (4, 4, 1),
