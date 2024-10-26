@@ -77,7 +77,7 @@ namespace DoAn_QLTour
                 btnDatCho.Visible = false;
                 btnThanhToan.Visible = false;
                 btnTaiKhoan.Visible = false;
-                //btnChiTietChuyenDiDaDat.Visible = false;
+                btnChiTietChuyenDiDaDat.Visible = false;
 
 
             }
