@@ -71,6 +71,7 @@
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnChiTietChuyenDiDaDat = new MaterialSkin.Controls.MaterialButton();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -97,7 +98,7 @@
             this.btnTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaiKhoan.HighEmphasis = true;
             this.btnTaiKhoan.Icon = ((System.Drawing.Image)(resources.GetObject("btnTaiKhoan.Icon")));
-            this.btnTaiKhoan.Location = new System.Drawing.Point(0, 491);
+            this.btnTaiKhoan.Location = new System.Drawing.Point(0, 507);
             this.btnTaiKhoan.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.btnTaiKhoan.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnTaiKhoan.Name = "btnTaiKhoan";
@@ -163,7 +164,7 @@
             this.btnDichVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDichVu.HighEmphasis = true;
             this.btnDichVu.Icon = ((System.Drawing.Image)(resources.GetObject("btnDichVu.Icon")));
-            this.btnDichVu.Location = new System.Drawing.Point(0, 246);
+            this.btnDichVu.Location = new System.Drawing.Point(0, 250);
             this.btnDichVu.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.btnDichVu.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDichVu.Name = "btnDichVu";
@@ -186,7 +187,7 @@
             this.btnTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTour.HighEmphasis = true;
             this.btnTour.Icon = ((System.Drawing.Image)(resources.GetObject("btnTour.Icon")));
-            this.btnTour.Location = new System.Drawing.Point(0, 180);
+            this.btnTour.Location = new System.Drawing.Point(0, 185);
             this.btnTour.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.btnTour.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnTour.Name = "btnTour";
@@ -228,6 +229,7 @@
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.btnChiTietChuyenDiDaDat);
             this.panel2.Controls.Add(this.btnDangXuat);
             this.panel2.Controls.Add(this.btnTaiKhoan);
             this.panel2.Controls.Add(this.btnThanhToan);
@@ -252,7 +254,7 @@
             this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.HighEmphasis = true;
             this.btnDangXuat.Icon = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.Icon")));
-            this.btnDangXuat.Location = new System.Drawing.Point(0, 558);
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 571);
             this.btnDangXuat.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.btnDangXuat.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDangXuat.Name = "btnDangXuat";
@@ -658,6 +660,7 @@
             this.btnDatTour_pn1.TabIndex = 5;
             this.btnDatTour_pn1.Text = "Đặt Ngay";
             this.btnDatTour_pn1.UseVisualStyleBackColor = false;
+            this.btnDatTour_pn1.Click += new System.EventHandler(this.btnDatTour_pn1_Click);
             // 
             // materialLabel3
             // 
@@ -712,6 +715,29 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnChiTietChuyenDiDaDat
+            // 
+            this.btnChiTietChuyenDiDaDat.AutoSize = false;
+            this.btnChiTietChuyenDiDaDat.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnChiTietChuyenDiDaDat.BackColor = System.Drawing.Color.Transparent;
+            this.btnChiTietChuyenDiDaDat.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnChiTietChuyenDiDaDat.Depth = 0;
+            this.btnChiTietChuyenDiDaDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChiTietChuyenDiDaDat.HighEmphasis = true;
+            this.btnChiTietChuyenDiDaDat.Icon = ((System.Drawing.Image)(resources.GetObject("btnChiTietChuyenDiDaDat.Icon")));
+            this.btnChiTietChuyenDiDaDat.Location = new System.Drawing.Point(0, 444);
+            this.btnChiTietChuyenDiDaDat.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btnChiTietChuyenDiDaDat.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnChiTietChuyenDiDaDat.Name = "btnChiTietChuyenDiDaDat";
+            this.btnChiTietChuyenDiDaDat.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnChiTietChuyenDiDaDat.Size = new System.Drawing.Size(337, 66);
+            this.btnChiTietChuyenDiDaDat.TabIndex = 11;
+            this.btnChiTietChuyenDiDaDat.Text = "Chi Tiết Chuyến Đi Đã Đặt";
+            this.btnChiTietChuyenDiDaDat.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnChiTietChuyenDiDaDat.UseAccentColor = false;
+            this.btnChiTietChuyenDiDaDat.UseVisualStyleBackColor = false;
+            this.btnChiTietChuyenDiDaDat.Click += new System.EventHandler(this.btnChiTietChuyenDiDaDat_Click);
             // 
             // frmHome
             // 
@@ -793,6 +819,7 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialScrollBar materialScrollBar1;
+        private MaterialSkin.Controls.MaterialButton btnChiTietChuyenDiDaDat;
     }
 }
 

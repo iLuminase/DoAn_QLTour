@@ -12,7 +12,7 @@ namespace QLTour.DAL.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DichVu()
         {
-            DatDichVus = new HashSet<DatDichVu>();
+            DatDichVu = new HashSet<DatDichVu>();
         }
 
         public int DichVuID { get; set; }
@@ -24,12 +24,11 @@ namespace QLTour.DAL.Entities
         [StringLength(255)]
         public string MoTa { get; set; }
 
-        [StringLength(10)]
-        public string TinhTrang { get; set; }
-
         public decimal GiaTien { get; set; }
 
+        public int? TinhTrang { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DatDichVu> DatDichVus { get; set; }
+        public virtual ICollection<DatDichVu> DatDichVu { get; set; }
     }
 }

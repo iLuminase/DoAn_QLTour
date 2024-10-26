@@ -63,19 +63,23 @@ namespace DoAn_QLTour
             if (roleID == 1) // Admin
             {
                 // Hiển thị tất cả các chức năng
+                btnChiTietChuyenDiDaDat.Visible = false; // Trừ Chi Tiết Chuyến đi đã đặt của Người Dùng
             }
             else if (roleID == 2) // Employee
             {
-                btnTaiKhoan.Visible = false; // Ẩn nút Tài Khoản
-                                             // Ẩn các chức năng không cần thiết khác
+                btnChiTietChuyenDiDaDat.Visible = false;
             }
             else if (roleID == 3) // User
             {
+
+                btnTour.Visible = false;
                 btnDichVu.Visible = false;
                 btnDatCho.Visible = false;
                 btnThanhToan.Visible = false;
                 btnTaiKhoan.Visible = false;
-                // Chỉ hiển thị các nút cần thiết cho User
+                btnChiTietChuyenDiDaDat.Visible = false;
+
+
             }
         }
 
@@ -116,6 +120,16 @@ namespace DoAn_QLTour
         }
 
         private void frmHome_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDatTour_pn1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnChiTietChuyenDiDaDat_Click(object sender, EventArgs e)
         {
 
         }

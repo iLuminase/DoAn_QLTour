@@ -72,5 +72,10 @@ namespace DoAn_QLTour.Forms
             }
 
         }
+
+        private void frmThemHoacSuaTour_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

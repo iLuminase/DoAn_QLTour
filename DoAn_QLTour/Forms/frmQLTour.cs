@@ -135,6 +135,11 @@ namespace DoAn_QLTour.Forms
             var listTour = db.Tours.ToList();
             BindGrid(listTour);
         }
+
+        private void frmQLTour_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
