@@ -14,6 +14,7 @@ namespace DoAn_QLTour
 {
     public partial class frmHome : MaterialSkin.Controls.MaterialForm
     {
+        private int roleID;
         public frmHome()
         {
             InitializeComponent();
@@ -49,6 +50,33 @@ namespace DoAn_QLTour
             label2.ForeColor = Color.FromArgb(192, 64, 0);
             label3.ForeColor = Color.FromArgb(192, 64, 0);
             label4.ForeColor = Color.FromArgb(192, 64, 0);
+        }
+        public frmHome(int roleID)
+        {
+            InitializeComponent();
+            this.roleID = roleID;
+            ApplyPermissions(); // Gọi hàm phân quyền dựa trên roleID
+        }
+
+        private void ApplyPermissions()
+        {
+            if (roleID == 1) // Admin
+            {
+                // Hiển thị tất cả các chức năng
+            }
+            else if (roleID == 2) // Employee
+            {
+                btnTaiKhoan.Visible = false; // Ẩn nút Tài Khoản
+                                             // Ẩn các chức năng không cần thiết khác
+            }
+            else if (roleID == 3) // User
+            {
+                btnDichVu.Visible = false;
+                btnDatCho.Visible = false;
+                btnThanhToan.Visible = false;
+                btnTaiKhoan.Visible = false;
+                // Chỉ hiển thị các nút cần thiết cho User
+            }
         }
 
         private void hideForm(Form child)
@@ -87,7 +115,9 @@ namespace DoAn_QLTour
             panel1.Visible = true;
         }
 
+        private void frmHome_Load(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

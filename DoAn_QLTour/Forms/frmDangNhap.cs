@@ -32,7 +32,7 @@ namespace DoAn_QLTour.Forms
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT Password FROM Account WHERE Email = @Email";
+                string query = "SELECT Password, RoleID FROM Account WHERE Email = @Email";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Email", email);
@@ -41,16 +41,17 @@ namespace DoAn_QLTour.Forms
                         if (reader.Read())
                         {
                             string hashedPassword = reader["Password"].ToString();
+                            int roleID = (int)reader["RoleID"];  // Lấy RoleID từ database
+
                             if (BCrypt.Net.BCrypt.Verify(password, hashedPassword))
                             {
-                                // Đăng nhập thành công
                                 MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                // Tạo instance của frmHome và hiển thị
-                                frmHome homeForm = new frmHome();
-                                homeForm.Show(); // Hiển thị Form Chính
+                                // Khởi tạo form chính với role của người dùng
+                                frmHome homeForm = new frmHome(roleID);
+                                homeForm.Show();
 
-                                this.Hide(); // Ẩn Form Đăng Nhập
+                                this.Hide(); // Ẩn form đăng nhập
                             }
                             else
                             {
