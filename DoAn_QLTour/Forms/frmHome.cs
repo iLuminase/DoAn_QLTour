@@ -77,7 +77,7 @@ namespace DoAn_QLTour
                 btnDatCho.Visible = false;
                 btnThanhToan.Visible = false;
                 btnTaiKhoan.Visible = false;
-                btnChiTietChuyenDiDaDat.Visible = false;
+                
 
 
             }
@@ -131,7 +131,10 @@ namespace DoAn_QLTour
 
         private void btnChiTietChuyenDiDaDat_Click(object sender, EventArgs e)
         {
-
+            // Mở Form Chi Tiết
+            frmChiTietCuaToi ChiTietCuaToifrm = new frmChiTietCuaToi();
+            ChiTietCuaToifrm.Show(); // Hiện Form Chi Tiết 
+            this.Hide(); // Ẩn Form Home
         }
     }
 }
