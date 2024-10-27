@@ -55,7 +55,7 @@
             this.cbbHDV.FormattingEnabled = true;
             this.cbbHDV.Location = new System.Drawing.Point(129, 413);
             this.cbbHDV.Name = "cbbHDV";
-            this.cbbHDV.Size = new System.Drawing.Size(152, 28);
+            this.cbbHDV.Size = new System.Drawing.Size(178, 28);
             this.cbbHDV.TabIndex = 1;
             // 
             // label8
@@ -128,7 +128,7 @@
             this.cbbTinhTrangTour.FormattingEnabled = true;
             this.cbbTinhTrangTour.Location = new System.Drawing.Point(416, 416);
             this.cbbTinhTrangTour.Name = "cbbTinhTrangTour";
-            this.cbbTinhTrangTour.Size = new System.Drawing.Size(121, 28);
+            this.cbbTinhTrangTour.Size = new System.Drawing.Size(141, 28);
             this.cbbTinhTrangTour.TabIndex = 4;
             // 
             // btnThemHoacSua
@@ -150,6 +150,7 @@
             this.btnThemHoacSua.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnThemHoacSua.UseAccentColor = false;
             this.btnThemHoacSua.UseVisualStyleBackColor = true;
+            this.btnThemHoacSua.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtLichTrinh
             // 
@@ -172,6 +173,7 @@
             this.btnDong.TabIndex = 1;
             this.btnDong.Text = "ĐÓNG";
             this.btnDong.UseVisualStyleBackColor = false;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // txtTenTour
             // 
@@ -240,6 +242,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "frmEditTour";
             this.Text = "frmEditTour";
+            this.Load += new System.EventHandler(this.frmEditTour_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

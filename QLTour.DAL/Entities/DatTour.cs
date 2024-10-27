@@ -21,10 +21,10 @@ namespace QLTour.DAL.Entities
         [Key]
         public int MaDatTour { get; set; }
 
+        public int? MaTour { get; set; }
+
         [Column(TypeName = "date")]
         public DateTime NgayDat { get; set; }
-
-        public int MaTour { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietDatTour> ChiTietDatTours { get; set; }

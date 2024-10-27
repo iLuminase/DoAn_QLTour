@@ -15,7 +15,6 @@ namespace QLTour.DAL.Entities
         public virtual DbSet<ChiTietDatTour> ChiTietDatTours { get; set; }
         public virtual DbSet<DatDichVu> DatDichVus { get; set; }
         public virtual DbSet<DatTour> DatTours { get; set; }
-        public virtual DbSet<DeleteLog> DeleteLogs { get; set; }
         public virtual DbSet<DichVu> DichVus { get; set; }
         public virtual DbSet<Feedback> Feedbacks { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
@@ -71,16 +70,6 @@ namespace QLTour.DAL.Entities
                 .HasMany(e => e.KhachHangKhuyenMais)
                 .WithRequired(e => e.KhuyenMai)
                 .HasForeignKey(e => e.MaKhuyenMai)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<NhanVien>()
-                .HasMany(e => e.Tours)
-                .WithOptional(e => e.NhanVien)
-                .HasForeignKey(e => e.HuongDanVienID);
-
-            modelBuilder.Entity<Tour>()
-                .HasMany(e => e.DatTours)
-                .WithRequired(e => e.Tour)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Tour>()

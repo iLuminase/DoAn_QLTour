@@ -56,7 +56,6 @@
     <Compile Include="Entities\ChiTietDatTour.cs" />
     <Compile Include="Entities\DatDichVu.cs" />
     <Compile Include="Entities\DatTour.cs" />
-    <Compile Include="Entities\DeleteLog.cs" />
     <Compile Include="Entities\DichVu.cs" />
     <Compile Include="Entities\Feedback.cs" />
     <Compile Include="Entities\KhachHang.cs" />

@@ -1,4 +1,5 @@
-﻿using QLTour.DAL.Entities;
+﻿using QLTour.BUS.Services;
+using QLTour.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,13 +13,18 @@ using System.Windows.Forms;
 
 namespace DoAn_QLTour.Forms
 {
-    public partial class frmThemHoacSuaTour : Form
+    public partial class frmThemTour : Form
     {
-        public frmThemHoacSuaTour()
+        // Khai bao su kien TourUpdated
+        public event EventHandler TourUpdated;
+        private readonly nhanVienService nhanVienService = new nhanVienService();
+        public frmThemTour()
         {
             InitializeComponent();
         }
+
         ModelTourDB db = new ModelTourDB();
+
         private void btnThemHoacSua_Click(object sender, EventArgs e)
         {
             // Kiểm tra dữ liệu đầu vào
@@ -37,28 +43,48 @@ namespace DoAn_QLTour.Forms
                 t.LichTrinh = txtLichTrinh.Text;
                 t.MoTa = txtMoTa.Text;
                 t.GiaTien = decimal.Parse(txtGiaTien.Text);
-          
-
+                t.TinhTrang = cbbTinhTrangTour.SelectedIndex;
+                t.NhanVienID = (int)cbbHDV.SelectedValue;
                 db.Tours.AddOrUpdate(t);
                 db.SaveChanges();
                 MessageBox.Show($"Cập nhật tour {txtTenTour.Text} thành công!.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-             // Nguoc lai thi tao moi tour
+                // Nguoc lai thi tao moi tour
                 Tour tour = new Tour()
                 {
                     TenTour = txtTenTour.Text,
                     LichTrinh = txtLichTrinh.Text,
                     MoTa = txtMoTa.Text,
                     GiaTien = int.Parse(txtGiaTien.Text),
-            
+                    TinhTrang = cbbTinhTrangTour.SelectedIndex,
+                    NhanVienID = (int)cbbHDV.SelectedValue
                 };
                 db.Tours.Add(tour);
                 db.SaveChanges();
                 MessageBox.Show($"Thêm thông tin cho tour {txtTenTour.Text} thành công!", "Thông báo");
             }
 
+            // Kích hoạt sự kiện TourUpdated
+            TourUpdated?.Invoke(this, EventArgs.Empty);
+        }
+        public void FillCbbHDV(List<NhanVien> listNhanViens)
+        {
+            cbbHDV.DataSource = null;
+            this.cbbHDV.DataSource = listNhanViens;
+            this.cbbHDV.DisplayMember = "HoTen";
+            this.cbbHDV.ValueMember = "NhanVienID";
+        }
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmThemTour_Load(object sender, EventArgs e)
+        {
+            var listNhanViens =  nhanVienService.GetAll();
+            FillCbbHDV(listNhanViens);
         }
     }
 }

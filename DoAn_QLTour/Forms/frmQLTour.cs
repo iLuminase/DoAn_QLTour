@@ -10,13 +10,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity.Migrations;
 using QLTour.BUS;
+using QLTour.BUS.Services;
 namespace DoAn_QLTour.Forms
 {
     public partial class frmQLTour : Form
     {
         private readonly TourService tourService = new TourService();
-        private readonly huongDanVienService huongDanVienService = new huongDanVienService();
+        private readonly nhanVienService nhanVienService = new nhanVienService();
         ModelTourDB db = new ModelTourDB();
+
         public frmQLTour()
         {
             InitializeComponent();
@@ -24,7 +26,24 @@ namespace DoAn_QLTour.Forms
             BindGrid(listTour);
         }
 
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            frmThemTour frm = new frmThemTour();
+            frm.TourUpdated += Frm_TourUpdated;
+            frm.ShowDialog();
+        }
 
+        private void Frm_TourUpdated(object sender, EventArgs e)
+        {
+            // Refresh the DataGridView
+            var listTour = tourService.GetAll();
+            BindGrid(listTour);
+        }
+
+        public void FillCBB(List<NhanVien> lstNhanViens)
+        {
+            // Implementation for filling ComboBox if needed
+        }
 
         private void BindGrid(List<Tour> listTour)
         {
@@ -43,19 +62,18 @@ namespace DoAn_QLTour.Forms
                 dgvTour.Rows[index].Cells[2].Value = item.LichTrinh;
                 dgvTour.Rows[index].Cells[3].Value = item.GiaTien;
                 dgvTour.Rows[index].Cells[4].Value = item.MoTa;
-
                 dgvTour.Rows[index].Cells[5].Value = item.TinhTrang == 1 ? "Còn Hoạt Động" : "Ngưng Hoạt Động";
-                // Fetch and display the tour guide's name if HuongDanVienID is present
-                if (item.HuongDanVienID.HasValue)
+
+                // Kiem tra ma huong dv va hien ten hdv (neu co)
+                if (item.NhanVienID.HasValue)
                 {
-                    var huongDanVien = huongDanVienService.GetById(item.HuongDanVienID.Value);
+                    var huongDanVien = nhanVienService.GetByID(item.NhanVienID.Value);
                     dgvTour.Rows[index].Cells[6].Value = huongDanVien != null ? huongDanVien.HoTen : string.Empty;
                 }
                 else
                 {
                     dgvTour.Rows[index].Cells[6].Value = string.Empty;
                 }
-
             }
         }
 
@@ -63,25 +81,6 @@ namespace DoAn_QLTour.Forms
         {
             var listTour = tourService.GetAll();
             BindGrid(listTour);
-        }
-
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            frmThemHoacSuaTour frm = new frmThemHoacSuaTour();
-            frm.Show();
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtMaTour.Text))
-            {
-                MessageBox.Show("Vui lòng chọn tour cần sửa");
-                return;
-            }
-            frmThemHoacSuaTour frm = new frmThemHoacSuaTour();
-            frm.MaTour = int.Parse(txtMaTour.Text);
-            frm.TenTour = txtTenTour.Text;
-            frm.Show();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -115,23 +114,6 @@ namespace DoAn_QLTour.Forms
             BindGrid(listTour);
         }
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-            var query = db.Tours.AsQueryable();
-
-            if (!string.IsNullOrWhiteSpace(txtMaTour.Text))
-            {
-                query = query.Where(t => t.MaTour.ToString().Contains(txtMaTour.Text.Trim()));
-            }
-            if (!string.IsNullOrWhiteSpace(txtTenTour.Text))
-            {
-                query = query.Where(t => t.TenTour.Contains(txtTenTour.Text.Trim()));
-            }
-
-            var listTour = query.ToList();
-            BindGrid(listTour);
-        }
-
         private void dgvTour_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && dgvTour.Rows[e.RowIndex].Cells[0].Value != null)
@@ -139,7 +121,6 @@ namespace DoAn_QLTour.Forms
                 DataGridViewRow row = dgvTour.Rows[e.RowIndex];
                 txtMaTour.Text = row.Cells[0].Value.ToString();
                 txtTenTour.Text = row.Cells[1].Value.ToString();
-
             }
         }
 
@@ -152,25 +133,10 @@ namespace DoAn_QLTour.Forms
             return true; // Placeholder implementation
         }
 
-
-
         private void setNull()
         {
             txtTenTour.Text = "";
-
             txtMaTour.Text = "";
-
-        }
-
-        private void dgvTour_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && dgvTour.Rows[e.RowIndex].Cells[0].Value != null)
-            {
-                DataGridViewRow row = dgvTour.Rows[e.RowIndex];
-                txtMaTour.Text = row.Cells[0].Value.ToString();
-                txtTenTour.Text = row.Cells[1].Value.ToString();
-
-            }
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -185,8 +151,6 @@ namespace DoAn_QLTour.Forms
             {
                 query = query.Where(t => t.TenTour.Contains(txtTenTour.Text.Trim()));
             }
-
-       
 
             var listTour = query.ToList();
             BindGrid(listTour);
@@ -201,23 +165,7 @@ namespace DoAn_QLTour.Forms
                 f.Hide();
             }
         }
-        private void btnThemHoacSua_Click(object sender, EventArgs e)
-        {
-            frmThemHoacSuaTour frm = new frmThemHoacSuaTour();
-            frm.Show();
-        }
 
-        private void btnDong_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnHuy_Click_1(object sender, EventArgs e)
-        {
-            setNull();
-            var listTour = db.Tours.ToList();
-            BindGrid(listTour);
-        }
         private void dgvTour_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && dgvTour.Rows[e.RowIndex].Cells[0].Value != null)
@@ -226,12 +174,25 @@ namespace DoAn_QLTour.Forms
                 frmEditTour editForm = new frmEditTour();
 
                 // Pass data to the edit form using public properties
-         
                 editForm.TenTour = row.Cells[1].Value.ToString();
                 editForm.LichTrinh = row.Cells[2].Value.ToString();
                 editForm.GiaTien = row.Cells[3].Value.ToString();
                 editForm.MoTa = row.Cells[4].Value.ToString();
-                
+
+                // Ensure NhanVienID is correctly retrieved and cast
+                if (row.Cells[6].Value != null && int.TryParse(row.Cells[6].Value.ToString(), out int nhanVienID))
+                {
+                    editForm.NhanVienID = nhanVienID;
+                }
+                else
+                {
+                    editForm.NhanVienID = null;
+                }
+
+                editForm.TinhTrang = row.Cells[5].Value.ToString() == "Còn Hoạt Động" ? 0 : 1;
+
+                // Subscribe to the TourUpdated event
+                editForm.TourUpdated += Frm_TourUpdated;
 
                 // Show the edit form
                 editForm.ShowDialog();
@@ -243,4 +204,3 @@ namespace DoAn_QLTour.Forms
         }
     }
 }
-

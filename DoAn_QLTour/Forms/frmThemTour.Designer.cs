@@ -1,6 +1,6 @@
 ﻿namespace DoAn_QLTour.Forms
 {
-    partial class frmThemHoacSuaTour
+    partial class frmThemTour
     {
         /// <summary>
         /// Required designer variable.
@@ -73,6 +73,7 @@
             this.btnDong.TabIndex = 1;
             this.btnDong.Text = "ĐÓNG";
             this.btnDong.UseVisualStyleBackColor = false;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnThemHoacSua
             // 
@@ -89,7 +90,7 @@
             this.btnThemHoacSua.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnThemHoacSua.Size = new System.Drawing.Size(108, 36);
             this.btnThemHoacSua.TabIndex = 0;
-            this.btnThemHoacSua.Text = "Thêm/Sửa";
+            this.btnThemHoacSua.Text = "Thêm";
             this.btnThemHoacSua.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnThemHoacSua.UseAccentColor = false;
             this.btnThemHoacSua.UseVisualStyleBackColor = true;
@@ -235,7 +236,7 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Mô Tả";
             // 
-            // frmThemHoacSuaTour
+            // frmThemTour
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -243,9 +244,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "frmThemHoacSuaTour";
+            this.Name = "frmThemTour";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Tour";
+            this.Load += new System.EventHandler(this.frmThemTour_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

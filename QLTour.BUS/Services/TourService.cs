@@ -27,7 +27,7 @@ namespace QLTour.BUS
                 existingTour.GiaTien = updatedTour.GiaTien;
                 existingTour.MoTa = updatedTour.MoTa;
                 existingTour.TinhTrang = updatedTour.TinhTrang;
-                existingTour.HuongDanVienID = updatedTour.HuongDanVienID;
+                existingTour.NhanVienID = updatedTour.NhanVienID;
 
 
                 // Save the changes to the database

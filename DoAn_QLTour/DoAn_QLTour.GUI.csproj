@@ -74,11 +74,11 @@
     <Compile Include="Forms\frmQLTour.Designer.cs">
       <DependentUpon>frmQLTour.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmThemHoacSuaTour.cs">
+    <Compile Include="Forms\frmThemTour.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmThemHoacSuaTour.Designer.cs">
-      <DependentUpon>frmThemHoacSuaTour.cs</DependentUpon>
+    <Compile Include="Forms\frmThemTour.Designer.cs">
+      <DependentUpon>frmThemTour.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,8 +91,8 @@
     <EmbeddedResource Include="Forms\frmQLTour.resx">
       <DependentUpon>frmQLTour.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmThemHoacSuaTour.resx">
-      <DependentUpon>frmThemHoacSuaTour.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmThemTour.resx">
+      <DependentUpon>frmThemTour.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

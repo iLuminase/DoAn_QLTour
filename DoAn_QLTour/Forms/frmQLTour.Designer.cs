@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnHuy = new System.Windows.Forms.Button();
-            this.btnThemHoacSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMaTour = new System.Windows.Forms.TextBox();
@@ -62,15 +62,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-
             this.panel1.Size = new System.Drawing.Size(1452, 80);
-
             this.panel1.TabIndex = 50;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnHuy);
-            this.groupBox1.Controls.Add(this.btnThemHoacSua);
+            this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Controls.Add(this.btnDong);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(466, 7);
@@ -89,19 +87,19 @@
             this.btnHuy.TabStop = false;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click_1);
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // btnThemHoacSua
+            // btnThem
             // 
-            this.btnThemHoacSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemHoacSua.Location = new System.Drawing.Point(22, 18);
-            this.btnThemHoacSua.Name = "btnThemHoacSua";
-            this.btnThemHoacSua.Size = new System.Drawing.Size(86, 35);
-            this.btnThemHoacSua.TabIndex = 7;
-            this.btnThemHoacSua.TabStop = false;
-            this.btnThemHoacSua.Text = "Thêm";
-            this.btnThemHoacSua.UseVisualStyleBackColor = true;
-            this.btnThemHoacSua.Click += new System.EventHandler(this.btnThemHoacSua_Click);
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Location = new System.Drawing.Point(22, 18);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(86, 35);
+            this.btnThem.TabIndex = 7;
+            this.btnThem.TabStop = false;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnDong
             // 
@@ -113,7 +111,7 @@
             this.btnDong.TabStop = false;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
-            this.btnDong.Click += new System.EventHandler(this.btnDong_Click_1);
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // label3
             // 
@@ -250,7 +248,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnHuy;
-        private System.Windows.Forms.Button btnThemHoacSua;
+        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMaTour;
