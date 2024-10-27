@@ -45,10 +45,16 @@ namespace DoAn_QLTour
             label3.Font = new Font("Lucida Bright", 15, FontStyle.Bold);
             label4.Font = new Font("Lucida Bright", 15, FontStyle.Bold);
 
+            lblSoNguoiPhucVu.Font = new Font("Lucida Bright", 25, FontStyle.Bold);
+            label5.Font = new Font("Microsoft Sans Serif", 15);
+
             label1.ForeColor = Color.FromArgb(192, 64, 0);
             label2.ForeColor = Color.FromArgb(192, 64, 0);
             label3.ForeColor = Color.FromArgb(192, 64, 0);
             label4.ForeColor = Color.FromArgb(192, 64, 0);
+
+            lblSoNguoiPhucVu.ForeColor = Color.Black;
+            label5.ForeColor = Color.Gray;
         }
 
         private void hideForm(Form child)

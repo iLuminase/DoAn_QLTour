@@ -71,6 +71,11 @@
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.lblSoNguoiPhucVu = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -85,6 +90,9 @@
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel7.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTaiKhoan
@@ -266,6 +274,7 @@
             // panel1
             // 
             this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(this.groupBox5);
             this.panel1.Controls.Add(this.materialScrollBar1);
             this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBox3);
@@ -318,9 +327,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label4.Location = new System.Drawing.Point(4, 283);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(161, 22);
+            this.label4.Size = new System.Drawing.Size(149, 22);
             this.label4.TabIndex = 6;
-            this.label4.Text = "10.000.000VND";
+            this.label4.Text = "6.500.000VND";
             // 
             // btnDatTour_pn4
             // 
@@ -344,9 +353,9 @@
             this.materialLabel10.Location = new System.Drawing.Point(5, 246);
             this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel10.Name = "materialLabel10";
-            this.materialLabel10.Size = new System.Drawing.Size(281, 14);
+            this.materialLabel10.Size = new System.Drawing.Size(247, 14);
             this.materialLabel10.TabIndex = 3;
-            this.materialLabel10.Text = "Phú Quốc cùng nhiều địa điểm tham quan hấp dẫn.";
+            this.materialLabel10.Text = " Đảo – thiên đường ẩn mình giữa biển Đông...";
             // 
             // materialLabel11
             // 
@@ -354,12 +363,12 @@
             this.materialLabel11.Depth = 0;
             this.materialLabel11.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel11.FontType = MaterialSkin.MaterialSkinManager.fontType.SubtleEmphasis;
-            this.materialLabel11.Location = new System.Drawing.Point(4, 232);
+            this.materialLabel11.Location = new System.Drawing.Point(5, 232);
             this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel11.Name = "materialLabel11";
-            this.materialLabel11.Size = new System.Drawing.Size(273, 14);
+            this.materialLabel11.Size = new System.Drawing.Size(284, 14);
             this.materialLabel11.TabIndex = 2;
-            this.materialLabel11.Text = "Tận hưởng buổi nghỉ dưỡng 3 ngày 2 đêm tại đảo ";
+            this.materialLabel11.Text = "Trải nghiệm vẻ đẹp thanh bình và hoang sơ của Côn";
             // 
             // materialLabel12
             // 
@@ -370,9 +379,9 @@
             this.materialLabel12.Location = new System.Drawing.Point(6, 204);
             this.materialLabel12.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel12.Name = "materialLabel12";
-            this.materialLabel12.Size = new System.Drawing.Size(197, 24);
+            this.materialLabel12.Size = new System.Drawing.Size(189, 24);
             this.materialLabel12.TabIndex = 1;
-            this.materialLabel12.Text = "Nghỉ Dưỡng Phú Quốc";
+            this.materialLabel12.Text = "3 Ngày Trên Côn Đảo";
             // 
             // pictureBox4
             // 
@@ -414,9 +423,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label3.Location = new System.Drawing.Point(4, 283);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 22);
+            this.label3.Size = new System.Drawing.Size(149, 22);
             this.label3.TabIndex = 6;
-            this.label3.Text = "10.000.000VND";
+            this.label3.Text = "7.000.000VND";
             // 
             // btnDatTour_pn3
             // 
@@ -440,9 +449,9 @@
             this.materialLabel7.Location = new System.Drawing.Point(5, 246);
             this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(281, 14);
+            this.materialLabel7.Size = new System.Drawing.Size(256, 14);
             this.materialLabel7.TabIndex = 3;
-            this.materialLabel7.Text = "Phú Quốc cùng nhiều địa điểm tham quan hấp dẫn.";
+            this.materialLabel7.Text = " Nha Trang, tham quan các hòn đảo hoang sơ, ";
             // 
             // materialLabel8
             // 
@@ -453,9 +462,9 @@
             this.materialLabel8.Location = new System.Drawing.Point(4, 232);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(273, 14);
+            this.materialLabel8.Size = new System.Drawing.Size(251, 14);
             this.materialLabel8.TabIndex = 2;
-            this.materialLabel8.Text = "Tận hưởng buổi nghỉ dưỡng 3 ngày 2 đêm tại đảo ";
+            this.materialLabel8.Text = "Đắm mình trong làn nước trong xanh của biển";
             // 
             // materialLabel9
             // 
@@ -511,9 +520,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(4, 282);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 22);
+            this.label2.Size = new System.Drawing.Size(149, 22);
             this.label2.TabIndex = 6;
-            this.label2.Text = "10.000.000VND";
+            this.label2.Text = "8.000.000VND";
             // 
             // btnDatTour_pn2
             // 
@@ -537,9 +546,9 @@
             this.materialLabel4.Location = new System.Drawing.Point(5, 246);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(281, 14);
+            this.materialLabel4.Size = new System.Drawing.Size(239, 14);
             this.materialLabel4.TabIndex = 3;
-            this.materialLabel4.Text = "Phú Quốc cùng nhiều địa điểm tham quan hấp dẫn.";
+            this.materialLabel4.Text = "với vẻ đẹp kỳ vĩ của những hòn đảo đá vôi....";
             // 
             // materialLabel5
             // 
@@ -550,9 +559,9 @@
             this.materialLabel5.Location = new System.Drawing.Point(4, 232);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(273, 14);
+            this.materialLabel5.Size = new System.Drawing.Size(280, 14);
             this.materialLabel5.TabIndex = 2;
-            this.materialLabel5.Text = "Tận hưởng buổi nghỉ dưỡng 3 ngày 2 đêm tại đảo ";
+            this.materialLabel5.Text = "Khám phá di sản thiên nhiên thế giới Vịnh Hạ Long ";
             // 
             // materialLabel6
             // 
@@ -563,9 +572,9 @@
             this.materialLabel6.Location = new System.Drawing.Point(6, 204);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(197, 24);
+            this.materialLabel6.Size = new System.Drawing.Size(198, 24);
             this.materialLabel6.TabIndex = 1;
-            this.materialLabel6.Text = "Nghỉ Dưỡng Phú Quốc";
+            this.materialLabel6.Text = "Tour Hà Nội - Hạ Long";
             // 
             // pictureBox2
             // 
@@ -607,9 +616,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(3, 282);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 22);
+            this.label1.Size = new System.Drawing.Size(149, 22);
             this.label1.TabIndex = 6;
-            this.label1.Text = "10.000.000VND";
+            this.label1.Text = "6.000.000VND";
             // 
             // btnDatTour_pn1
             // 
@@ -674,6 +683,58 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label5);
+            this.panel7.Controls.Add(this.lblSoNguoiPhucVu);
+            this.panel7.Controls.Add(this.pictureBox5);
+            this.panel7.Location = new System.Drawing.Point(14, 25);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(491, 179);
+            this.panel7.TabIndex = 11;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.panel7);
+            this.groupBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.groupBox5.Location = new System.Drawing.Point(17, 365);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(523, 214);
+            this.groupBox5.TabIndex = 12;
+            this.groupBox5.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(32, 13);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(188, 152);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // lblSoNguoiPhucVu
+            // 
+            this.lblSoNguoiPhucVu.AutoSize = true;
+            this.lblSoNguoiPhucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoNguoiPhucVu.Location = new System.Drawing.Point(339, 52);
+            this.lblSoNguoiPhucVu.Name = "lblSoNguoiPhucVu";
+            this.lblSoNguoiPhucVu.Size = new System.Drawing.Size(37, 39);
+            this.lblSoNguoiPhucVu.TabIndex = 1;
+            this.lblSoNguoiPhucVu.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label5.Location = new System.Drawing.Point(276, 119);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(161, 25);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "người đã phục vụ";
+            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -703,6 +764,10 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -751,6 +816,11 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialScrollBar materialScrollBar1;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblSoNguoiPhucVu;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
 
