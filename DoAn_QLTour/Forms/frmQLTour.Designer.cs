@@ -62,7 +62,9 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1445, 80);
+
+            this.panel1.Size = new System.Drawing.Size(1452, 80);
+
             this.panel1.TabIndex = 50;
             // 
             // groupBox1
@@ -180,7 +182,7 @@
             this.dgvTour.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTour.Location = new System.Drawing.Point(0, 80);
             this.dgvTour.Name = "dgvTour";
-            this.dgvTour.Size = new System.Drawing.Size(1445, 653);
+            this.dgvTour.Size = new System.Drawing.Size(1452, 653);
             this.dgvTour.TabIndex = 58;
             this.dgvTour.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTour_CellClick);
             this.dgvTour.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTour_CellDoubleClick);
@@ -230,7 +232,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1445, 733);
+            this.ClientSize = new System.Drawing.Size(1452, 733);
             this.Controls.Add(this.dgvTour);
             this.Controls.Add(this.panel1);
             this.Name = "frmQLTour";
