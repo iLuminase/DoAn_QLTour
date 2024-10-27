@@ -28,17 +28,7 @@ namespace DoAn_QLTour.Forms
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin Tour.");
                 return;
             }
-
-            DateTime ngayBatDau = DateTime.Parse(dtpNgayBD.Text);
-            DateTime ngayKetThuc = DateTime.Parse(dtpNgayKT.Text);
-
-            // Kiểm tra ngày kết thúc phải lớn hơn ngày bắt đầu
-            if (ngayKetThuc <= ngayBatDau)
-            {
-                MessageBox.Show("Ngày kết thúc phải lớn hơn ngày bắt đầu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                dtpNgayKT.Focus();
-                return;
-            }
+            db.Tours.FindAsync();
             // kiem tra neu TenTour da ton tai thi cap nhat lai thong tin
             Tour t = db.Tours.FirstOrDefault(tr => tr.TenTour.ToString().CompareTo(txtTenTour.Text.Trim()) == 0);
             if (t != null)
@@ -47,8 +37,7 @@ namespace DoAn_QLTour.Forms
                 t.LichTrinh = txtLichTrinh.Text;
                 t.MoTa = txtMoTa.Text;
                 t.GiaTien = decimal.Parse(txtGiaTien.Text);
-                t.NgayBatDau = DateTime.Parse(dtpNgayBD.Text);
-                t.NgayKetThuc = DateTime.Parse(dtpNgayKT.Text);
+
 
                 db.Tours.AddOrUpdate(t);
                 db.SaveChanges();
@@ -56,15 +45,14 @@ namespace DoAn_QLTour.Forms
             }
             else
             {
-             // Nguoc lai thi tao moi tour
+                // Nguoc lai thi tao moi tour
                 Tour tour = new Tour()
                 {
                     TenTour = txtTenTour.Text,
                     LichTrinh = txtLichTrinh.Text,
                     MoTa = txtMoTa.Text,
                     GiaTien = int.Parse(txtGiaTien.Text),
-                    NgayBatDau = DateTime.Parse(dtpNgayBD.Text),
-                    NgayKetThuc = DateTime.Parse(dtpNgayKT.Text)
+
                 };
                 db.Tours.Add(tour);
                 db.SaveChanges();
@@ -72,7 +60,6 @@ namespace DoAn_QLTour.Forms
             }
 
         }
-
         private void frmThemHoacSuaTour_Load(object sender, EventArgs e)
         {
 

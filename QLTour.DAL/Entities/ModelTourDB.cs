@@ -12,19 +12,19 @@ namespace QLTour.DAL.Entities
         {
         }
 
-        public virtual DbSet<Account> Account { get; set; }
-        public virtual DbSet<ChiTietDatTour> ChiTietDatTour { get; set; }
-        public virtual DbSet<DatDichVu> DatDichVu { get; set; }
-        public virtual DbSet<DatTour> DatTour { get; set; }
-        public virtual DbSet<DichVu> DichVu { get; set; }
-        public virtual DbSet<Feedback> Feedback { get; set; }
-        public virtual DbSet<KhachHang> KhachHang { get; set; }
-        public virtual DbSet<KhachHangKhuyenMai> KhachHangKhuyenMai { get; set; }
-        public virtual DbSet<KhuyenMai> KhuyenMai { get; set; }
-        public virtual DbSet<NhanVien> NhanVien { get; set; }
-        public virtual DbSet<Role> Role { get; set; }
-        public virtual DbSet<Tour> Tour { get; set; }
-        public virtual DbSet<ThanhToan> ThanhToan { get; set; }
+        public virtual DbSet<Account> Accounts { get; set; }
+        public virtual DbSet<ChiTietDatTour> ChiTietDatTours { get; set; }
+        public virtual DbSet<DatDichVu> DatDichVus { get; set; }
+        public virtual DbSet<DatTour> DatTours { get; set; }
+        public virtual DbSet<DichVu> DichVus { get; set; }
+        public virtual DbSet<Feedback> Feedbacks { get; set; }
+        public virtual DbSet<KhachHang> KhachHangs { get; set; }
+        public virtual DbSet<KhachHangKhuyenMai> KhachHangKhuyenMais { get; set; }
+        public virtual DbSet<KhuyenMai> KhuyenMais { get; set; }
+        public virtual DbSet<NhanVien> NhanViens { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<Tour> Tours { get; set; }
+        public virtual DbSet<ThanhToan> ThanhToans { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
