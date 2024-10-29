@@ -87,7 +87,15 @@ namespace DoAn_QLTour
             panel1.Visible = true;
         }
 
+        private void btnDatCho_Click(object sender, EventArgs e)
+        {
 
 
+            QLDatCho frm = new QLDatCho();
+            hideForm(frm);
+            frm.MdiParent = this; // Giúp giao diện MDI chỉ nằm trong form cha (frmMain)
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
     }
 }

@@ -12,8 +12,10 @@ namespace QLTour.DAL.Entities
         {
         }
 
+        public virtual DbSet<ChiTietDatTour> ChiTietDatTours { get; set; }
         public virtual DbSet<DatDichVu> DatDichVus { get; set; }
         public virtual DbSet<DatTour> DatTours { get; set; }
+        public virtual DbSet<DeleteLog> DeleteLogs { get; set; }
         public virtual DbSet<DichVu> DichVus { get; set; }
         public virtual DbSet<Feedback> Feedbacks { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
@@ -25,6 +27,11 @@ namespace QLTour.DAL.Entities
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<DatTour>()
+                .HasMany(e => e.ChiTietDatTours)
+                .WithRequired(e => e.DatTour)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<DatTour>()
                 .HasMany(e => e.DatDichVus)
                 .WithRequired(e => e.DatTour)
@@ -41,17 +48,13 @@ namespace QLTour.DAL.Entities
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<DichVu>()
-                .Property(e => e.TinhTrang)
-                .IsFixedLength();
-
-            modelBuilder.Entity<DichVu>()
                 .HasMany(e => e.DatDichVus)
                 .WithRequired(e => e.DichVu)
                 .HasForeignKey(e => e.MaDichVu)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<KhachHang>()
-                .HasMany(e => e.DatTours)
+                .HasMany(e => e.ChiTietDatTours)
                 .WithRequired(e => e.KhachHang)
                 .WillCascadeOnDelete(false);
 
@@ -71,22 +74,9 @@ namespace QLTour.DAL.Entities
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<NhanVien>()
-                .Property(e => e.TrangThai)
-                .IsFixedLength();
-
-            modelBuilder.Entity<NhanVien>()
-                .HasMany(e => e.DatTours)
-                .WithRequired(e => e.NhanVien)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Tour>()
-                .Property(e => e.TrangThai)
-                .IsFixedLength();
-
-            modelBuilder.Entity<Tour>()
-                .HasMany(e => e.DatTours)
-                .WithRequired(e => e.Tour)
-                .WillCascadeOnDelete(false);
+                .HasMany(e => e.Tours)
+                .WithOptional(e => e.NhanVien)
+                .HasForeignKey(e => e.HuongDanVienID);
 
             modelBuilder.Entity<Tour>()
                 .HasMany(e => e.Feedbacks)

@@ -12,7 +12,7 @@ namespace QLTour.DAL.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public KhachHang()
         {
-            DatTours = new HashSet<DatTour>();
+            ChiTietDatTours = new HashSet<ChiTietDatTour>();
             Feedbacks = new HashSet<Feedback>();
         }
 
@@ -36,9 +36,11 @@ namespace QLTour.DAL.Entities
         public string CMND { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DatTour> DatTours { get; set; }
+        public virtual ICollection<ChiTietDatTour> ChiTietDatTours { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Feedback> Feedbacks { get; set; }
+
+  
     }
 }

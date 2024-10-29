@@ -12,6 +12,7 @@ namespace QLTour.DAL.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DatTour()
         {
+            ChiTietDatTours = new HashSet<ChiTietDatTour>();
             DatDichVus = new HashSet<DatDichVu>();
             KhachHangKhuyenMais = new HashSet<KhachHangKhuyenMai>();
             ThanhToans = new HashSet<ThanhToan>();
@@ -20,28 +21,16 @@ namespace QLTour.DAL.Entities
         [Key]
         public int MaDatTour { get; set; }
 
-        public int MaKhachHang { get; set; }
-
-        public int MaTour { get; set; }
+        public int? MaTour { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime NgayDat { get; set; }
 
-        public int? SoLuongNguoi { get; set; }
-
-        public decimal? TongTien { get; set; }
-
-        [StringLength(50)]
-        public string TinhTrang { get; set; }
-
-        public int NhanVienID { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietDatTour> ChiTietDatTours { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DatDichVu> DatDichVus { get; set; }
-
-        public virtual KhachHang KhachHang { get; set; }
-
-        public virtual NhanVien NhanVien { get; set; }
 
         public virtual Tour Tour { get; set; }
 

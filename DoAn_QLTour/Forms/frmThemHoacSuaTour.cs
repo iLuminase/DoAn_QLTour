@@ -47,8 +47,7 @@ namespace DoAn_QLTour.Forms
                 t.LichTrinh = txtLichTrinh.Text;
                 t.MoTa = txtMoTa.Text;
                 t.GiaTien = decimal.Parse(txtGiaTien.Text);
-                t.NgayBatDau = DateTime.Parse(dtpNgayBD.Text);
-                t.NgayKetThuc = DateTime.Parse(dtpNgayKT.Text);
+               
 
                 db.Tours.AddOrUpdate(t);
                 db.SaveChanges();
@@ -63,8 +62,7 @@ namespace DoAn_QLTour.Forms
                     LichTrinh = txtLichTrinh.Text,
                     MoTa = txtMoTa.Text,
                     GiaTien = int.Parse(txtGiaTien.Text),
-                    NgayBatDau = DateTime.Parse(dtpNgayBD.Text),
-                    NgayKetThuc = DateTime.Parse(dtpNgayKT.Text)
+                 
                 };
                 db.Tours.Add(tour);
                 db.SaveChanges();
