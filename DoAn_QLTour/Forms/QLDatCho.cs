@@ -16,14 +16,13 @@ namespace DoAn_QLTour.Forms
     public partial class QLDatCho : Form
     {
         private readonly TourService tourService = new TourService();
-        private readonly KhachHangService khachHangService = new KhachHangService();
+        private readonly QLTour.BUS.KhachHangService khachHangService = new QLTour.BUS.KhachHangService();
         ModelTourDB db = new ModelTourDB();
         public QLDatCho()
         {
-          
+
             InitializeComponent();
-            var listKhachHang = khachHangService.GetAll();
-            BindGrid(listKhachHang);
+
 
 
         }
@@ -39,83 +38,51 @@ namespace DoAn_QLTour.Forms
                 dgvDatCho.Rows[index].Cells[3].Value = item.Email;
                 dgvDatCho.Rows[index].Cells[4].Value = item.DiaChi;
                 dgvDatCho.Rows[index].Cells[5].Value = item.CMND;
-                //dgvTour.Rows[index].Cells[5].Value = item.NgayBatDau != null
-                //     ? item.NgayBatDau.Value.ToString("dd/MM/yyyy")
-                //     : string.Empty;
 
-                //dgvTour.Rows[index].Cells[6].Value = item.NgayKetThuc != null
-                //    ? item.NgayKetThuc.Value.ToString("dd/MM/yyyy")
-                //    : string.Empty;
-              
+
             }
         }
 
         private void QLDatCho_Load(object sender, EventArgs e)
         {
+            var listKhachHang = khachHangService.GetAll();
+            BindGrid(listKhachHang);
 
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-           
-            string maKhachHang = txtMaKH.Text.Trim();
-            string hoTen = txtHoTen.Text.Trim();
-            string soDienThoai = txtSDT.Text.Trim();
-            string email = txtEmail.Text.Trim();
-            string diaChi = txtDiaChi.Text.Trim();
-            string cmnd = txtCMND.Text.Trim();
+            // Lấy thông tin từ các TextBox
+            var maKhachHang = txtMaKH.Text.Trim();
+            var hoTen = txtHoTen.Text.Trim();
+            var soDienThoai = txtSDT.Text.Trim();
+            var email = txtEmail.Text.Trim();
+            var diaChi = txtDiaChi.Text.Trim();
+            var cmnd = txtCMND.Text.Trim();
 
-           
-            bool isValid = true;
-            string errorMessage = "";
+            // Kiểm tra ràng buộc
+            if (string.IsNullOrWhiteSpace(maKhachHang) ||
+                string.IsNullOrWhiteSpace(hoTen) ||
+                string.IsNullOrWhiteSpace(soDienThoai) ||
+                string.IsNullOrWhiteSpace(email) ||
+                string.IsNullOrWhiteSpace(diaChi) ||
+                string.IsNullOrWhiteSpace(cmnd))
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            } 
 
-           
-            if (string.IsNullOrEmpty(maKhachHang))
+            // Kiểm tra số điện thoại
+            if (soDienThoai.Length != 10 || !soDienThoai.StartsWith("0"))
             {
-                errorMessage += "Mã khách hàng không được để trống!\n";
-                isValid = false;
-            }
-            else if (khachHangService.IsMaKhachHangExists(maKhachHang))
-            {
-                errorMessage += "Mã khách hàng đã tồn tại. Vui lòng nhập mã khác!\n";
-                isValid = false;
-            }
-
-         
-            if (string.IsNullOrEmpty(soDienThoai))
-            {
-                errorMessage += "Số điện thoại không được để trống!\n";
-                isValid = false;
-            }
-            else if (!soDienThoai.StartsWith("0") || soDienThoai.Length != 10)
-            {
-                errorMessage += "Số điện thoại phải bắt đầu bằng 0 và đủ 10 số!\n";
-                isValid = false;
-            }
-
-            
-            if (string.IsNullOrEmpty(email))
-            {
-                errorMessage += "Email không được để trống!\n";
-                isValid = false;
-            }
-            else if (!email.EndsWith("@gmail.com"))
-            {
-                errorMessage += "Email phải có định dạng @gmail.com!\n";
-                isValid = false;
-            }
-
-            
-            if (!isValid)
-            {
-                MessageBox.Show(errorMessage, "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Số điện thoại phải đủ 10 số và bắt đầu bằng số 0!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-           
-            KhachHang khachHang = new KhachHang
+            // Tạo đối tượng KhachHang
+            var khachHang = new KhachHang
             {
-                MaKhachHang = maKhachHang,
+                MaKhachHang = int.Parse(maKhachHang),
                 HoTen = hoTen,
                 SoDienThoai = soDienThoai,
                 Email = email,
@@ -123,22 +90,28 @@ namespace DoAn_QLTour.Forms
                 CMND = cmnd
             };
 
-           
-            khachHangService.Add(khachHang);
+            // Gọi phương thức thêm khách hàng từ dịch vụ
+            try
+            {
+                khachHangService.Add(khachHang);
+                MessageBox.Show("Thêm khách hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            
-            txtMaKH.Text = "";
-            txtHoTen.Text = "";
-            txtSDT.Text = "";
-            txtEmail.Text = "";
-            txtDiaChi.Text = "";
-            txtCMND.Text = "";
+                // Cập nhật lại Grid
+                var listKhachHang = khachHangService.GetAll();
+                BindGrid(listKhachHang);
 
-            
-            BindGrid(khachHangService.GetAll());
-
-           
-            MessageBox.Show("Thêm khách hàng thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Xóa thông tin trong các TextBox
+                txtMaKH.Clear();
+                txtHoTen.Clear();
+                txtSDT.Clear();
+                txtEmail.Clear();
+                txtDiaChi.Clear();
+                txtCMND.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Có lỗi xảy ra: {ex.Message}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -150,28 +123,29 @@ namespace DoAn_QLTour.Forms
                 return;
             }
 
-            // Lấy mã khách hàng của dòng được chọn
-            string maKhachHang = dgvDatCho.SelectedRows[0].Cells[0].Value.ToString();
+            // Lấy mã khách hàng từ dòng được chọn
+            var selectedRow = dgvDatCho.SelectedRows[0];
+            var maKhachHang = (int)selectedRow.Cells[0].Value; // Giả sử cột 0 là MaKhachHang
 
-            // Xác nhận việc xóa
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa khách hàng này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if
-         (result == DialogResult.No)
+            // Xác nhận xóa
+            var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa khách hàng này không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (confirmResult == DialogResult.Yes)
             {
-                return;
-            }
+                try
+                {
+                    // Gọi phương thức xóa khách hàng từ dịch vụ
+                    khachHangService.Delete(maKhachHang); // Đảm bảo rằng phương thức này đã được định nghĩa
 
-            // Gọi hàm xóa khách hàng trong service
-            if (khachHangService.Delete(maKhachHang))
-            {
-                // Cập nhật lại DataGridView
-                BindGrid(khachHangService.GetAll());
-                MessageBox.Show("Xóa khách hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Xóa khách hàng thất bại!",
-         "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Cập nhật lại Grid
+                    var listKhachHang = khachHangService.GetAll();
+                    BindGrid(listKhachHang);
+
+                    MessageBox.Show("Xóa khách hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Có lỗi xảy ra: {ex.Message}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -182,10 +156,74 @@ namespace DoAn_QLTour.Forms
             {
                 MessageBox.Show("Vui lòng chọn khách hàng cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-
             }
 
-        
+            // Lấy thông tin từ các TextBox
+            var maKhachHang = txtMaKH.Text.Trim();
+            var hoTen = txtHoTen.Text.Trim();
+            var soDienThoai = txtSDT.Text.Trim();
+            var email = txtEmail.Text.Trim();
+            var diaChi = txtDiaChi.Text.Trim();
+            var cmnd = txtCMND.Text.Trim();
+
+            // Kiểm tra ràng buộc
+            if (string.IsNullOrWhiteSpace(maKhachHang) ||
+                string.IsNullOrWhiteSpace(hoTen) ||
+                string.IsNullOrWhiteSpace(soDienThoai) ||
+                string.IsNullOrWhiteSpace(email) ||
+                string.IsNullOrWhiteSpace(diaChi) ||
+                string.IsNullOrWhiteSpace(cmnd))
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Kiểm tra số điện thoại
+            if (soDienThoai.Length != 10 || !soDienThoai.StartsWith("0"))
+            {
+                MessageBox.Show("Số điện thoại phải đủ 10 số và bắt đầu bằng số 0!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Lấy mã khách hàng từ dòng được chọn
+            var selectedRow = dgvDatCho.SelectedRows[0];
+            var id = (int)selectedRow.Cells[0].Value; // Giả sử cột 0 là MaKhachHang
+
+            // Tạo đối tượng KhachHang để cập nhật
+            var khachHang = new KhachHang
+            {
+                MaKhachHang = id,
+                HoTen = hoTen,
+                SoDienThoai = soDienThoai,
+                Email = email,
+                DiaChi = diaChi,
+                CMND = cmnd
+            };
+
+            // Gọi phương thức sửa khách hàng từ dịch vụ
+            try
+            {
+                khachHangService.Update(khachHang);
+                MessageBox.Show("Sửa thông tin khách hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Cập nhật lại Grid
+                var listKhachHang = khachHangService.GetAll();
+                BindGrid(listKhachHang);
+
+                // Xóa thông tin trong các TextBox
+                txtMaKH.Clear();
+                txtHoTen.Clear();
+                txtSDT.Clear();
+                txtEmail.Clear();
+                txtDiaChi.Clear();
+                txtCMND.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Có lỗi xảy ra: {ex.Message}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+       
     }
 }

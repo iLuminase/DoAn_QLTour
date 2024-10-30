@@ -17,23 +17,13 @@ namespace QLTour.DAL.Entities
         }
 
         [Key]
+
         public int MaKhachHang { get; set; }
-
-        [Required]
-        [StringLength(255)]
-        public string HoTen { get; set; }
-
-        [StringLength(20)]
-        public string SoDienThoai { get; set; }
-
-        [StringLength(255)]
-        public string Email { get; set; }
-
-        [StringLength(255)]
-        public string DiaChi { get; set; }
-
-        [StringLength(12)]
-        public string CMND { get; set; }
+    public string HoTen { get; set; }
+    public string SoDienThoai { get; set; }
+    public string Email { get; set; }
+    public string DiaChi { get; set; }
+    public string CMND { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietDatTour> ChiTietDatTours { get; set; }

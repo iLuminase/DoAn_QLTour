@@ -15,4 +15,20 @@ namespace QLTour.BUS.Properties
             return db.Tours.ToList();
         }
     }
+    public class KhachHangService
+    {
+        private readonly ModelTourDB db = new ModelTourDB();
+
+        public void Add(KhachHang khachHang)
+        {
+            db.KhachHangs.Add(khachHang); // Giả sử có DbSet KhachHangs trong db
+            db.SaveChanges(); // Lưu thay đổi vào cơ sở dữ liệu
+        }
+
+        public List<KhachHang> GetAll()
+        {
+            return db.KhachHangs.ToList();
+        }
+    }
+
 }

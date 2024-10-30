@@ -51,7 +51,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaKH = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatCho)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -66,11 +65,11 @@
             this.Email,
             this.DiaChi,
             this.CMND});
-            this.dgvDatCho.Location = new System.Drawing.Point(690, 12);
+            this.dgvDatCho.Location = new System.Drawing.Point(448, 22);
             this.dgvDatCho.Name = "dgvDatCho";
             this.dgvDatCho.RowHeadersWidth = 51;
             this.dgvDatCho.RowTemplate.Height = 24;
-            this.dgvDatCho.Size = new System.Drawing.Size(806, 723);
+            this.dgvDatCho.Size = new System.Drawing.Size(806, 476);
             this.dgvDatCho.TabIndex = 0;
             // 
             // MaKH
@@ -132,9 +131,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtMaKH);
-            this.groupBox1.Location = new System.Drawing.Point(12, 109);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(644, 557);
+            this.groupBox1.Size = new System.Drawing.Size(430, 557);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Khách Hàng";
@@ -146,7 +145,7 @@
             this.btnSua.Depth = 0;
             this.btnSua.HighEmphasis = true;
             this.btnSua.Icon = null;
-            this.btnSua.Location = new System.Drawing.Point(420, 498);
+            this.btnSua.Location = new System.Drawing.Point(289, 491);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSua.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSua.Name = "btnSua";
@@ -166,7 +165,7 @@
             this.btnXoa.Depth = 0;
             this.btnXoa.HighEmphasis = true;
             this.btnXoa.Icon = null;
-            this.btnXoa.Location = new System.Drawing.Point(266, 498);
+            this.btnXoa.Location = new System.Drawing.Point(188, 491);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnXoa.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnXoa.Name = "btnXoa";
@@ -186,7 +185,7 @@
             this.btnThem.Depth = 0;
             this.btnThem.HighEmphasis = true;
             this.btnThem.Icon = null;
-            this.btnThem.Location = new System.Drawing.Point(115, 498);
+            this.btnThem.Location = new System.Drawing.Point(91, 491);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnThem.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnThem.Name = "btnThem";
@@ -203,35 +202,35 @@
             // 
             this.txtCMND.Location = new System.Drawing.Point(149, 422);
             this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(257, 22);
+            this.txtCMND.Size = new System.Drawing.Size(204, 22);
             this.txtCMND.TabIndex = 11;
             // 
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(149, 339);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(257, 22);
+            this.txtDiaChi.Size = new System.Drawing.Size(215, 22);
             this.txtDiaChi.TabIndex = 10;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(149, 265);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(257, 22);
+            this.txtEmail.Size = new System.Drawing.Size(215, 22);
             this.txtEmail.TabIndex = 9;
             // 
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(149, 198);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(257, 22);
+            this.txtSDT.Size = new System.Drawing.Size(163, 22);
             this.txtSDT.TabIndex = 8;
             // 
             // txtHoTen
             // 
             this.txtHoTen.Location = new System.Drawing.Point(149, 131);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(257, 22);
+            this.txtHoTen.Size = new System.Drawing.Size(215, 22);
             this.txtHoTen.TabIndex = 7;
             // 
             // label6
@@ -292,25 +291,14 @@
             // 
             this.txtMaKH.Location = new System.Drawing.Point(149, 67);
             this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(257, 22);
+            this.txtMaKH.Size = new System.Drawing.Size(163, 22);
             this.txtMaKH.TabIndex = 0;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(81, 34);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(460, 29);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Xin Quý Khách Nhập Đầy Đủ Thông Tin";
             // 
             // QLDatCho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1554, 784);
-            this.Controls.Add(this.label7);
+            this.ClientSize = new System.Drawing.Size(1278, 588);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvDatCho);
             this.Name = "QLDatCho";
@@ -320,7 +308,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -349,6 +336,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMaKH;
-        private System.Windows.Forms.Label label7;
     }
 }
