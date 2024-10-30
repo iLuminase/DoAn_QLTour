@@ -29,16 +29,7 @@ namespace DoAn_QLTour.Forms
                 return;
             }
 
-            DateTime ngayBatDau = DateTime.Parse(dtpNgayBD.Text);
-            DateTime ngayKetThuc = DateTime.Parse(dtpNgayKT.Text);
-
-            // Kiểm tra ngày kết thúc phải lớn hơn ngày bắt đầu
-            if (ngayKetThuc <= ngayBatDau)
-            {
-                MessageBox.Show("Ngày kết thúc phải lớn hơn ngày bắt đầu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                dtpNgayKT.Focus();
-                return;
-            }
+   
             // kiem tra neu TenTour da ton tai thi cap nhat lai thong tin
             Tour t = db.Tours.FirstOrDefault(tr => tr.TenTour.ToString().CompareTo(txtTenTour.Text.Trim()) == 0);
             if (t != null)

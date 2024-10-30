@@ -17,15 +17,14 @@ namespace DoAn_QLTour.Forms
     {
         private readonly TourService tourService = new TourService();
         private readonly QLTour.BUS.KhachHangService khachHangService = new QLTour.BUS.KhachHangService();
+        private readonly DatTourService datTourService = new DatTourService();
         ModelTourDB db = new ModelTourDB();
+
         public QLDatCho()
         {
-
             InitializeComponent();
-
-
-
         }
+
         private void BindGrid(List<KhachHang> listKhachHang)
         {
             dgvDatCho.Rows.Clear();
@@ -38,8 +37,6 @@ namespace DoAn_QLTour.Forms
                 dgvDatCho.Rows[index].Cells[3].Value = item.Email;
                 dgvDatCho.Rows[index].Cells[4].Value = item.DiaChi;
                 dgvDatCho.Rows[index].Cells[5].Value = item.CMND;
-
-
             }
         }
 
@@ -47,13 +44,51 @@ namespace DoAn_QLTour.Forms
         {
             var listKhachHang = khachHangService.GetAll();
             BindGrid(listKhachHang);
+            // Đăng ký sự kiện CellClick
+            dgvDatCho.CellClick += new DataGridViewCellEventHandler(dgvDatCho_CellClick);
+           
 
+            // Tải dữ liệu ChiTietDatTour
+            LoadChiTietDatTour();
+
+            // Đăng ký sự kiện CellClick
+            dgvDatCho.CellClick += new DataGridViewCellEventHandler(dgvDatCho_CellClick);
         }
+        private void LoadChiTietDatTour()
+        {
+            var listChiTietDatTour = datTourService.GetAllChiTietDatTour();
+            BindChiTietDatTourGrid(listChiTietDatTour);
+        }
+        private void BindChiTietDatTourGrid(List<ChiTietDatTour> listChiTietDatTour)
+        {
+            dgvChiTietDatTour.Rows.Clear();
+            foreach (var item in listChiTietDatTour)
+            {
+                int index = dgvChiTietDatTour.Rows.Add();
+                dgvChiTietDatTour.Rows[index].Cells[0].Value = item.MaDatTour; // Mã đặt tour
+                dgvChiTietDatTour.Rows[index].Cells[1].Value = item.MaKhachHang; // Mã khách hàng
+                
+            }
+        }
+        private void dgvDatCho_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Kiểm tra nếu người dùng đã chọn một dòng hợp lệ
+            if (e.RowIndex >= 0)
+            {
+                var selectedRow = dgvDatCho.Rows[e.RowIndex];
+                txtMaKH.Text = selectedRow.Cells[0].Value.ToString(); // Mã khách hàng
+                txtHoTen.Text = selectedRow.Cells[1].Value.ToString();
+                txtSDT.Text = selectedRow.Cells[2].Value.ToString();
+                txtEmail.Text = selectedRow.Cells[3].Value.ToString();
+                txtDiaChi.Text = selectedRow.Cells[4].Value.ToString();
+                txtCMND.Text = selectedRow.Cells[5].Value.ToString();
+            }
+        }
+      
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             // Lấy thông tin từ các TextBox
-            var maKhachHang = txtMaKH.Text.Trim();
             var hoTen = txtHoTen.Text.Trim();
             var soDienThoai = txtSDT.Text.Trim();
             var email = txtEmail.Text.Trim();
@@ -61,8 +96,7 @@ namespace DoAn_QLTour.Forms
             var cmnd = txtCMND.Text.Trim();
 
             // Kiểm tra ràng buộc
-            if (string.IsNullOrWhiteSpace(maKhachHang) ||
-                string.IsNullOrWhiteSpace(hoTen) ||
+            if (string.IsNullOrWhiteSpace(hoTen) ||
                 string.IsNullOrWhiteSpace(soDienThoai) ||
                 string.IsNullOrWhiteSpace(email) ||
                 string.IsNullOrWhiteSpace(diaChi) ||
@@ -70,7 +104,7 @@ namespace DoAn_QLTour.Forms
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-            } 
+            }
 
             // Kiểm tra số điện thoại
             if (soDienThoai.Length != 10 || !soDienThoai.StartsWith("0"))
@@ -82,7 +116,6 @@ namespace DoAn_QLTour.Forms
             // Tạo đối tượng KhachHang
             var khachHang = new KhachHang
             {
-                MaKhachHang = int.Parse(maKhachHang),
                 HoTen = hoTen,
                 SoDienThoai = soDienThoai,
                 Email = email,
@@ -125,7 +158,7 @@ namespace DoAn_QLTour.Forms
 
             // Lấy mã khách hàng từ dòng được chọn
             var selectedRow = dgvDatCho.SelectedRows[0];
-            var maKhachHang = (int)selectedRow.Cells[0].Value; // Giả sử cột 0 là MaKhachHang
+            var maKhachHang = (int)selectedRow.Cells[0].Value;
 
             // Xác nhận xóa
             var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa khách hàng này không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -134,7 +167,7 @@ namespace DoAn_QLTour.Forms
                 try
                 {
                     // Gọi phương thức xóa khách hàng từ dịch vụ
-                    khachHangService.Delete(maKhachHang); // Đảm bảo rằng phương thức này đã được định nghĩa
+                    khachHangService.Delete(maKhachHang);
 
                     // Cập nhật lại Grid
                     var listKhachHang = khachHangService.GetAll();
@@ -159,7 +192,6 @@ namespace DoAn_QLTour.Forms
             }
 
             // Lấy thông tin từ các TextBox
-            var maKhachHang = txtMaKH.Text.Trim();
             var hoTen = txtHoTen.Text.Trim();
             var soDienThoai = txtSDT.Text.Trim();
             var email = txtEmail.Text.Trim();
@@ -167,8 +199,7 @@ namespace DoAn_QLTour.Forms
             var cmnd = txtCMND.Text.Trim();
 
             // Kiểm tra ràng buộc
-            if (string.IsNullOrWhiteSpace(maKhachHang) ||
-                string.IsNullOrWhiteSpace(hoTen) ||
+            if (string.IsNullOrWhiteSpace(hoTen) ||
                 string.IsNullOrWhiteSpace(soDienThoai) ||
                 string.IsNullOrWhiteSpace(email) ||
                 string.IsNullOrWhiteSpace(diaChi) ||
@@ -192,7 +223,7 @@ namespace DoAn_QLTour.Forms
             // Tạo đối tượng KhachHang để cập nhật
             var khachHang = new KhachHang
             {
-                MaKhachHang = id,
+                MaKhachHang = id, // Giữ mã khách hàng không thay đổi
                 HoTen = hoTen,
                 SoDienThoai = soDienThoai,
                 Email = email,
