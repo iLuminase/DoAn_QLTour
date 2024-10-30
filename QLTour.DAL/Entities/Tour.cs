@@ -12,8 +12,8 @@ namespace QLTour.DAL.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Tour()
         {
-            DatTour = new HashSet<DatTour>();
-            Feedback = new HashSet<Feedback>();
+            DatTours = new HashSet<DatTour>();
+            Feedbacks = new HashSet<Feedback>();
         }
 
         [Key]
@@ -34,10 +34,10 @@ namespace QLTour.DAL.Entities
         public int? HuongDanVienID { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DatTour> DatTour { get; set; }
+        public virtual ICollection<DatTour> DatTours { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Feedback> Feedback { get; set; }
+        public virtual ICollection<Feedback> Feedbacks { get; set; }
 
         public virtual NhanVien NhanVien { get; set; }
     }

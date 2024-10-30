@@ -396,3 +396,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+DoAn_QLTour/App.config
+DoAn_QLTour/App.config
+QLTour.BUS/App.config
+QLTour.DAL/App.config
+QLTour.DAL/App.config

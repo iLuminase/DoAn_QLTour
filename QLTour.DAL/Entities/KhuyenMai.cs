@@ -12,7 +12,7 @@ namespace QLTour.DAL.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public KhuyenMai()
         {
-            KhachHangKhuyenMai = new HashSet<KhachHangKhuyenMai>();
+            KhachHangKhuyenMais = new HashSet<KhachHangKhuyenMai>();
         }
 
         public int KhuyenMaiID { get; set; }
@@ -32,6 +32,6 @@ namespace QLTour.DAL.Entities
         public int? SoLuong { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<KhachHangKhuyenMai> KhachHangKhuyenMai { get; set; }
+        public virtual ICollection<KhachHangKhuyenMai> KhachHangKhuyenMais { get; set; }
     }
 }

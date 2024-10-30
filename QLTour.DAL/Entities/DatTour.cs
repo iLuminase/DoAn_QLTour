@@ -12,10 +12,10 @@ namespace QLTour.DAL.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DatTour()
         {
-            ChiTietDatTour = new HashSet<ChiTietDatTour>();
-            DatDichVu = new HashSet<DatDichVu>();
-            KhachHangKhuyenMai = new HashSet<KhachHangKhuyenMai>();
-            ThanhToan = new HashSet<ThanhToan>();
+            ChiTietDatTours = new HashSet<ChiTietDatTour>();
+            DatDichVus = new HashSet<DatDichVu>();
+            KhachHangKhuyenMais = new HashSet<KhachHangKhuyenMai>();
+            ThanhToans = new HashSet<ThanhToan>();
         }
 
         [Key]
@@ -27,17 +27,17 @@ namespace QLTour.DAL.Entities
         public DateTime NgayDat { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietDatTour> ChiTietDatTour { get; set; }
+        public virtual ICollection<ChiTietDatTour> ChiTietDatTours { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DatDichVu> DatDichVu { get; set; }
+        public virtual ICollection<DatDichVu> DatDichVus { get; set; }
 
         public virtual Tour Tour { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<KhachHangKhuyenMai> KhachHangKhuyenMai { get; set; }
+        public virtual ICollection<KhachHangKhuyenMai> KhachHangKhuyenMais { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ThanhToan> ThanhToan { get; set; }
+        public virtual ICollection<ThanhToan> ThanhToans { get; set; }
     }
 }

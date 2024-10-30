@@ -23,8 +23,8 @@ namespace QLTour.DAL.Entities
         public virtual DbSet<KhuyenMai> KhuyenMais { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
-        public virtual DbSet<Tour> Tours { get; set; }
         public virtual DbSet<ThanhToan> ThanhToans { get; set; }
+        public virtual DbSet<Tour> Tours { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -37,38 +37,38 @@ namespace QLTour.DAL.Entities
                 .IsUnicode(false);
 
             modelBuilder.Entity<DatTour>()
-                .HasMany(e => e.ChiTietDatTour)
+                .HasMany(e => e.ChiTietDatTours)
                 .WithRequired(e => e.DatTour)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<DatTour>()
-                .HasMany(e => e.DatDichVu)
+                .HasMany(e => e.DatDichVus)
                 .WithRequired(e => e.DatTour)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<DatTour>()
-                .HasMany(e => e.KhachHangKhuyenMai)
+                .HasMany(e => e.KhachHangKhuyenMais)
                 .WithRequired(e => e.DatTour)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<DatTour>()
-                .HasMany(e => e.ThanhToan)
+                .HasMany(e => e.ThanhToans)
                 .WithRequired(e => e.DatTour)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<DichVu>()
-                .HasMany(e => e.DatDichVu)
+                .HasMany(e => e.DatDichVus)
                 .WithRequired(e => e.DichVu)
                 .HasForeignKey(e => e.MaDichVu)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<KhachHang>()
-                .HasMany(e => e.ChiTietDatTour)
+                .HasMany(e => e.ChiTietDatTours)
                 .WithRequired(e => e.KhachHang)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<KhachHang>()
-                .HasMany(e => e.Feedback)
+                .HasMany(e => e.Feedbacks)
                 .WithRequired(e => e.KhachHang)
                 .WillCascadeOnDelete(false);
 
@@ -77,23 +77,23 @@ namespace QLTour.DAL.Entities
                 .HasPrecision(5, 2);
 
             modelBuilder.Entity<KhuyenMai>()
-                .HasMany(e => e.KhachHangKhuyenMai)
+                .HasMany(e => e.KhachHangKhuyenMais)
                 .WithRequired(e => e.KhuyenMai)
                 .HasForeignKey(e => e.MaKhuyenMai)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<NhanVien>()
-                .HasMany(e => e.Tour)
+                .HasMany(e => e.Tours)
                 .WithOptional(e => e.NhanVien)
                 .HasForeignKey(e => e.HuongDanVienID);
 
             modelBuilder.Entity<Role>()
-                .HasMany(e => e.Account)
+                .HasMany(e => e.Accounts)
                 .WithRequired(e => e.Role)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Tour>()
-                .HasMany(e => e.Feedback)
+                .HasMany(e => e.Feedbacks)
                 .WithRequired(e => e.Tour)
                 .WillCascadeOnDelete(false);
         }
