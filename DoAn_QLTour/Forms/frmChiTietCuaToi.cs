@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity.Migrations;
-using QLTour.BUS.Properties;
+using QLTour.BUS;
 namespace DoAn_QLTour.Forms
 {
     public partial class frmChiTietCuaToi : MaterialSkin.Controls.MaterialForm

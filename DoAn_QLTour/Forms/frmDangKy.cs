@@ -15,7 +15,7 @@ namespace DoAn_QLTour.Forms
     public partial class frmDangKy : MaterialSkin.Controls.MaterialForm
     {
         // Biến connectionString được định nghĩa ở đầu lớp frmRegister, đảm bảo rằng nó có thể được sử dụng trong các phương thức khác trong cùng một lớp.
-        private string connectionString = "Data Source=DESKTOP-LSF5N86\\NHAN;Initial Catalog=QuanLyTour;Integrated Security=True"; // Thay đổi thông tin kết nối
+        private string connectionString = "Data Source=_HEHENIKEN;Initial Catalog=QuanLyTour;Integrated Security=True"; // Thay đổi thông tin kết nối
         public frmDangKy()
         {
             InitializeComponent();
@@ -64,9 +64,9 @@ namespace DoAn_QLTour.Forms
 
         private void materialButtonDangKy_Click(object sender, EventArgs e)
         {
-            string email = materialMaskedTextBoxEmail.Text.Trim();
-            string password = materialMaskedTextBoxPassword.Text.Trim();
-            string confirmPassword = materialMaskedTextBoxConfirmPassword.Text.Trim();
+            string email = txtEmail.Text.Trim();
+            string password = txtPassword.Text.Trim();
+            string confirmPassword = txtPassword2.Text.Trim();
 
             // Ràng buộc đầu vào
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword))
@@ -89,6 +89,28 @@ namespace DoAn_QLTour.Forms
 
             // Đăng ký người dùng
             RegisterUser(email, password);
+            frmDangNhap frm = new frmDangNhap();
+            frm.Show();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void materialLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
