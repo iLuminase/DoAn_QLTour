@@ -12,7 +12,6 @@ namespace QLTour.DAL.Entities
         {
         }
 
-        public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<ChiTietDatTour> ChiTietDatTours { get; set; }
         public virtual DbSet<DatDichVu> DatDichVus { get; set; }
         public virtual DbSet<DatTour> DatTours { get; set; }
@@ -22,20 +21,11 @@ namespace QLTour.DAL.Entities
         public virtual DbSet<KhachHangKhuyenMai> KhachHangKhuyenMais { get; set; }
         public virtual DbSet<KhuyenMai> KhuyenMais { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
-        public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<ThanhToan> ThanhToans { get; set; }
         public virtual DbSet<Tour> Tours { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Account>()
-                .Property(e => e.Email)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Account>()
-                .Property(e => e.Password)
-                .IsUnicode(false);
-
             modelBuilder.Entity<DatTour>()
                 .HasMany(e => e.ChiTietDatTours)
                 .WithRequired(e => e.DatTour)
@@ -80,16 +70,6 @@ namespace QLTour.DAL.Entities
                 .HasMany(e => e.KhachHangKhuyenMais)
                 .WithRequired(e => e.KhuyenMai)
                 .HasForeignKey(e => e.MaKhuyenMai)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<NhanVien>()
-                .HasMany(e => e.Tours)
-                .WithOptional(e => e.NhanVien)
-                .HasForeignKey(e => e.HuongDanVienID);
-
-            modelBuilder.Entity<Role>()
-                .HasMany(e => e.Accounts)
-                .WithRequired(e => e.Role)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Tour>()

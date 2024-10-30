@@ -31,7 +31,7 @@ namespace QLTour.DAL.Entities
 
         public int? TinhTrang { get; set; }
 
-        public int? HuongDanVienID { get; set; }
+        public int? NhanVienID { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DatTour> DatTours { get; set; }

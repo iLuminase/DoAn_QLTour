@@ -1,6 +1,3 @@
-﻿
-
-
 ﻿USE MASTER
 GO
 CREATE DATABASE QuanLyTour
@@ -328,6 +325,19 @@ VALUES
 (9, 9, N'Tour ổn nhưng mình không hài lòng với đồ ăn.', '2024-10-28'),
 (10, 10, N'Tour khá tốt, giá cả hợp lý, rất đáng thử.', '2024-10-29')
 
+
+Go
+INSERT INTO Tour ( TenTour, LichTrinh, GiaTien, MoTa, TinhTrang, HuongDanVienID)
+VALUES (N'Tour Phú Quốc', N'Lịch trình khám phá Phú Quốc trong 3 ngày', 6000000.00, N'Tour khám phá đảo ngọc Phú Quốc', 1, 8);
+Go
+INSERT INTO Tour ( TenTour, LichTrinh, GiaTien, MoTa, TinhTrang, HuongDanVienID)
+VALUES ( N'Tour Côn Đảo', N'Lịch trình khám phá Côn Đảo trong 3 ngày', 6500000.00, N'Tour thiên nhiên và lịch sử Côn Đảo', 1, 9);
+GO
+INSERT INTO Tour ( TenTour, LichTrinh, GiaTien, MoTa, TinhTrang, HuongDanVienID)
+VALUES ( N'Tour Nha Trang', N'Lịch trình khám phá Nha Trang trong 4 ngày', 7000000.00, N'Tour khám phá biển Nha Trang', 1, 10);
+GO
+INSERT INTO Tour ( TenTour, LichTrinh, GiaTien, MoTa, TinhTrang, HuongDanVienID)
+VALUES (N'Tour Hạ Long - Hà Nội', N'Lịch trình khám phá Hạ Long và Hà Nội trong 4 ngày', 8000000.00, N'Tour văn hóa và thiên nhiên Hạ Long - Hà Nội', 1, 10);
 
 Go
 INSERT INTO DatDichVu (MaDatTour, MaDichVu, SoLuong)

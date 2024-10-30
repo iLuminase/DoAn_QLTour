@@ -9,17 +9,43 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity.Migrations;
-using QLTour.BUS.Properties;
+using QLTour.BUS;
+using QLTour.BUS.Services;
+
 namespace DoAn_QLTour.Forms
 {
     public partial class frmQLTour : Form
     {
         private readonly TourService tourService = new TourService();
+        private readonly nhanVienService nhanVienService = new nhanVienService();
         ModelTourDB db = new ModelTourDB();
+
         public frmQLTour()
         {
             InitializeComponent();
-            setGridViewStyle(dgvTour);
+            var listTour = tourService.GetAll();
+            BindGrid(listTour);
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            frmThemTour frm = new frmThemTour();
+            frm.TourUpdated += Frm_TourUpdated;
+            frm.ShowDialog();
+        }
+
+        private void Frm_TourUpdated(object sender, EventArgs e)
+        {
+            // Refresh the DataGridView
+            LoadData();
+        }
+        private void EditForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Refresh the DataGridView when the edit form is closed
+            LoadData();
+        }
+        private void LoadData()
+        {
             var listTour = tourService.GetAll();
             BindGrid(listTour);
         }
@@ -29,37 +55,44 @@ namespace DoAn_QLTour.Forms
             dgvTour.Rows.Clear();
             foreach (var item in listTour)
             {
+                // Skip tours that are not active if the user is a customer
+                if (item.TinhTrang != 1 && IsCustomerUser())
+                {
+                    continue;
+                }
+
                 int index = dgvTour.Rows.Add();
                 dgvTour.Rows[index].Cells[0].Value = item.MaTour;
                 dgvTour.Rows[index].Cells[1].Value = item.TenTour;
                 dgvTour.Rows[index].Cells[2].Value = item.LichTrinh;
                 dgvTour.Rows[index].Cells[3].Value = item.GiaTien;
                 dgvTour.Rows[index].Cells[4].Value = item.MoTa;
-                //dgvTour.Rows[index].Cells[5].Value = item.NgayBatDau != null
-                //     ? item.NgayBatDau.Value.ToString("dd/MM/yyyy")
-                //     : string.Empty;
+                dgvTour.Rows[index].Cells[5].Value = item.TinhTrang == 1 ? "Còn Hoạt Động" : "Ngưng Hoạt Động";
 
-                //dgvTour.Rows[index].Cells[6].Value = item.NgayKetThuc != null
-                //    ? item.NgayKetThuc.Value.ToString("dd/MM/yyyy")
-                //    : string.Empty;
-                dgvTour.Rows[index].Cells[5].Value = item.TinhTrang;
+                // Kiem tra ma huong dv va hien ten hdv (neu co)
+                if (item.NhanVienID.HasValue)
+                {
+                    var huongDanVien = nhanVienService.GetByID(item.NhanVienID.Value);
+                    dgvTour.Rows[index].Cells[6].Value = huongDanVien != null ? huongDanVien.HoTen : string.Empty;
+                }
+                else
+                {
+                    dgvTour.Rows[index].Cells[6].Value = string.Empty;
+                }
             }
         }
-        public void setGridViewStyle(DataGridView dgview)
+
+
+        private void btnDong_Click(object sender, EventArgs e)
         {
-            dgview.BorderStyle = BorderStyle.Fixed3D;
-            dgview.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
-            dgview.CellBorderStyle = DataGridViewCellBorderStyle.SunkenVertical;
-            dgview.BackgroundColor = Color.White;
-            dgview.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.Close();
         }
 
-        private void setNull()
+        private void btnHuy_Click(object sender, EventArgs e)
         {
-            txtTenTour.Text = "";
-
-            txtMaTour.Text = "";
-
+            setNull();
+            var listTour = db.Tours.ToList();
+            BindGrid(listTour);
         }
 
         private void dgvTour_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -69,11 +102,22 @@ namespace DoAn_QLTour.Forms
                 DataGridViewRow row = dgvTour.Rows[e.RowIndex];
                 txtMaTour.Text = row.Cells[0].Value.ToString();
                 txtTenTour.Text = row.Cells[1].Value.ToString();
-
-                //// Ép kiểu datetime từ csdl vào dtp
-                //dtpNgayBD.Value = DateTime.ParseExact(row.Cells[5].Value.ToString(), "dd/MM/yyyy", null);
-                //dtpNgayKT.Value = DateTime.ParseExact(row.Cells[6].Value.ToString(), "dd/MM/yyyy", null);
             }
+        }
+
+        // Helper method to determine if the current user is a customer
+        private bool IsCustomerUser()
+        {
+            // Implement your logic to determine if the current user is a customer
+            // For example, you might check the user's role or permissions
+            // Return true if the user is a customer, otherwise false
+            return true; // Placeholder implementation
+        }
+
+        private void setNull()
+        {
+            txtTenTour.Text = "";
+            txtMaTour.Text = "";
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -89,57 +133,57 @@ namespace DoAn_QLTour.Forms
                 query = query.Where(t => t.TenTour.Contains(txtTenTour.Text.Trim()));
             }
 
-            //// Parse the dates from the date pickers
-            //DateTime? ngayBatDau = dtpNgayBD.Checked ? (DateTime?)dtpNgayBD.Value : null;
-            //DateTime? ngayKetThuc = dtpNgayKT.Checked ? (DateTime?)dtpNgayKT.Value : null;
-
-            //// Add conditions to filter by date range
-            //if (ngayBatDau.HasValue)
-            //{
-            //    query = query.Where(t => t.NgayBatDau >= ngayBatDau.Value);
-            //}
-            //if (ngayKetThuc.HasValue)
-            //{
-            //    query = query.Where(t => t.NgayKetThuc <= ngayKetThuc.Value);
-            //}
-
             var listTour = query.ToList();
             BindGrid(listTour);
         }
 
-        //Su kien them tour
-        private void hideForm()
+        private void dgvTour_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            panel1.Visible = false;
-            foreach (Form f in this.MdiChildren)
+            if (e.RowIndex >= 0 && dgvTour.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                f.Hide();
+                DataGridViewRow row = dgvTour.Rows[e.RowIndex];
+                frmEditTour editForm = new frmEditTour();
+
+                // Pass data to the edit form using public properties
+                editForm.MaTour = (int)row.Cells["colMaTour"].Value; // Ensure MaTour is passed
+                editForm.TenTour = row.Cells["colTen"].Value.ToString();
+                editForm.LichTrinh = row.Cells["colLichTrinh"].Value.ToString();
+                editForm.GiaTien = row.Cells["colGia"].Value.ToString();
+                editForm.MoTa = row.Cells["colMoTa"].Value.ToString();
+
+                // Ensure NhanVienID is correctly retrieved and cast
+                if (row.Cells["colHDV"].Value != null && int.TryParse(row.Cells["colHDV"].Value.ToString(), out int nhanVienID))
+                {
+                    editForm.NhanVienID = nhanVienID;
+                }
+                else
+                {
+                    editForm.NhanVienID = null;
+                }
+
+                editForm.TinhTrang = row.Cells["colTinhTrang"].Value.ToString() == "Còn Hoạt Động" ? 0 : 1;
+
+                // Subscribe to the TourUpdated event
+                editForm.TourUpdated += Frm_TourUpdated;
+
+                // Subscribe to the FormClosed event
+                editForm.FormClosed += EditForm_FormClosed;
+
+                // Show the edit form
+                editForm.ShowDialog();
             }
         }
-        private void btnThemHoacSua_Click(object sender, EventArgs e)
-        {
-            frmThemHoacSuaTour frm = new frmThemHoacSuaTour();
-            frm.Show();
-        }
 
-        private void btnDong_Click_1(object sender, EventArgs e)
+        private void frmQLTour_Load_1(object sender, EventArgs e)
         {
-            this.Close();
-            // Đóng tất cả các form con & cha
-            //Environment.Exit(0);
-        }
-
-        private void btnHuy_Click_1(object sender, EventArgs e)
-        {
-            setNull();
-            var listTour = db.Tours.ToList();
-            BindGrid(listTour);
-        }
-
-        private void frmQLTour_Load(object sender, EventArgs e)
-        {
-
+            // Add this code in the form load event or where you bind the DataGridView
+            dgvTour.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colNhanVienID",
+                HeaderText = "NhanVienID",
+                DataPropertyName = "NhanVienID",
+                Visible = false // Set to false if you don't want to display this column
+            });
         }
     }
 }
-
