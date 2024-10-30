@@ -1,15 +1,9 @@
-﻿using QLTour.DAL.Entities;
+﻿using QLTour.BUS.Properties;
+using QLTour.DAL.Entities;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.Entity.Migrations;
-using QLTour.BUS.Properties;
 namespace DoAn_QLTour.Forms
 {
     public partial class frmChiTietCuaToi : MaterialSkin.Controls.MaterialForm
@@ -20,31 +14,27 @@ namespace DoAn_QLTour.Forms
         {
             InitializeComponent();
             setGridViewStyle(dgvTour);
-            var listTour = tourService.GetAll();
+            string email = CurrentSession.LoggedInUserEmail;
+            var listTour = tourService.GetChiTietDatTourByEmail(email);
             BindGrid(listTour);
         }
 
-        private void BindGrid(List<Tour> listTour)
+        private void BindGrid(List<ChiTietDatTour> listTour)
         {
             dgvTour.Rows.Clear();
             foreach (var item in listTour)
             {
                 int index = dgvTour.Rows.Add();
-                dgvTour.Rows[index].Cells[0].Value = item.TenTour;
-                dgvTour.Rows[index].Cells[1].Value = item.LichTrinh;
-                dgvTour.Rows[index].Cells[2].Value = item.GiaTien;
-                dgvTour.Rows[index].Cells[3].Value = item.MoTa;
-                //dgvTour.Rows[index].Cells[4].Value = item.SoTienCoc;
-                //dgvTour.Rows[index].Cells[5].Value = item.TinhTrang;
-                //dgvTour.Rows[index].Cells[5].Value = item.NgayBatDau != null
-                //     ? item.NgayBatDau.Value.ToString("dd/MM/yyyy")
-                //     : string.Empty;
-
-                //dgvTour.Rows[index].Cells[6].Value = item.NgayKetThuc != null
-                //    ? item.NgayKetThuc.Value.ToString("dd/MM/yyyy")
-                //    : string.Empty;
+                dgvTour.Rows[index].Cells[0].Value = item.DatTour.Tour.TenTour;
+                dgvTour.Rows[index].Cells[1].Value = item.DatTour.Tour.LichTrinh;
+                dgvTour.Rows[index].Cells[2].Value = item.DatTour.Tour.GiaTien;
+                dgvTour.Rows[index].Cells[3].Value = item.DatTour.NgayDat;
+                dgvTour.Rows[index].Cells[4].Value = item.SoTienCoc;
+                dgvTour.Rows[index].Cells[5].Value = item.TinhTrang;
             }
         }
+
+
         public void setGridViewStyle(DataGridView dgview)
         {
             dgview.BorderStyle = BorderStyle.Fixed3D;
@@ -60,7 +50,7 @@ namespace DoAn_QLTour.Forms
             if (e.RowIndex >= 0 && dgvTour.Rows[e.RowIndex].Cells[0].Value != null)
             {
                 DataGridViewRow row = dgvTour.Rows[e.RowIndex];
-         
+
 
                 //// Ép kiểu datetime từ csdl vào dtp
                 //dtpNgayBD.Value = DateTime.ParseExact(row.Cells[5].Value.ToString(), "dd/MM/yyyy", null);

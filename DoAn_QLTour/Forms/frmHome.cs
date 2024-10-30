@@ -46,10 +46,16 @@ namespace DoAn_QLTour
             label3.Font = new Font("Lucida Bright", 15, FontStyle.Bold);
             label4.Font = new Font("Lucida Bright", 15, FontStyle.Bold);
 
+            lblSoNguoiPhucVu.Font = new Font("Lucida Bright", 25, FontStyle.Bold);
+            label5.Font = new Font("Microsoft Sans Serif", 15);
+
             label1.ForeColor = Color.FromArgb(192, 64, 0);
             label2.ForeColor = Color.FromArgb(192, 64, 0);
             label3.ForeColor = Color.FromArgb(192, 64, 0);
             label4.ForeColor = Color.FromArgb(192, 64, 0);
+
+            lblSoNguoiPhucVu.ForeColor = Color.Black;
+            label5.ForeColor = Color.Gray;
         }
         public frmHome(int roleID)
         {
@@ -77,7 +83,7 @@ namespace DoAn_QLTour
                 btnDatCho.Visible = false;
                 btnThanhToan.Visible = false;
                 btnTaiKhoan.Visible = false;
-                
+
 
 
             }
@@ -85,32 +91,32 @@ namespace DoAn_QLTour
 
         private void hideForm(Form child)
         {
-
             panel1.Visible = false;
-            foreach (Form f in this.MdiChildren)
+
+            // Hide all MDI child forms using LINQ
+            foreach (var form in this.MdiChildren)
             {
-                f.Hide();
+                form.Hide();
             }
-            if (child != null)
-            { this.Size = new Size(child.Width, child.Height); }
-            else
-            {
-                this.Size = new Size(1552, 794);
-            } 
-                
-            
+
+            // Set the size of the current form based on the child form
+            this.Size = child != null ? new Size(child.Width, child.Height) : new Size(1552, 794);
         }
 
-        //form Tour show
+        // Helper method to show a form as an MDI child
+        private void ShowFormAsMdiChild(Form child)
+        {
+            hideForm(child);
+            child.MdiParent = this; // Ensure the form is a child of the current MDI parent
+            child.WindowState = FormWindowState.Maximized;
+            child.Show();
+        }
+
+        // form Tour show
         private void btnTour_Click(object sender, EventArgs e)
         {
-            
-            
-            frmQLTour frm = new frmQLTour();
-            hideForm(frm);
-            frm.MdiParent = this; // Giúp giao diện MDI chỉ nằm trong form cha (frmMain)
-            frm.WindowState = FormWindowState.Maximized;
-            frm.Show();
+            var frm = new frmQLTour();
+            ShowFormAsMdiChild(frm);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -135,6 +141,37 @@ namespace DoAn_QLTour
             frmChiTietCuaToi ChiTietCuaToifrm = new frmChiTietCuaToi();
             ChiTietCuaToifrm.Show(); // Hiện Form Chi Tiết 
             this.Hide(); // Ẩn Form Home
+        }
+
+        private void btnDichVu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            // Hiển thị lại Form đăng nhập
+            frmDangNhap frmDangNhap = new frmDangNhap();
+            frmDangNhap.Show();
+
+            // Đóng Form Home hiện tại
+            this.Close();
+        }
+
+        private void btnChiTietChuyenDiDaDat_Click_1(object sender, EventArgs e)
+        {
+            var frm = new frmChiTietCuaToi();
+            ShowFormAsMdiChild(frm);
+        }
+
+        private void btnTaiKhoan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDatCho_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

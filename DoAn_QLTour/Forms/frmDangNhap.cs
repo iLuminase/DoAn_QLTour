@@ -47,6 +47,9 @@ namespace DoAn_QLTour.Forms
                             {
                                 MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                                // Lưu email vào CurrentSession
+                                CurrentSession.LoggedInUserEmail = email;
+
                                 // Khởi tạo form chính với role của người dùng
                                 frmHome homeForm = new frmHome(roleID);
                                 homeForm.Show();
@@ -81,4 +84,9 @@ namespace DoAn_QLTour.Forms
             AuthenticateUser(email, password);
         }
     }
+}
+//Tao session luu phien dang nhap nguoi dung voi mail
+public static class CurrentSession
+{
+    public static string LoggedInUserEmail { get; set; }
 }

@@ -153,7 +153,7 @@
             this.materialMaskedTextBoxPassword.MaxLength = 32767;
             this.materialMaskedTextBoxPassword.MouseState = MaterialSkin.MouseState.OUT;
             this.materialMaskedTextBoxPassword.Name = "materialMaskedTextBoxPassword";
-            this.materialMaskedTextBoxPassword.PasswordChar = '\0';
+            this.materialMaskedTextBoxPassword.PasswordChar = '●';
             this.materialMaskedTextBoxPassword.PrefixSuffixText = null;
             this.materialMaskedTextBoxPassword.PromptChar = '_';
             this.materialMaskedTextBoxPassword.ReadOnly = false;
@@ -172,7 +172,7 @@
             this.materialMaskedTextBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.materialMaskedTextBoxPassword.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.materialMaskedTextBoxPassword.TrailingIcon = null;
-            this.materialMaskedTextBoxPassword.UseSystemPasswordChar = false;
+            this.materialMaskedTextBoxPassword.UseSystemPasswordChar = true;
             this.materialMaskedTextBoxPassword.ValidatingType = null;
             // 
             // materialButtonDangNhap

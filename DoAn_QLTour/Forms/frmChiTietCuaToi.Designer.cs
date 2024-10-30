@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvTour = new System.Windows.Forms.DataGridView();
-            this.colMaTour = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colLichTrinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.dgvTour = new System.Windows.Forms.DataGridView();
+            this.TenTour = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LichTrinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTienCoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTour)).BeginInit();
             this.SuspendLayout();
@@ -45,72 +45,11 @@
             // 
             this.panel1.Controls.Add(this.materialLabel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(3, 64);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1673, 98);
+            this.panel1.Size = new System.Drawing.Size(1667, 98);
             this.panel1.TabIndex = 50;
-            // 
-            // dgvTour
-            // 
-            this.dgvTour.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTour.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colMaTour,
-            this.colTen,
-            this.colLichTrinh,
-            this.colGia,
-            this.colMoTa,
-            this.colTrangThai});
-            this.dgvTour.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvTour.Location = new System.Drawing.Point(0, 98);
-            this.dgvTour.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvTour.Name = "dgvTour";
-            this.dgvTour.RowHeadersWidth = 51;
-            this.dgvTour.Size = new System.Drawing.Size(1673, 804);
-            this.dgvTour.TabIndex = 58;
-            this.dgvTour.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTour_CellClick);
-            // 
-            // 
-            // 
-            this.colMaTour.HeaderText = "Tên Tour";
-            this.colMaTour.MinimumWidth = 6;
-            this.colMaTour.Name = "TenTour";
-            this.colMaTour.Width = 80;
-            // 
-            // 
-            // 
-            this.colTen.HeaderText = "Lịch Trình";
-            this.colTen.MinimumWidth = 6;
-            this.colTen.Name = "LichTrinh";
-            this.colTen.Width = 200;
-            // 
-            // 
-            // 
-            this.colLichTrinh.HeaderText = "Giá Tiền";
-            this.colLichTrinh.MinimumWidth = 6;
-            this.colLichTrinh.Name = "GiaTien";
-            this.colLichTrinh.Width = 250;
-            // 
-            // 
-            // 
-            this.colGia.HeaderText = "Mô Tả";
-            this.colGia.MinimumWidth = 6;
-            this.colGia.Name = "MoTa";
-            this.colGia.Width = 125;
-            // 
-            // 
-            // 
-            this.colMoTa.HeaderText = "Số Tiền Cọc";
-            this.colMoTa.MinimumWidth = 6;
-            this.colMoTa.Name = "SoTienCoc";
-            this.colMoTa.Width = 250;
-            // 
-            // colTrangThai
-            // 
-            this.colTrangThai.HeaderText = "Tình Trạng";
-            this.colTrangThai.MinimumWidth = 6;
-            this.colTrangThai.Name = "TinhTrang";
-            this.colTrangThai.Width = 125;
             // 
             // materialLabel1
             // 
@@ -123,6 +62,67 @@
             this.materialLabel1.Size = new System.Drawing.Size(151, 19);
             this.materialLabel1.TabIndex = 0;
             this.materialLabel1.Text = "Chi Tiết Tour Của Tôi";
+            // 
+            // dgvTour
+            // 
+            this.dgvTour.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTour.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TenTour,
+            this.LichTrinh,
+            this.GiaTien,
+            this.NgayDat,
+            this.SoTienCoc,
+            this.TinhTrang});
+            this.dgvTour.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTour.Location = new System.Drawing.Point(3, 162);
+            this.dgvTour.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvTour.Name = "dgvTour";
+            this.dgvTour.RowHeadersWidth = 51;
+            this.dgvTour.Size = new System.Drawing.Size(1667, 737);
+            this.dgvTour.TabIndex = 58;
+            this.dgvTour.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTour_CellClick);
+            // 
+            // TenTour
+            // 
+            this.TenTour.HeaderText = "Tên Tour";
+            this.TenTour.MinimumWidth = 6;
+            this.TenTour.Name = "TenTour";
+            this.TenTour.Width = 80;
+            // 
+            // LichTrinh
+            // 
+            this.LichTrinh.HeaderText = "Lịch Trình";
+            this.LichTrinh.MinimumWidth = 6;
+            this.LichTrinh.Name = "LichTrinh";
+            this.LichTrinh.Width = 200;
+            // 
+            // GiaTien
+            // 
+            this.GiaTien.HeaderText = "Giá Tiền";
+            this.GiaTien.MinimumWidth = 6;
+            this.GiaTien.Name = "GiaTien";
+            this.GiaTien.Width = 250;
+            // 
+            // NgayDat
+            // 
+            this.NgayDat.HeaderText = "Ngày Đặt";
+            this.NgayDat.MinimumWidth = 6;
+            this.NgayDat.Name = "NgayDat";
+            this.NgayDat.Width = 125;
+            // 
+            // SoTienCoc
+            // 
+            this.SoTienCoc.HeaderText = "Số Tiền Cọc";
+            this.SoTienCoc.MinimumWidth = 6;
+            this.SoTienCoc.Name = "SoTienCoc";
+            this.SoTienCoc.Width = 250;
+            // 
+            // TinhTrang
+            // 
+            this.TinhTrang.HeaderText = "Tình Trạng";
+            this.TinhTrang.MinimumWidth = 6;
+            this.TinhTrang.Name = "TinhTrang";
+            this.TinhTrang.Width = 125;
             // 
             // frmChiTietCuaToi
             // 
@@ -150,8 +150,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLichTrinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMoTa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayDat;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTrangThai;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTour;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LichTrinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiaTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayDat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoTienCoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang;
     }
 }
