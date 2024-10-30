@@ -182,6 +182,7 @@
             this.btnDichVu.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnDichVu.UseAccentColor = false;
             this.btnDichVu.UseVisualStyleBackColor = false;
+            this.btnDichVu.Click += new System.EventHandler(this.btnDichVu_Click);
             // 
             // btnTour
             // 
@@ -532,7 +533,6 @@
             this.materialLabel9.Size = new System.Drawing.Size(197, 24);
             this.materialLabel9.TabIndex = 1;
             this.materialLabel9.Text = "Nghỉ Dưỡng Phú Quốc";
-            this.materialLabel9.Click += new System.EventHandler(this.materialLabel9_Click);
             // 
             // pictureBox3
             // 

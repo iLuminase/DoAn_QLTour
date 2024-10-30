@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.materialButtonDangKy = new MaterialSkin.Controls.MaterialButton();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialMaskedTextBoxEmail = new MaterialSkin.Controls.MaterialMaskedTextBox();
-            this.materialMaskedTextBoxPassword = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.materialButtonDangNhap = new MaterialSkin.Controls.MaterialButton();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialButtonDangKy
@@ -44,37 +46,26 @@
             this.materialButtonDangKy.Depth = 0;
             this.materialButtonDangKy.HighEmphasis = true;
             this.materialButtonDangKy.Icon = null;
-            this.materialButtonDangKy.Location = new System.Drawing.Point(245, 361);
-            this.materialButtonDangKy.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButtonDangKy.Location = new System.Drawing.Point(182, 317);
+            this.materialButtonDangKy.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.materialButtonDangKy.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButtonDangKy.Name = "materialButtonDangKy";
             this.materialButtonDangKy.NoAccentTextColor = System.Drawing.Color.Empty;
             this.materialButtonDangKy.Size = new System.Drawing.Size(83, 36);
-            this.materialButtonDangKy.TabIndex = 2;
+            this.materialButtonDangKy.TabIndex = 3;
             this.materialButtonDangKy.Text = "Đăng Ký";
             this.materialButtonDangKy.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButtonDangKy.UseAccentColor = false;
             this.materialButtonDangKy.UseVisualStyleBackColor = true;
             this.materialButtonDangKy.Click += new System.EventHandler(this.materialButtonDangKy_Click);
             // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(159, 77);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(81, 19);
-            this.materialLabel1.TabIndex = 3;
-            this.materialLabel1.Text = "Đăng Nhập";
-            // 
             // materialLabel2
             // 
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(28, 140);
+            this.materialLabel2.Location = new System.Drawing.Point(35, 42);
+            this.materialLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(49, 19);
@@ -86,94 +77,13 @@
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(28, 250);
+            this.materialLabel3.Location = new System.Drawing.Point(5, 94);
+            this.materialLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(79, 19);
             this.materialLabel3.TabIndex = 5;
             this.materialLabel3.Text = "Password: ";
-            // 
-            // materialMaskedTextBoxEmail
-            // 
-            this.materialMaskedTextBoxEmail.AllowPromptAsInput = true;
-            this.materialMaskedTextBoxEmail.AnimateReadOnly = false;
-            this.materialMaskedTextBoxEmail.AsciiOnly = false;
-            this.materialMaskedTextBoxEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.materialMaskedTextBoxEmail.BeepOnError = false;
-            this.materialMaskedTextBoxEmail.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.materialMaskedTextBoxEmail.Depth = 0;
-            this.materialMaskedTextBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialMaskedTextBoxEmail.HidePromptOnLeave = false;
-            this.materialMaskedTextBoxEmail.HideSelection = true;
-            this.materialMaskedTextBoxEmail.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
-            this.materialMaskedTextBoxEmail.LeadingIcon = null;
-            this.materialMaskedTextBoxEmail.Location = new System.Drawing.Point(110, 140);
-            this.materialMaskedTextBoxEmail.Mask = "";
-            this.materialMaskedTextBoxEmail.MaxLength = 32767;
-            this.materialMaskedTextBoxEmail.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialMaskedTextBoxEmail.Name = "materialMaskedTextBoxEmail";
-            this.materialMaskedTextBoxEmail.PasswordChar = '\0';
-            this.materialMaskedTextBoxEmail.PrefixSuffixText = null;
-            this.materialMaskedTextBoxEmail.PromptChar = '_';
-            this.materialMaskedTextBoxEmail.ReadOnly = false;
-            this.materialMaskedTextBoxEmail.RejectInputOnFirstFailure = false;
-            this.materialMaskedTextBoxEmail.ResetOnPrompt = true;
-            this.materialMaskedTextBoxEmail.ResetOnSpace = true;
-            this.materialMaskedTextBoxEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.materialMaskedTextBoxEmail.SelectedText = "";
-            this.materialMaskedTextBoxEmail.SelectionLength = 0;
-            this.materialMaskedTextBoxEmail.SelectionStart = 0;
-            this.materialMaskedTextBoxEmail.ShortcutsEnabled = true;
-            this.materialMaskedTextBoxEmail.Size = new System.Drawing.Size(218, 48);
-            this.materialMaskedTextBoxEmail.SkipLiterals = true;
-            this.materialMaskedTextBoxEmail.TabIndex = 6;
-            this.materialMaskedTextBoxEmail.TabStop = false;
-            this.materialMaskedTextBoxEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.materialMaskedTextBoxEmail.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.materialMaskedTextBoxEmail.TrailingIcon = null;
-            this.materialMaskedTextBoxEmail.UseSystemPasswordChar = false;
-            this.materialMaskedTextBoxEmail.ValidatingType = null;
-            // 
-            // materialMaskedTextBoxPassword
-            // 
-            this.materialMaskedTextBoxPassword.AllowPromptAsInput = true;
-            this.materialMaskedTextBoxPassword.AnimateReadOnly = false;
-            this.materialMaskedTextBoxPassword.AsciiOnly = false;
-            this.materialMaskedTextBoxPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.materialMaskedTextBoxPassword.BeepOnError = false;
-            this.materialMaskedTextBoxPassword.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.materialMaskedTextBoxPassword.Depth = 0;
-            this.materialMaskedTextBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialMaskedTextBoxPassword.HidePromptOnLeave = false;
-            this.materialMaskedTextBoxPassword.HideSelection = true;
-            this.materialMaskedTextBoxPassword.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
-            this.materialMaskedTextBoxPassword.LeadingIcon = null;
-            this.materialMaskedTextBoxPassword.Location = new System.Drawing.Point(110, 250);
-            this.materialMaskedTextBoxPassword.Mask = "";
-            this.materialMaskedTextBoxPassword.MaxLength = 32767;
-            this.materialMaskedTextBoxPassword.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialMaskedTextBoxPassword.Name = "materialMaskedTextBoxPassword";
-            this.materialMaskedTextBoxPassword.PasswordChar = '\0';
-            this.materialMaskedTextBoxPassword.PrefixSuffixText = null;
-            this.materialMaskedTextBoxPassword.PromptChar = '_';
-            this.materialMaskedTextBoxPassword.ReadOnly = false;
-            this.materialMaskedTextBoxPassword.RejectInputOnFirstFailure = false;
-            this.materialMaskedTextBoxPassword.ResetOnPrompt = true;
-            this.materialMaskedTextBoxPassword.ResetOnSpace = true;
-            this.materialMaskedTextBoxPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.materialMaskedTextBoxPassword.SelectedText = "";
-            this.materialMaskedTextBoxPassword.SelectionLength = 0;
-            this.materialMaskedTextBoxPassword.SelectionStart = 0;
-            this.materialMaskedTextBoxPassword.ShortcutsEnabled = true;
-            this.materialMaskedTextBoxPassword.Size = new System.Drawing.Size(218, 48);
-            this.materialMaskedTextBoxPassword.SkipLiterals = true;
-            this.materialMaskedTextBoxPassword.TabIndex = 7;
-            this.materialMaskedTextBoxPassword.TabStop = false;
-            this.materialMaskedTextBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.materialMaskedTextBoxPassword.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.materialMaskedTextBoxPassword.TrailingIcon = null;
-            this.materialMaskedTextBoxPassword.UseSystemPasswordChar = false;
-            this.materialMaskedTextBoxPassword.ValidatingType = null;
             // 
             // materialButtonDangNhap
             // 
@@ -182,34 +92,77 @@
             this.materialButtonDangNhap.Depth = 0;
             this.materialButtonDangNhap.HighEmphasis = true;
             this.materialButtonDangNhap.Icon = null;
-            this.materialButtonDangNhap.Location = new System.Drawing.Point(110, 361);
-            this.materialButtonDangNhap.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButtonDangNhap.Location = new System.Drawing.Point(42, 317);
+            this.materialButtonDangNhap.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.materialButtonDangNhap.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButtonDangNhap.Name = "materialButtonDangNhap";
             this.materialButtonDangNhap.NoAccentTextColor = System.Drawing.Color.Empty;
             this.materialButtonDangNhap.Size = new System.Drawing.Size(105, 36);
-            this.materialButtonDangNhap.TabIndex = 8;
+            this.materialButtonDangNhap.TabIndex = 2;
             this.materialButtonDangNhap.Text = "Đăng Nhập";
             this.materialButtonDangNhap.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButtonDangNhap.UseAccentColor = false;
             this.materialButtonDangNhap.UseVisualStyleBackColor = true;
             this.materialButtonDangNhap.Click += new System.EventHandler(this.materialButtonDangNhap_Click);
             // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(93, 182);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(192, 29);
+            this.txtEmail.TabIndex = 0;
+            this.txtEmail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(93, 234);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(135, 29);
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(75, 100);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(190, 45);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Đăng Nhập";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.groupBox1.Controls.Add(this.materialLabel3);
+            this.groupBox1.Controls.Add(this.materialLabel2);
+            this.groupBox1.Location = new System.Drawing.Point(6, 149);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(323, 160);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
+            // 
             // frmDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 435);
+            this.ClientSize = new System.Drawing.Size(334, 418);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.materialButtonDangNhap);
-            this.Controls.Add(this.materialMaskedTextBoxPassword);
-            this.Controls.Add(this.materialMaskedTextBoxEmail);
-            this.Controls.Add(this.materialLabel3);
-            this.Controls.Add(this.materialLabel2);
-            this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.materialButtonDangKy);
+            this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDangNhap";
-            this.Text = "frmDangNhap";
+            this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmDangNhap_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,11 +170,12 @@
 
         #endregion
         private MaterialSkin.Controls.MaterialButton materialButtonDangKy;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialMaskedTextBox materialMaskedTextBoxEmail;
-        private MaterialSkin.Controls.MaterialMaskedTextBox materialMaskedTextBoxPassword;
         private MaterialSkin.Controls.MaterialButton materialButtonDangNhap;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

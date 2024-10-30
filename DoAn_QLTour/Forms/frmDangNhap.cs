@@ -13,7 +13,7 @@ namespace DoAn_QLTour.Forms
 {
     public partial class frmDangNhap : MaterialSkin.Controls.MaterialForm
     {
-        private string connectionString = "Data Source=DESKTOP-LSF5N86\\NHAN;Initial Catalog=QuanLyTour;Integrated Security=True";
+        private string connectionString = "Data Source=_HEHENIKEN;Initial Catalog=QuanLyTour;Integrated Security=True";
 
         public frmDangNhap()
         {
@@ -27,8 +27,15 @@ namespace DoAn_QLTour.Forms
             this.Hide(); // Ẩn Form Đăng Nhập
         }
 
+
         private void AuthenticateUser(string email, string password)
         {
+
+
+
+
+
+
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
@@ -74,11 +81,25 @@ namespace DoAn_QLTour.Forms
 
         private void materialButtonDangNhap_Click(object sender, EventArgs e)
         {
-            string email = materialMaskedTextBoxEmail.Text.Trim();
-            string password = materialMaskedTextBoxPassword.Text.Trim();
+            string email = txtEmail.Text.Trim();
+            string password = txtPassword.Text.Trim();
 
             // Gọi hàm xác thực người dùng
             AuthenticateUser(email, password);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        // xử lý sự kiện Enter
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char) Keys.Enter)
+            {
+                materialButtonDangNhap_Click(sender, e);
+            }
         }
     }
 }
