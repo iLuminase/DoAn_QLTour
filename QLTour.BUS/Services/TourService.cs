@@ -10,6 +10,7 @@ namespace QLTour.BUS
     public class TourService
     {
         ModelTourDB db = new ModelTourDB();
+     
         public List<Tour> GetAll()
         {
             return db.Tours.ToList();

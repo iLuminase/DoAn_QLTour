@@ -15,7 +15,6 @@ namespace DoAn_QLTour.Forms
 {
     public partial class frmEditTour : Form
     {
-        ModelTourDB db = new ModelTourDB();
         private readonly TourService tourService = new TourService();
         private readonly nhanVienService nhanVienService = new nhanVienService();
 
@@ -28,6 +27,7 @@ namespace DoAn_QLTour.Forms
         }
 
         // Public properties to access the textboxes
+        public int MaTour { get; set; } // Add this property to store MaTour
         public string TenTour
         {
             get => txtTenTour.Text;
@@ -64,6 +64,10 @@ namespace DoAn_QLTour.Forms
             {
                 cbbHDV.SelectedValue = NhanVienID.Value;
             }
+            else
+            {
+                cbbHDV.SelectedIndex = -1; // Clear selection if no NhanVienID
+            }
             cbbTinhTrangTour.SelectedIndex = TinhTrang;
         }
 
@@ -86,11 +90,12 @@ namespace DoAn_QLTour.Forms
             // Create a new Tour object with the updated data
             var updatedTour = new Tour
             {
+                MaTour = MaTour, // Ensure MaTour is set
                 TenTour = TenTour,
                 LichTrinh = LichTrinh,
                 GiaTien = decimal.Parse(GiaTien),
                 MoTa = MoTa,
-                TinhTrang = cbbTinhTrangTour.SelectedIndex,
+                TinhTrang = cbbTinhTrangTour.SelectedIndex+1,
                 NhanVienID = (int)cbbHDV.SelectedValue // Use NhanVienID here
             };
 
@@ -100,12 +105,12 @@ namespace DoAn_QLTour.Forms
             // Raise the TourUpdated event
             TourUpdated?.Invoke(this, EventArgs.Empty);
 
-            // Close the edit form
-            this.Close();
+      
         }
 
         private void btnDong_Click(object sender, EventArgs e)
         {
+           
             this.Close();
         }
     }

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Data.Entity.Migrations;
 using QLTour.BUS;
 using QLTour.BUS.Services;
+
 namespace DoAn_QLTour.Forms
 {
     public partial class frmQLTour : Form
@@ -36,13 +37,17 @@ namespace DoAn_QLTour.Forms
         private void Frm_TourUpdated(object sender, EventArgs e)
         {
             // Refresh the DataGridView
+            LoadData();
+        }
+        private void EditForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Refresh the DataGridView when the edit form is closed
+            LoadData();
+        }
+        private void LoadData()
+        {
             var listTour = tourService.GetAll();
             BindGrid(listTour);
-        }
-
-        public void FillCBB(List<NhanVien> lstNhanViens)
-        {
-            // Implementation for filling ComboBox if needed
         }
 
         private void BindGrid(List<Tour> listTour)
@@ -77,30 +82,6 @@ namespace DoAn_QLTour.Forms
             }
         }
 
-        private void frmQLTour_Load(object sender, EventArgs e)
-        {
-            var listTour = tourService.GetAll();
-            BindGrid(listTour);
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtMaTour.Text))
-            {
-                MessageBox.Show("Vui lòng chọn tour cần xóa");
-                return;
-            }
-            int maTour = int.Parse(txtMaTour.Text);
-            var tour = db.Tours.Find(maTour);
-            if (tour != null)
-            {
-                db.Tours.Remove(tour);
-                db.SaveChanges();
-                MessageBox.Show("Xóa thành công");
-                var listTour = db.Tours.ToList();
-                BindGrid(listTour);
-            }
-        }
 
         private void btnDong_Click(object sender, EventArgs e)
         {
@@ -156,16 +137,6 @@ namespace DoAn_QLTour.Forms
             BindGrid(listTour);
         }
 
-        //Su kien them tour
-        private void hideForm()
-        {
-            panel1.Visible = false;
-            foreach (Form f in this.MdiChildren)
-            {
-                f.Hide();
-            }
-        }
-
         private void dgvTour_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && dgvTour.Rows[e.RowIndex].Cells[0].Value != null)
@@ -174,13 +145,14 @@ namespace DoAn_QLTour.Forms
                 frmEditTour editForm = new frmEditTour();
 
                 // Pass data to the edit form using public properties
-                editForm.TenTour = row.Cells[1].Value.ToString();
-                editForm.LichTrinh = row.Cells[2].Value.ToString();
-                editForm.GiaTien = row.Cells[3].Value.ToString();
-                editForm.MoTa = row.Cells[4].Value.ToString();
+                editForm.MaTour = (int)row.Cells["colMaTour"].Value; // Ensure MaTour is passed
+                editForm.TenTour = row.Cells["colTen"].Value.ToString();
+                editForm.LichTrinh = row.Cells["colLichTrinh"].Value.ToString();
+                editForm.GiaTien = row.Cells["colGia"].Value.ToString();
+                editForm.MoTa = row.Cells["colMoTa"].Value.ToString();
 
                 // Ensure NhanVienID is correctly retrieved and cast
-                if (row.Cells[6].Value != null && int.TryParse(row.Cells[6].Value.ToString(), out int nhanVienID))
+                if (row.Cells["colHDV"].Value != null && int.TryParse(row.Cells["colHDV"].Value.ToString(), out int nhanVienID))
                 {
                     editForm.NhanVienID = nhanVienID;
                 }
@@ -189,18 +161,29 @@ namespace DoAn_QLTour.Forms
                     editForm.NhanVienID = null;
                 }
 
-                editForm.TinhTrang = row.Cells[5].Value.ToString() == "Còn Hoạt Động" ? 0 : 1;
+                editForm.TinhTrang = row.Cells["colTinhTrang"].Value.ToString() == "Còn Hoạt Động" ? 0 : 1;
 
                 // Subscribe to the TourUpdated event
                 editForm.TourUpdated += Frm_TourUpdated;
 
+                // Subscribe to the FormClosed event
+                editForm.FormClosed += EditForm_FormClosed;
+
                 // Show the edit form
                 editForm.ShowDialog();
-
-                // Refresh the grid after editing
-                var listTour = tourService.GetAll();
-                BindGrid(listTour);
             }
+        }
+
+        private void frmQLTour_Load_1(object sender, EventArgs e)
+        {
+            // Add this code in the form load event or where you bind the DataGridView
+            dgvTour.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colNhanVienID",
+                HeaderText = "NhanVienID",
+                DataPropertyName = "NhanVienID",
+                Visible = false // Set to false if you don't want to display this column
+            });
         }
     }
 }

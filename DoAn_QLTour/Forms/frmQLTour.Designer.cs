@@ -44,7 +44,7 @@
             this.colLichTrinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colHDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -175,7 +175,7 @@
             this.colLichTrinh,
             this.colGia,
             this.colMoTa,
-            this.colTrangThai,
+            this.colTinhTrang,
             this.colHDV});
             this.dgvTour.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTour.Location = new System.Drawing.Point(0, 80);
@@ -214,11 +214,11 @@
             this.colMoTa.Name = "colMoTa";
             this.colMoTa.Width = 250;
             // 
-            // colTrangThai
+            // colTinhTrang
             // 
-            this.colTrangThai.HeaderText = "Trạng Thái";
-            this.colTrangThai.Name = "colTrangThai";
-            this.colTrangThai.Width = 120;
+            this.colTinhTrang.HeaderText = "Tình Trạng";
+            this.colTinhTrang.Name = "colTinhTrang";
+            this.colTinhTrang.Width = 120;
             // 
             // colHDV
             // 
@@ -235,6 +235,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmQLTour";
             this.Text = "Quản Lý Tour";
+            this.Load += new System.EventHandler(this.frmQLTour_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -261,7 +262,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colLichTrinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMoTa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTrangThai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTinhTrang;
         private System.Windows.Forms.DataGridViewTextBoxColumn colHDV;
     }
 }
