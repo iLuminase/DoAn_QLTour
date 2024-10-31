@@ -39,6 +39,7 @@
       <HintPath>..\..\NguyenTienPhat_Chieu4\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,10 +49,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Services\ChiTietDatTourService.cs" />
+    <Compile Include="Services\DatTourService.cs" />
     <Compile Include="Services\dichVuService.cs" />
     <Compile Include="Services\huongDanVienService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\KhachHangService.cs" />
     <Compile Include="Services\nhanVienService.cs" />
+    <Compile Include="Services\ThanhToanRepository.cs" />
+    <Compile Include="Services\ThanhToanService.cs" />
     <Compile Include="Services\TourService.cs" />
   </ItemGroup>
   <ItemGroup>

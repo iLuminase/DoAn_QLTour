@@ -42,7 +42,7 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblSoNguoiPhucVu = new System.Windows.Forms.Label();
+            this.lblCountSuccessed = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.materialScrollBar1 = new MaterialSkin.Controls.MaterialScrollBar();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -161,6 +161,7 @@
             this.btnDatCho.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnDatCho.UseAccentColor = false;
             this.btnDatCho.UseVisualStyleBackColor = false;
+            this.btnDatCho.Click += new System.EventHandler(this.btnDatCho_Click);
             // 
             // btnDichVu
             // 
@@ -317,7 +318,7 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.label5);
-            this.panel7.Controls.Add(this.lblSoNguoiPhucVu);
+            this.panel7.Controls.Add(this.lblCountSuccessed);
             this.panel7.Controls.Add(this.pictureBox5);
             this.panel7.Location = new System.Drawing.Point(14, 25);
             this.panel7.Name = "panel7";
@@ -335,15 +336,15 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "người đã phục vụ";
             // 
-            // lblSoNguoiPhucVu
+            // lblCountSuccessed
             // 
-            this.lblSoNguoiPhucVu.AutoSize = true;
-            this.lblSoNguoiPhucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoNguoiPhucVu.Location = new System.Drawing.Point(339, 52);
-            this.lblSoNguoiPhucVu.Name = "lblSoNguoiPhucVu";
-            this.lblSoNguoiPhucVu.Size = new System.Drawing.Size(37, 39);
-            this.lblSoNguoiPhucVu.TabIndex = 1;
-            this.lblSoNguoiPhucVu.Text = "0";
+            this.lblCountSuccessed.AutoSize = true;
+            this.lblCountSuccessed.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCountSuccessed.Location = new System.Drawing.Point(339, 52);
+            this.lblCountSuccessed.Name = "lblCountSuccessed";
+            this.lblCountSuccessed.Size = new System.Drawing.Size(37, 39);
+            this.lblCountSuccessed.TabIndex = 1;
+            this.lblCountSuccessed.Text = "0";
             // 
             // pictureBox5
             // 
@@ -762,6 +763,7 @@
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TRANG CHỦ";
+            this.Load += new System.EventHandler(this.frmHome_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -836,7 +838,7 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblSoNguoiPhucVu;
+        private System.Windows.Forms.Label lblCountSuccessed;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label6;
     }

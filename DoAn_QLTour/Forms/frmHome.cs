@@ -1,5 +1,7 @@
 ﻿using DoAn_QLTour.Forms;
+using DuAnCuoiKy;
 using MaterialSkin;
+using QLTour.BUS.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +16,9 @@ namespace DoAn_QLTour
 {
     public partial class frmHome : MaterialSkin.Controls.MaterialForm
     {
+        private readonly ThanhToanService thanhToanService;
         private int roleID;
+
         public frmHome()
         {
             InitializeComponent();
@@ -46,7 +50,7 @@ namespace DoAn_QLTour
             label3.Font = new Font("Lucida Bright", 15, FontStyle.Bold);
             label4.Font = new Font("Lucida Bright", 15, FontStyle.Bold);
 
-            lblSoNguoiPhucVu.Font = new Font("Lucida Bright", 25, FontStyle.Bold);
+            lblCountSuccessed.Font = new Font("Lucida Bright", 25, FontStyle.Bold);
             label5.Font = new Font("Microsoft Sans Serif", 15);
 
             label1.ForeColor = Color.FromArgb(192, 64, 0);
@@ -54,8 +58,23 @@ namespace DoAn_QLTour
             label3.ForeColor = Color.FromArgb(192, 64, 0);
             label4.ForeColor = Color.FromArgb(192, 64, 0);
 
-            lblSoNguoiPhucVu.ForeColor = Color.Black;
+            lblCountSuccessed.ForeColor = Color.Black;
             label5.ForeColor = Color.Gray;
+            // Khởi tạo repository và service
+            ThanhToanRepository repository = new ThanhToanRepository();
+            thanhToanService = new ThanhToanService(repository);
+
+            // Cập nhật số lượng hóa đơn khi form được tải
+            UpdateInvoiceCount();
+        }
+
+        private void UpdateInvoiceCount()
+        {
+            if (thanhToanService == null)
+            {
+                return;
+            }
+            lblCountSuccessed.Text = thanhToanService.GetThanhToanCount().ToString();
         }
         public frmHome(int roleID)
         {
@@ -65,12 +84,14 @@ namespace DoAn_QLTour
 
             this.FormClosed += FrmHome_FormClosed;
         }
+
         // xử lý sự kiện form đóng
         private void FrmHome_FormClosed(object sender, FormClosedEventArgs e)
         {
             // Gọi Application.Exit() khi form đóng
             Application.Exit();
         }
+
         private void ApplyPermissions()
         {
             if (roleID == 1) // Admin
@@ -86,15 +107,11 @@ namespace DoAn_QLTour
             }
             else if (roleID == 3) // User
             {
-
                 btnTour.Visible = false;
                 btnDichVu.Visible = true;
                 btnDatCho.Visible = true;
                 btnThanhToan.Visible = true;
                 btnTaiKhoan.Visible = true;
-
-
-
             }
         }
 
@@ -134,28 +151,27 @@ namespace DoAn_QLTour
             panel1.Visible = true;
         }
 
-
-
-        private void btnChiTietChuyenDiDaDat_Click(object sender, EventArgs e)
-        {
-            // Mở Form Chi Tiết
-            frmChiTietCuaToi ChiTietCuaToifrm = new frmChiTietCuaToi();
-            ChiTietCuaToifrm.Show(); // Hiện Form Chi Tiết 
-            this.Hide(); // Ẩn Form Home
-        }
-
         private void btnDichVu_Click(object sender, EventArgs e)
         {
-
-            frmDichVu frm = new frmDichVu();
+            frmQuanLyDichVu frm = new frmQuanLyDichVu();
             ShowFormAsMdiChild(frm);
-
         }
 
         private void btnDatTour_pn1_Click(object sender, EventArgs e)
         {
-
+            // Logic for btnDatTour_pn1 click event
         }
-        
+
+        private void frmHome_Load(object sender, EventArgs e)
+        {
+            // Cập nhật số lượng hóa đơn khi form được tải
+            UpdateInvoiceCount();
+        }
+
+        private void btnDatCho_Click(object sender, EventArgs e)
+        {
+            QLDatCho frm = new QLDatCho();
+            ShowFormAsMdiChild(frm);
+        }
     }
 }
