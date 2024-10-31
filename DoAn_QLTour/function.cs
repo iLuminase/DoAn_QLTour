@@ -1,7 +1,7 @@
-﻿using System;
+﻿using System.Data.SqlClient;
 using System.Data;
-using System.Data.SqlClient;
 using System.Windows.Forms;
+using System;
 
 namespace DuAnCuoiKy
 {
@@ -38,6 +38,28 @@ namespace DuAnCuoiKy
         }
 
         public SqlDataReader GetDataReaderForCombo(string query)
+        {
+            SqlConnection con = GetConnection();
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            return cmd.ExecuteReader(CommandBehavior.CloseConnection);
+        }
+
+        public void setData(string query, string message)
+        {
+            using (SqlConnection con = GetConnection())
+            {
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            MessageBox.Show(message, "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public SqlDataReader getForCombo(string query)
         {
             SqlConnection con = GetConnection();
             SqlCommand cmd = new SqlCommand(query, con);

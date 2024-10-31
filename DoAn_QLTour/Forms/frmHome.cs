@@ -1,7 +1,9 @@
 ﻿using DoAn_QLTour.Forms;
 using DuAnCuoiKy;
 using MaterialSkin;
+using PhanBaThanh_2280602959;
 using QLTour.BUS.Services;
+using QLTour.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -170,7 +172,19 @@ namespace DoAn_QLTour
 
         private void btnDatCho_Click(object sender, EventArgs e)
         {
-            QLDatCho frm = new QLDatCho();
+            frmDatTour frm = new frmDatTour();
+            ShowFormAsMdiChild(frm);
+        }
+
+        private void btnFeedBack_Click(object sender, EventArgs e)
+        {
+            frmFeedback frm = new frmFeedback();
+            ShowFormAsMdiChild(frm);
+        }
+
+        private void btnChiTietChuyenDiDaDat_Click(object sender, EventArgs e)
+        {
+            frmChiTietCuaToi frm = new frmChiTietCuaToi();
             ShowFormAsMdiChild(frm);
         }
     }
