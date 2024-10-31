@@ -1,0 +1,11 @@
+C:\Users\Admin\source\repos\PhanBaThanh_2280602959\PhanBaThanh_2280602959\bin\Debug\PhanBaThanh_2280602959.exe.config
+C:\Users\Admin\source\repos\PhanBaThanh_2280602959\PhanBaThanh_2280602959\bin\Debug\PhanBaThanh_2280602959.exe
+C:\Users\Admin\source\repos\PhanBaThanh_2280602959\PhanBaThanh_2280602959\bin\Debug\PhanBaThanh_2280602959.pdb
+C:\Users\Admin\source\repos\PhanBaThanh_2280602959\PhanBaThanh_2280602959\obj\Debug\PhanBaThanh_2280602959.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\PhanBaThanh_2280602959\PhanBaThanh_2280602959\obj\Debug\PhanBaThanh_2280602959.Form1.resources
+C:\Users\Admin\source\repos\PhanBaThanh_2280602959\PhanBaThanh_2280602959\obj\Debug\PhanBaThanh_2280602959.Properties.Resources.resources
+C:\Users\Admin\source\repos\PhanBaThanh_2280602959\PhanBaThanh_2280602959\obj\Debug\PhanBaThanh_2280602959.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\PhanBaThanh_2280602959\PhanBaThanh_2280602959\obj\Debug\PhanBaThanh_2280602959.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\PhanBaThanh_2280602959\PhanBaThanh_2280602959\obj\Debug\PhanBaThanh_2280602959.exe
+C:\Users\Admin\source\repos\PhanBaThanh_2280602959\PhanBaThanh_2280602959\obj\Debug\PhanBaThanh_2280602959.pdb
+C:\Users\Admin\source\repos\PhanBaThanh_2280602959\PhanBaThanh_2280602959\obj\Debug\PhanBaThanh_2280602959.Feedback.resources
