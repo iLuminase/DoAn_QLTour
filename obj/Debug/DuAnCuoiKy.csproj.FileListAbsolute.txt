@@ -1,0 +1,17 @@
+C:\Users\Admin\source\repos\DuAnCuoiKy\DuAnCuoiKy\obj\Debug\DuAnCuoiKy.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\DuAnCuoiKy\DuAnCuoiKy\obj\Debug\DuAnCuoiKy.frmDatDichVu.resources
+C:\Users\Admin\source\repos\DuAnCuoiKy\DuAnCuoiKy\obj\Debug\DuAnCuoiKy.Properties.Resources.resources
+C:\Users\Admin\source\repos\DuAnCuoiKy\DuAnCuoiKy\obj\Debug\DuAnCuoiKy.frmQuanLyDichVu.resources
+C:\Users\Admin\source\repos\DuAnCuoiKy\DuAnCuoiKy\obj\Debug\DuAnCuoiKy.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\DuAnCuoiKy\DuAnCuoiKy\obj\Debug\DuAnCuoiKy.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\DuAnCuoiKy\DuAnCuoiKy\bin\Debug\DuAnCuoiKy.exe.config
+C:\Users\Admin\source\repos\DuAnCuoiKy\DuAnCuoiKy\bin\Debug\DuAnCuoiKy.exe
+C:\Users\Admin\source\repos\DuAnCuoiKy\DuAnCuoiKy\bin\Debug\DuAnCuoiKy.pdb
+C:\Users\Admin\source\repos\DuAnCuoiKy\DuAnCuoiKy\bin\Debug\EntityFramework.dll
+C:\Users\Admin\source\repos\DuAnCuoiKy\DuAnCuoiKy\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\source\repos\DuAnCuoiKy\DuAnCuoiKy\bin\Debug\MaterialSkin.dll
+C:\Users\Admin\source\repos\DuAnCuoiKy\DuAnCuoiKy\bin\Debug\EntityFramework.xml
+C:\Users\Admin\source\repos\DuAnCuoiKy\DuAnCuoiKy\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\source\repos\DuAnCuoiKy\DuAnCuoiKy\obj\Debug\DuAnCuoiKy.csproj.Up2Date
+C:\Users\Admin\source\repos\DuAnCuoiKy\DuAnCuoiKy\obj\Debug\DuAnCuoiKy.exe
+C:\Users\Admin\source\repos\DuAnCuoiKy\DuAnCuoiKy\obj\Debug\DuAnCuoiKy.pdb
