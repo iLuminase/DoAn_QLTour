@@ -28,154 +28,220 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialButtonDangKy = new MaterialSkin.Controls.MaterialButton();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialButtonDangNhap = new MaterialSkin.Controls.MaterialButton();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangNhap));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnDangKy = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox1.SuspendLayout();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbxShowPass = new MaterialSkin.Controls.MaterialCheckbox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.btnDangNhap = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // materialButtonDangKy
+            // panel1
             // 
-            this.materialButtonDangKy.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButtonDangKy.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButtonDangKy.Depth = 0;
-            this.materialButtonDangKy.HighEmphasis = true;
-            this.materialButtonDangKy.Icon = null;
-            this.materialButtonDangKy.Location = new System.Drawing.Point(182, 317);
-            this.materialButtonDangKy.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.materialButtonDangKy.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButtonDangKy.Name = "materialButtonDangKy";
-            this.materialButtonDangKy.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButtonDangKy.Size = new System.Drawing.Size(83, 36);
-            this.materialButtonDangKy.TabIndex = 3;
-            this.materialButtonDangKy.Text = "Đăng Ký";
-            this.materialButtonDangKy.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButtonDangKy.UseAccentColor = false;
-            this.materialButtonDangKy.UseVisualStyleBackColor = true;
-            this.materialButtonDangKy.Click += new System.EventHandler(this.materialButtonDangKy_Click);
+            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.btnDangKy);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(268, 449);
+            this.panel1.TabIndex = 0;
             // 
-            // materialLabel2
+            // label6
             // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(35, 42);
-            this.materialLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(49, 19);
-            this.materialLabel2.TabIndex = 4;
-            this.materialLabel2.Text = "Email: ";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(46, 223);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(168, 22);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Quản Lý Đặt Tour";
             // 
-            // materialLabel3
+            // label5
             // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(5, 94);
-            this.materialLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(79, 19);
-            this.materialLabel3.TabIndex = 5;
-            this.materialLabel3.Text = "Password: ";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(150, 362);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(102, 16);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Register account";
             // 
-            // materialButtonDangNhap
+            // btnDangKy
             // 
-            this.materialButtonDangNhap.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButtonDangNhap.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButtonDangNhap.Depth = 0;
-            this.materialButtonDangNhap.HighEmphasis = true;
-            this.materialButtonDangNhap.Icon = null;
-            this.materialButtonDangNhap.Location = new System.Drawing.Point(42, 317);
-            this.materialButtonDangNhap.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.materialButtonDangNhap.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButtonDangNhap.Name = "materialButtonDangNhap";
-            this.materialButtonDangNhap.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButtonDangNhap.Size = new System.Drawing.Size(105, 36);
-            this.materialButtonDangNhap.TabIndex = 2;
-            this.materialButtonDangNhap.Text = "Đăng Nhập";
-            this.materialButtonDangNhap.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButtonDangNhap.UseAccentColor = false;
-            this.materialButtonDangNhap.UseVisualStyleBackColor = true;
-            this.materialButtonDangNhap.Click += new System.EventHandler(this.materialButtonDangNhap_Click);
+            this.btnDangKy.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangKy.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnDangKy.Location = new System.Drawing.Point(11, 383);
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.Size = new System.Drawing.Size(241, 39);
+            this.btnDangKy.TabIndex = 6;
+            this.btnDangKy.TabStop = false;
+            this.btnDangKy.Text = "Sign up";
+            this.btnDangKy.UseVisualStyleBackColor = false;
+            this.btnDangKy.Click += new System.EventHandler(this.materialButtonDangKy_Click);
             // 
-            // txtEmail
+            // pictureBox1
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(93, 182);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(192, 29);
-            this.txtEmail.TabIndex = 0;
-            this.txtEmail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(93, 234);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(135, 29);
-            this.txtPassword.TabIndex = 1;
-            this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(77, 90);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(75, 100);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(590, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 45);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Đăng Nhập";
+            this.label1.Size = new System.Drawing.Size(17, 18);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "X";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
+            this.label1.MouseHover += new System.EventHandler(this.label1_MouseHover);
             // 
-            // groupBox1
+            // label2
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.groupBox1.Controls.Add(this.materialLabel3);
-            this.groupBox1.Controls.Add(this.materialLabel2);
-            this.groupBox1.Location = new System.Drawing.Point(6, 149);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(323, 160);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(288, 77);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(163, 26);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Login Account";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(292, 128);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 18);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "UserName:";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.Color.White;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(293, 159);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(293, 34);
+            this.txtEmail.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(292, 212);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 18);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Password:";
+            // 
+            // cbxShowPass
+            // 
+            this.cbxShowPass.AutoEllipsis = true;
+            this.cbxShowPass.Depth = 0;
+            this.cbxShowPass.Location = new System.Drawing.Point(438, 280);
+            this.cbxShowPass.Margin = new System.Windows.Forms.Padding(0);
+            this.cbxShowPass.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.cbxShowPass.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cbxShowPass.Name = "cbxShowPass";
+            this.cbxShowPass.ReadOnly = false;
+            this.cbxShowPass.Ripple = true;
+            this.cbxShowPass.Size = new System.Drawing.Size(203, 36);
+            this.cbxShowPass.TabIndex = 3;
+            this.cbxShowPass.Text = "Show password";
+            this.cbxShowPass.UseVisualStyleBackColor = true;
+            this.cbxShowPass.CheckedChanged += new System.EventHandler(this.cbxShowPass_CheckedChanged);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(293, 243);
+            this.txtPassword.Multiline = true;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(293, 34);
+            this.txtPassword.TabIndex = 2;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
+            // 
+            // btnDangNhap
+            // 
+            this.btnDangNhap.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnDangNhap.Location = new System.Drawing.Point(293, 340);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(106, 39);
+            this.btnDangNhap.TabIndex = 4;
+            this.btnDangNhap.Text = "Sign in";
+            this.btnDangNhap.UseVisualStyleBackColor = false;
+            this.btnDangNhap.Click += new System.EventHandler(this.materialButtonDangNhap_Click);
             // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 418);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(619, 449);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnDangNhap);
+            this.Controls.Add(this.cbxShowPass);
             this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.materialButtonDangNhap);
-            this.Controls.Add(this.materialButtonDangKy);
-            this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDangNhap";
-            this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "frmTestDangNhap";
             this.Load += new System.EventHandler(this.frmDangNhap_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialButton materialButtonDangKy;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialButton materialButtonDangNhap;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtPassword;
+
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label4;
+        private MaterialSkin.Controls.MaterialCheckbox cbxShowPass;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Button btnDangNhap;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnDangKy;
+        private System.Windows.Forms.Label label6;
     }
 }
