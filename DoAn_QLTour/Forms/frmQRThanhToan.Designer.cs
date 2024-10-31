@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQRThanhToan));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnXacNhanThanhToan = new System.Windows.Forms.Button();
@@ -36,10 +37,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::DoAn_QLTour.Properties.Resources.tải_xuống;
-            this.pictureBox1.Location = new System.Drawing.Point(270, 128);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(252, 67);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(231, 232);
+            this.pictureBox1.Size = new System.Drawing.Size(232, 230);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -47,7 +48,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(89, 77);
+            this.label1.Location = new System.Drawing.Point(69, 300);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(636, 48);
             this.label1.TabIndex = 1;
@@ -55,15 +56,14 @@
             // 
             // btnXacNhanThanhToan
             // 
-            this.btnXacNhanThanhToan.Location = new System.Drawing.Point(270, 398);
+            this.btnXacNhanThanhToan.Location = new System.Drawing.Point(252, 384);
             this.btnXacNhanThanhToan.Name = "btnXacNhanThanhToan";
-            this.btnXacNhanThanhToan.Size = new System.Drawing.Size(231, 26);
+            this.btnXacNhanThanhToan.Size = new System.Drawing.Size(232, 46);
             this.btnXacNhanThanhToan.TabIndex = 2;
-            this.btnXacNhanThanhToan.Text = "Xác Nhận";
+            this.btnXacNhanThanhToan.Text = "Xác Nhận Thanh Toán";
             this.btnXacNhanThanhToan.UseVisualStyleBackColor = true;
-            this.btnXacNhanThanhToan.Click += new System.EventHandler(this.btnXacNhanThanhToan_Click);
             // 
-            // QRThanhToan
+            // frmQRThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -71,8 +71,8 @@
             this.Controls.Add(this.btnXacNhanThanhToan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "QRThanhToan";
-            this.Text = "QRThanhToan";
+            this.Name = "frmQRThanhToan";
+            this.Text = "frmQRThanhToan";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

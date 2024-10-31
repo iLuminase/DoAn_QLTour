@@ -16,7 +16,6 @@ namespace DoAn_QLTour.Forms
         {
             InitializeComponent();
         }
-
         private void btnXacNhanThanhToan_Click(object sender, EventArgs e)
         {
 
