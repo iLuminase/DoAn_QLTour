@@ -12,7 +12,7 @@ using BCrypt.Net;
 
 namespace DoAn_QLTour.Forms
 {
-    public partial class frmDangKy : MaterialSkin.Controls.MaterialForm
+    public partial class frmDangKy : Form
     {
         // Biến connectionString được định nghĩa ở đầu lớp frmRegister, đảm bảo rằng nó có thể được sử dụng trong các phương thức khác trong cùng một lớp.
         private string connectionString = "Data Source=_HEHENIKEN;Initial Catalog=QuanLyTour;Integrated Security=True"; // Thay đổi thông tin kết nối
@@ -57,10 +57,7 @@ namespace DoAn_QLTour.Forms
             MessageBox.Show("Đăng ký thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close(); // Đóng form đăng ký
         }
-        private void frmDangKy_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void materialButtonDangKy_Click(object sender, EventArgs e)
         {
@@ -92,24 +89,43 @@ namespace DoAn_QLTour.Forms
             frmDangNhap frm = new frmDangNhap();
             frm.Show();
         }
+        
+        // xử lý nút X
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
-        private void materialLabel4_Click(object sender, EventArgs e)
+        private void label1_MouseHover(object sender, EventArgs e)
         {
-
+            label1.BackColor = Color.Gray;
         }
 
-        private void materialLabel3_Click(object sender, EventArgs e)
+        private void label1_MouseLeave(object sender, EventArgs e)
         {
-
+            label1.BackColor = default;
+        }
+        // xử lý sự kiện Enter
+        private void txtPassword2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                materialButtonDangKy_Click(sender, e);
+            }
+        }
+        // xử lý nút sign in
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            frmDangNhap frm = new frmDangNhap();
+            frm.Show(); 
+            this.Hide(); 
         }
 
-        private void materialLabel2_Click(object sender, EventArgs e)
+        private void cbxShowPass_CheckedChanged(object sender, EventArgs e)
         {
+            txtPassword.PasswordChar = cbxShowPass.Checked ? '\0' : '*';
+            txtPassword2.PasswordChar = cbxShowPass.Checked ? '\0' : '*';
 
         }
     }

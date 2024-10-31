@@ -61,33 +61,42 @@ namespace DoAn_QLTour
         {
             InitializeComponent();
             this.roleID = roleID;
-            /*ApplyPermissions();*/ // Gọi hàm phân quyền dựa trên roleID
+            ApplyPermissions(); // Gọi hàm phân quyền dựa trên roleID
+
+            this.FormClosed += FrmHome_FormClosed;
         }
+        // xử lý sự kiện form đóng
+        private void FrmHome_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Gọi Application.Exit() khi form đóng
+            Application.Exit();
+        }
+        private void ApplyPermissions()
+        {
+            if (roleID == 1) // Admin
+            {
+                //doanh thu
+                //bao cao
+                //thong ke 
+                //
+            }
+            else if (roleID == 2) // Employee
+            {
+                //tat ca chuc nang tru chuc nang cua admin
+            }
+            else if (roleID == 3) // User
+            {
 
-        //private void ApplyPermissions()
-        //{
-        //    if (roleID == 1) // Admin
-        //    {
-        //        // Hiển thị tất cả các chức năng
-        //        btnChiTietChuyenDiDaDat.Visible = false; // Trừ Chi Tiết Chuyến đi đã đặt của Người Dùng
-        //    }
-        //    else if (roleID == 2) // Employee
-        //    {
-        //        btnChiTietChuyenDiDaDat.Visible = false;
-        //    }
-        //    else if (roleID == 3) // User
-        //    {
-
-        //        btnTour.Visible = false;
-        //        btnDichVu.Visible = false;
-        //        btnDatCho.Visible = false;
-        //        btnThanhToan.Visible = false;
-        //        btnTaiKhoan.Visible = false;
-                
+                btnTour.Visible = false;
+                btnDichVu.Visible = true;
+                btnDatCho.Visible = true;
+                btnThanhToan.Visible = true;
+                btnTaiKhoan.Visible = true;
 
 
-        //    }
-        //}
+
+            }
+        }
 
         private void hideForm(Form child)
         {
@@ -125,7 +134,7 @@ namespace DoAn_QLTour
             panel1.Visible = true;
         }
 
-  
+
 
         private void btnChiTietChuyenDiDaDat_Click(object sender, EventArgs e)
         {
@@ -137,10 +146,16 @@ namespace DoAn_QLTour
 
         private void btnDichVu_Click(object sender, EventArgs e)
         {
-            
+
             frmDichVu frm = new frmDichVu();
             ShowFormAsMdiChild(frm);
 
         }
+
+        private void btnDatTour_pn1_Click(object sender, EventArgs e)
+        {
+
+        }
+        
     }
 }

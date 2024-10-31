@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DoAn_QLTour.Forms
 {
-    public partial class frmDangNhap : MaterialSkin.Controls.MaterialForm
+    public partial class frmDangNhap : Form
     {
         private string connectionString = "Data Source=_HEHENIKEN;Initial Catalog=QuanLyTour;Integrated Security=True";
 
@@ -74,10 +74,6 @@ namespace DoAn_QLTour.Forms
             }
         }
 
-        private void frmDangNhap_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void materialButtonDangNhap_Click(object sender, EventArgs e)
         {
@@ -88,18 +84,40 @@ namespace DoAn_QLTour.Forms
             AuthenticateUser(email, password);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
         // xử lý sự kiện Enter
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == (char) Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 materialButtonDangNhap_Click(sender, e);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label1_MouseHover(object sender, EventArgs e)
+        {
+            label1.BackColor = Color.Gray;
+        }
+
+        private void label1_MouseLeave(object sender, EventArgs e)
+        {
+            label1.BackColor = default;
+        }
+
+        private void cbxShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPassword.PasswordChar = cbxShowPass.Checked ? '\0' : '*';
+        }
+
+        private void frmDangNhap_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

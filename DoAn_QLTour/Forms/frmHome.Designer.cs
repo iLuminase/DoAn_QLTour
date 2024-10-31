@@ -36,6 +36,7 @@
             this.btnTour = new MaterialSkin.Controls.MaterialButton();
             this.btnHome = new MaterialSkin.Controls.MaterialButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnDangXuat = new MaterialSkin.Controls.MaterialButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -237,6 +238,7 @@
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.btnDangXuat);
             this.panel2.Controls.Add(this.btnTaiKhoan);
             this.panel2.Controls.Add(this.btnThanhToan);
@@ -249,6 +251,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(253, 727);
             this.panel2.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(3, 712);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 15);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Version 0.1.1234";
             // 
             // btnDangXuat
             // 
@@ -686,6 +700,7 @@
             this.btnDatTour_pn1.TabIndex = 5;
             this.btnDatTour_pn1.Text = "Đặt Ngay";
             this.btnDatTour_pn1.UseVisualStyleBackColor = false;
+            this.btnDatTour_pn1.Click += new System.EventHandler(this.btnDatTour_pn1_Click);
             // 
             // materialLabel3
             // 
@@ -748,6 +763,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TRANG CHỦ";
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -822,6 +838,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblSoNguoiPhucVu;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label6;
     }
 }
 
