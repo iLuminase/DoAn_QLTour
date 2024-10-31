@@ -23,17 +23,23 @@ namespace QLTour.DAL.Entities
         [StringLength(255)]
         public string HoTen { get; set; }
 
+        [Required]
         [StringLength(20)]
         public string SoDienThoai { get; set; }
 
-        [StringLength(255)]
+        [Required]
+        [StringLength(100)]
         public string Email { get; set; }
 
+        [Required]
         [StringLength(255)]
         public string DiaChi { get; set; }
 
+        [Required]
         [StringLength(12)]
         public string CMND { get; set; }
+
+        public virtual Account Account { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietDatTour> ChiTietDatTour { get; set; }

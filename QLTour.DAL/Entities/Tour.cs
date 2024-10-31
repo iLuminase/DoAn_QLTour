@@ -29,16 +29,10 @@ namespace QLTour.DAL.Entities
 
         public string MoTa { get; set; }
 
-        public int? TinhTrang { get; set; }
-
-        public int? HuongDanVienID { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DatTour> DatTour { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Feedback> Feedback { get; set; }
-
-        public virtual NhanVien NhanVien { get; set; }
     }
 }

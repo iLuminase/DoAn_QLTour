@@ -71,7 +71,7 @@ namespace DoAn_QLTour
                 // Hiển thị tất cả các chức năng
                 btnChiTietChuyenDiDaDat.Visible = false; // Trừ Chi Tiết Chuyến đi đã đặt của Người Dùng
             }
-            else if (roleID == 2) // Employee
+            else if (roleID == 2) // Nhan Vien
             {
                 btnChiTietChuyenDiDaDat.Visible = false;
             }
@@ -80,12 +80,8 @@ namespace DoAn_QLTour
 
                 btnTour.Visible = false;
                 btnDichVu.Visible = false;
-                btnDatCho.Visible = false;
                 btnThanhToan.Visible = false;
                 btnTaiKhoan.Visible = false;
-
-
-
             }
         }
 
@@ -171,7 +167,10 @@ namespace DoAn_QLTour
 
         private void btnDatCho_Click(object sender, EventArgs e)
         {
-
+            // Mở Form Đặt Chỗ
+            var frm = new frmDatTour();
+            ShowFormAsMdiChild(frm);
+            //this.Hide(); // Ẩn Form Home
         }
     }
 }

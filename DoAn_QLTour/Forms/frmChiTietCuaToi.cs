@@ -31,6 +31,7 @@ namespace DoAn_QLTour.Forms
                 dgvTour.Rows[index].Cells[3].Value = item.DatTour.NgayDat;
                 dgvTour.Rows[index].Cells[4].Value = item.SoTienCoc;
                 dgvTour.Rows[index].Cells[5].Value = item.TinhTrang;
+                dgvTour.Rows[index].Cells[6].Value = item.SoLuongNguoiDat;
             }
         }
 
@@ -61,6 +62,11 @@ namespace DoAn_QLTour.Forms
         private void frmQLTour_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

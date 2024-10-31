@@ -36,6 +36,11 @@ namespace QLTour.DAL.Entities
                 .Property(e => e.Password)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<Account>()
+                .HasMany(e => e.KhachHang)
+                .WithRequired(e => e.Account)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<DatTour>()
                 .HasMany(e => e.ChiTietDatTour)
                 .WithRequired(e => e.DatTour)
@@ -63,6 +68,10 @@ namespace QLTour.DAL.Entities
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<KhachHang>()
+                .Property(e => e.Email)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<KhachHang>()
                 .HasMany(e => e.ChiTietDatTour)
                 .WithRequired(e => e.KhachHang)
                 .WillCascadeOnDelete(false);
@@ -81,11 +90,6 @@ namespace QLTour.DAL.Entities
                 .WithRequired(e => e.KhuyenMai)
                 .HasForeignKey(e => e.MaKhuyenMai)
                 .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<NhanVien>()
-                .HasMany(e => e.Tour)
-                .WithOptional(e => e.NhanVien)
-                .HasForeignKey(e => e.HuongDanVienID);
 
             modelBuilder.Entity<Role>()
                 .HasMany(e => e.Account)

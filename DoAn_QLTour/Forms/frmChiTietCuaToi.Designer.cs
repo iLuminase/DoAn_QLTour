@@ -37,12 +37,15 @@
             this.NgayDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoTienCoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoNguoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDong = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTour)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnDong);
             this.panel1.Controls.Add(this.materialLabel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 64);
@@ -72,7 +75,8 @@
             this.GiaTien,
             this.NgayDat,
             this.SoTienCoc,
-            this.TinhTrang});
+            this.TinhTrang,
+            this.SoNguoi});
             this.dgvTour.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTour.Location = new System.Drawing.Point(3, 162);
             this.dgvTour.Margin = new System.Windows.Forms.Padding(4);
@@ -124,6 +128,26 @@
             this.TinhTrang.Name = "TinhTrang";
             this.TinhTrang.Width = 125;
             // 
+            // SoNguoi
+            // 
+            this.SoNguoi.HeaderText = "Số Người";
+            this.SoNguoi.MinimumWidth = 6;
+            this.SoNguoi.Name = "SoNguoi";
+            this.SoNguoi.Width = 125;
+            // 
+            // btnDong
+            // 
+            this.btnDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDong.Location = new System.Drawing.Point(4, 9);
+            this.btnDong.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(115, 43);
+            this.btnDong.TabIndex = 8;
+            this.btnDong.TabStop = false;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
+            // 
             // frmChiTietCuaToi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -159,5 +183,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayDat;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoTienCoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoNguoi;
+        private System.Windows.Forms.Button btnDong;
     }
 }

@@ -9,6 +9,12 @@ namespace QLTour.DAL.Entities
     [Table("Account")]
     public partial class Account
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Account()
+        {
+            KhachHang = new HashSet<KhachHang>();
+        }
+
         [Key]
         [StringLength(100)]
         public string Email { get; set; }
@@ -20,5 +26,8 @@ namespace QLTour.DAL.Entities
         public int RoleID { get; set; }
 
         public virtual Role Role { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<KhachHang> KhachHang { get; set; }
     }
 }

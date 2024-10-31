@@ -12,7 +12,7 @@ using System.Data.Entity.Migrations;
 using QLTour.BUS.Properties;
 namespace DoAn_QLTour.Forms
 {
-    public partial class frmQLTour : Form
+    public partial class frmQLTour : MaterialSkin.Controls.MaterialForm
     {
         private readonly TourService tourService = new TourService();
         ModelTourDB db = new ModelTourDB();
@@ -42,7 +42,7 @@ namespace DoAn_QLTour.Forms
                 //dgvTour.Rows[index].Cells[6].Value = item.NgayKetThuc != null
                 //    ? item.NgayKetThuc.Value.ToString("dd/MM/yyyy")
                 //    : string.Empty;
-                dgvTour.Rows[index].Cells[5].Value = item.TinhTrang;
+                
             }
         }
         public void setGridViewStyle(DataGridView dgview)

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BCrypt.Net;
+using QLTour.BUS.Properties;
 
 namespace DoAn_QLTour.Forms
 {
@@ -36,26 +37,16 @@ namespace DoAn_QLTour.Forms
             }
         }
 
-        private void RegisterUser(string email, string password)
+        private void RegisterUserButton_Click(object sender, EventArgs e)
         {
-            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
+            string email = materialMaskedTextBoxEmail.Text.Trim();
+            string password = materialMaskedTextBoxPassword.Text.Trim();
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                string query = "INSERT INTO Account (Email, Password, RoleID) VALUES (@Email, @Password, @RoleID)";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@Email", email);
-                    cmd.Parameters.AddWithValue("@Password", hashedPassword);
-                    cmd.Parameters.AddWithValue("@RoleID", 3); // 3 là User
-                    cmd.ExecuteNonQuery();
+            User userBUS = new User();
+            userBUS.RegisterUser(email, password);
 
-                }
-            }
-
-            MessageBox.Show("Đăng ký thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close(); // Đóng form đăng ký
+            // Đóng form đăng ký sau khi đăng ký thành công
+            this.Close();
         }
         private void frmDangKy_Load(object sender, EventArgs e)
         {
@@ -64,6 +55,7 @@ namespace DoAn_QLTour.Forms
 
         private void materialButtonDangKy_Click(object sender, EventArgs e)
         {
+            User userBUS = new User();
             string email = materialMaskedTextBoxEmail.Text.Trim();
             string password = materialMaskedTextBoxPassword.Text.Trim();
             string confirmPassword = materialMaskedTextBoxConfirmPassword.Text.Trim();
@@ -88,7 +80,7 @@ namespace DoAn_QLTour.Forms
             }
 
             // Đăng ký người dùng
-            RegisterUser(email, password);
+            userBUS.RegisterUser(email, password);
         }
     }
 }
