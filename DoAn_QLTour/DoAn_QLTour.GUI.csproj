@@ -76,6 +76,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\frmFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFeedback.Designer.cs">
+      <DependentUpon>frmFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChiTietCuaToi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChiTietCuaToi.Designer.cs">
+      <DependentUpon>frmChiTietCuaToi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmDangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +99,12 @@
     </Compile>
     <Compile Include="Forms\frmDatDichVu.Designer.cs">
       <DependentUpon>frmDatDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDatTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDatTour.Designer.cs">
+      <DependentUpon>frmDatTour.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmDatTourPanel.cs">
       <SubType>Form</SubType>
@@ -118,6 +136,12 @@
     <Compile Include="Forms\frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmQRThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmQRThanhToan.Designer.cs">
+      <DependentUpon>frmQRThanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmThemTour.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,11 +171,20 @@
     <Compile Include="obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmFeedback.resx">
+      <DependentUpon>frmFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChiTietCuaToi.resx">
+      <DependentUpon>frmChiTietCuaToi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDangKy.resx">
       <DependentUpon>frmDangKy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDatDichVu.resx">
       <DependentUpon>frmDatDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDatTour.resx">
+      <DependentUpon>frmDatTour.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDatTourPanel.resx">
       <DependentUpon>frmDatTourPanel.cs</DependentUpon>
@@ -167,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmQRThanhToan.resx">
+      <DependentUpon>frmQRThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmThemTour.resx">
       <DependentUpon>frmThemTour.cs</DependentUpon>

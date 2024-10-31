@@ -50,7 +50,7 @@
             // 
             this.dgvDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDichVu.Location = new System.Drawing.Point(384, 11);
-            this.dgvDichVu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDichVu.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDichVu.Name = "dgvDichVu";
             this.dgvDichVu.RowHeadersWidth = 51;
             this.dgvDichVu.RowTemplate.Height = 24;
@@ -224,7 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1327, 696);
+            this.ClientSize = new System.Drawing.Size(1436, 681);
             this.Controls.Add(this.btnDatDV);
             this.Controls.Add(this.txtTinhTrang);
             this.Controls.Add(this.txtMoTa);
@@ -240,7 +240,7 @@
             this.Controls.Add(this.dgvDichVu);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmQuanLyDichVu";
             this.Text = "Quản Lý Dịch Vụ";
             this.Load += new System.EventHandler(this.frmQuanLyDichVu_Load);

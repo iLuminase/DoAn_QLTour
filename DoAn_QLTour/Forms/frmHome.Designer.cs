@@ -29,15 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
-            this.btnTaiKhoan = new MaterialSkin.Controls.MaterialButton();
-            this.btnThanhToan = new MaterialSkin.Controls.MaterialButton();
-            this.btnDatCho = new MaterialSkin.Controls.MaterialButton();
-            this.btnDichVu = new MaterialSkin.Controls.MaterialButton();
-            this.btnTour = new MaterialSkin.Controls.MaterialButton();
-            this.btnHome = new MaterialSkin.Controls.MaterialButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnDangXuat = new MaterialSkin.Controls.MaterialButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -77,7 +68,17 @@
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2.SuspendLayout();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnFeedBack = new MaterialSkin.Controls.MaterialButton();
+            this.btnChiTietChuyenDiDaDat = new MaterialSkin.Controls.MaterialButton();
+            this.btnDangXuat = new MaterialSkin.Controls.MaterialButton();
+            this.btnTaiKhoan = new MaterialSkin.Controls.MaterialButton();
+            this.btnThanhToan = new MaterialSkin.Controls.MaterialButton();
+            this.btnDatCho = new MaterialSkin.Controls.MaterialButton();
+            this.btnDichVu = new MaterialSkin.Controls.MaterialButton();
+            this.btnTour = new MaterialSkin.Controls.MaterialButton();
+            this.btnHome = new MaterialSkin.Controls.MaterialButton();
             this.panel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -94,198 +95,8 @@
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnTaiKhoan
-            // 
-            this.btnTaiKhoan.AutoSize = false;
-            this.btnTaiKhoan.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnTaiKhoan.BackColor = System.Drawing.Color.Transparent;
-            this.btnTaiKhoan.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnTaiKhoan.Depth = 0;
-            this.btnTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiKhoan.HighEmphasis = true;
-            this.btnTaiKhoan.Icon = ((System.Drawing.Image)(resources.GetObject("btnTaiKhoan.Icon")));
-            this.btnTaiKhoan.Location = new System.Drawing.Point(0, 399);
-            this.btnTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnTaiKhoan.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnTaiKhoan.Name = "btnTaiKhoan";
-            this.btnTaiKhoan.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnTaiKhoan.Size = new System.Drawing.Size(253, 54);
-            this.btnTaiKhoan.TabIndex = 9;
-            this.btnTaiKhoan.Text = "Tài Khoản";
-            this.btnTaiKhoan.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnTaiKhoan.UseAccentColor = false;
-            this.btnTaiKhoan.UseVisualStyleBackColor = false;
-            // 
-            // btnThanhToan
-            // 
-            this.btnThanhToan.AutoSize = false;
-            this.btnThanhToan.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnThanhToan.BackColor = System.Drawing.Color.Transparent;
-            this.btnThanhToan.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnThanhToan.Depth = 0;
-            this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan.HighEmphasis = true;
-            this.btnThanhToan.Icon = ((System.Drawing.Image)(resources.GetObject("btnThanhToan.Icon")));
-            this.btnThanhToan.Location = new System.Drawing.Point(0, 308);
-            this.btnThanhToan.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnThanhToan.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnThanhToan.Size = new System.Drawing.Size(253, 54);
-            this.btnThanhToan.TabIndex = 7;
-            this.btnThanhToan.Text = "Thanh Toán";
-            this.btnThanhToan.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnThanhToan.UseAccentColor = false;
-            this.btnThanhToan.UseVisualStyleBackColor = false;
-            // 
-            // btnDatCho
-            // 
-            this.btnDatCho.AutoSize = false;
-            this.btnDatCho.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDatCho.BackColor = System.Drawing.Color.Transparent;
-            this.btnDatCho.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnDatCho.Depth = 0;
-            this.btnDatCho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDatCho.HighEmphasis = true;
-            this.btnDatCho.Icon = ((System.Drawing.Image)(resources.GetObject("btnDatCho.Icon")));
-            this.btnDatCho.Location = new System.Drawing.Point(0, 254);
-            this.btnDatCho.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnDatCho.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnDatCho.Name = "btnDatCho";
-            this.btnDatCho.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnDatCho.Size = new System.Drawing.Size(253, 54);
-            this.btnDatCho.TabIndex = 5;
-            this.btnDatCho.Text = "Đặt Chỗ";
-            this.btnDatCho.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnDatCho.UseAccentColor = false;
-            this.btnDatCho.UseVisualStyleBackColor = false;
-            this.btnDatCho.Click += new System.EventHandler(this.btnDatCho_Click);
-            // 
-            // btnDichVu
-            // 
-            this.btnDichVu.AutoSize = false;
-            this.btnDichVu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDichVu.BackColor = System.Drawing.Color.Transparent;
-            this.btnDichVu.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnDichVu.Depth = 0;
-            this.btnDichVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDichVu.HighEmphasis = true;
-            this.btnDichVu.Icon = ((System.Drawing.Image)(resources.GetObject("btnDichVu.Icon")));
-            this.btnDichVu.Location = new System.Drawing.Point(0, 200);
-            this.btnDichVu.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnDichVu.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnDichVu.Name = "btnDichVu";
-            this.btnDichVu.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnDichVu.Size = new System.Drawing.Size(253, 54);
-            this.btnDichVu.TabIndex = 6;
-            this.btnDichVu.Text = "Dịch Vụ";
-            this.btnDichVu.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnDichVu.UseAccentColor = false;
-            this.btnDichVu.UseVisualStyleBackColor = false;
-            this.btnDichVu.Click += new System.EventHandler(this.btnDichVu_Click);
-            // 
-            // btnTour
-            // 
-            this.btnTour.AutoSize = false;
-            this.btnTour.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnTour.BackColor = System.Drawing.Color.Transparent;
-            this.btnTour.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btnTour.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnTour.Depth = 0;
-            this.btnTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTour.HighEmphasis = true;
-            this.btnTour.Icon = ((System.Drawing.Image)(resources.GetObject("btnTour.Icon")));
-            this.btnTour.Location = new System.Drawing.Point(0, 146);
-            this.btnTour.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnTour.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnTour.Name = "btnTour";
-            this.btnTour.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnTour.Size = new System.Drawing.Size(253, 54);
-            this.btnTour.TabIndex = 4;
-            this.btnTour.Text = "Tour";
-            this.btnTour.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnTour.UseAccentColor = false;
-            this.btnTour.UseVisualStyleBackColor = false;
-            this.btnTour.Click += new System.EventHandler(this.btnTour_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.AutoSize = false;
-            this.btnHome.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnHome.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnHome.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnHome.Depth = 0;
-            this.btnHome.Font = new System.Drawing.Font("Microsoft JhengHei UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.Transparent;
-            this.btnHome.HighEmphasis = true;
-            this.btnHome.Icon = ((System.Drawing.Image)(resources.GetObject("btnHome.Icon")));
-            this.btnHome.Location = new System.Drawing.Point(0, 37);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnHome.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnHome.Name = "btnHome";
-            this.btnHome.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnHome.Size = new System.Drawing.Size(253, 72);
-            this.btnHome.TabIndex = 2;
-            this.btnHome.Text = "Home";
-            this.btnHome.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnHome.UseAccentColor = false;
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.btnDangXuat);
-            this.panel2.Controls.Add(this.btnTaiKhoan);
-            this.panel2.Controls.Add(this.btnThanhToan);
-            this.panel2.Controls.Add(this.btnDatCho);
-            this.panel2.Controls.Add(this.btnDichVu);
-            this.panel2.Controls.Add(this.btnTour);
-            this.panel2.Controls.Add(this.btnHome);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(3, 64);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(253, 727);
-            this.panel2.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(3, 712);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 15);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Version 0.1.1234";
-            // 
-            // btnDangXuat
-            // 
-            this.btnDangXuat.AutoSize = false;
-            this.btnDangXuat.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDangXuat.BackColor = System.Drawing.Color.Transparent;
-            this.btnDangXuat.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnDangXuat.Depth = 0;
-            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.HighEmphasis = true;
-            this.btnDangXuat.Icon = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.Icon")));
-            this.btnDangXuat.Location = new System.Drawing.Point(0, 453);
-            this.btnDangXuat.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnDangXuat.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnDangXuat.Size = new System.Drawing.Size(253, 54);
-            this.btnDangXuat.TabIndex = 10;
-            this.btnDangXuat.Text = "Đăng Xuất";
-            this.btnDangXuat.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnDangXuat.UseAccentColor = false;
-            this.btnDangXuat.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -753,6 +564,245 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(3, 712);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 15);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Version 0.1.1234";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.btnFeedBack);
+            this.panel2.Controls.Add(this.btnChiTietChuyenDiDaDat);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.btnDangXuat);
+            this.panel2.Controls.Add(this.btnTaiKhoan);
+            this.panel2.Controls.Add(this.btnThanhToan);
+            this.panel2.Controls.Add(this.btnDatCho);
+            this.panel2.Controls.Add(this.btnDichVu);
+            this.panel2.Controls.Add(this.btnTour);
+            this.panel2.Controls.Add(this.btnHome);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(3, 64);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(253, 727);
+            this.panel2.TabIndex = 9;
+            // 
+            // btnFeedBack
+            // 
+            this.btnFeedBack.AutoSize = false;
+            this.btnFeedBack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFeedBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnFeedBack.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnFeedBack.Depth = 0;
+            this.btnFeedBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFeedBack.HighEmphasis = true;
+            this.btnFeedBack.Icon = ((System.Drawing.Image)(resources.GetObject("btnFeedBack.Icon")));
+            this.btnFeedBack.Location = new System.Drawing.Point(0, 572);
+            this.btnFeedBack.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnFeedBack.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnFeedBack.Name = "btnFeedBack";
+            this.btnFeedBack.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnFeedBack.Size = new System.Drawing.Size(253, 54);
+            this.btnFeedBack.TabIndex = 13;
+            this.btnFeedBack.Text = "FeedBack";
+            this.btnFeedBack.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnFeedBack.UseAccentColor = false;
+            this.btnFeedBack.UseVisualStyleBackColor = false;
+            this.btnFeedBack.Click += new System.EventHandler(this.btnFeedBack_Click);
+            // 
+            // btnChiTietChuyenDiDaDat
+            // 
+            this.btnChiTietChuyenDiDaDat.AutoSize = false;
+            this.btnChiTietChuyenDiDaDat.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnChiTietChuyenDiDaDat.BackColor = System.Drawing.Color.Transparent;
+            this.btnChiTietChuyenDiDaDat.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnChiTietChuyenDiDaDat.Depth = 0;
+            this.btnChiTietChuyenDiDaDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChiTietChuyenDiDaDat.HighEmphasis = true;
+            this.btnChiTietChuyenDiDaDat.Icon = ((System.Drawing.Image)(resources.GetObject("btnChiTietChuyenDiDaDat.Icon")));
+            this.btnChiTietChuyenDiDaDat.Location = new System.Drawing.Point(0, 308);
+            this.btnChiTietChuyenDiDaDat.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnChiTietChuyenDiDaDat.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnChiTietChuyenDiDaDat.Name = "btnChiTietChuyenDiDaDat";
+            this.btnChiTietChuyenDiDaDat.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnChiTietChuyenDiDaDat.Size = new System.Drawing.Size(253, 54);
+            this.btnChiTietChuyenDiDaDat.TabIndex = 12;
+            this.btnChiTietChuyenDiDaDat.Text = "Chi Tiết Đã Đặt";
+            this.btnChiTietChuyenDiDaDat.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnChiTietChuyenDiDaDat.UseAccentColor = false;
+            this.btnChiTietChuyenDiDaDat.UseVisualStyleBackColor = false;
+            this.btnChiTietChuyenDiDaDat.Click += new System.EventHandler(this.btnChiTietChuyenDiDaDat_Click);
+            // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.AutoSize = false;
+            this.btnDangXuat.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDangXuat.BackColor = System.Drawing.Color.Transparent;
+            this.btnDangXuat.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnDangXuat.Depth = 0;
+            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.HighEmphasis = true;
+            this.btnDangXuat.Icon = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.Icon")));
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 622);
+            this.btnDangXuat.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDangXuat.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnDangXuat.Size = new System.Drawing.Size(253, 54);
+            this.btnDangXuat.TabIndex = 10;
+            this.btnDangXuat.Text = "Đăng Xuất";
+            this.btnDangXuat.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnDangXuat.UseAccentColor = false;
+            this.btnDangXuat.UseVisualStyleBackColor = false;
+            // 
+            // btnTaiKhoan
+            // 
+            this.btnTaiKhoan.AutoSize = false;
+            this.btnTaiKhoan.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTaiKhoan.BackColor = System.Drawing.Color.Transparent;
+            this.btnTaiKhoan.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnTaiKhoan.Depth = 0;
+            this.btnTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaiKhoan.HighEmphasis = true;
+            this.btnTaiKhoan.Icon = ((System.Drawing.Image)(resources.GetObject("btnTaiKhoan.Icon")));
+            this.btnTaiKhoan.Location = new System.Drawing.Point(0, 525);
+            this.btnTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnTaiKhoan.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnTaiKhoan.Name = "btnTaiKhoan";
+            this.btnTaiKhoan.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnTaiKhoan.Size = new System.Drawing.Size(253, 54);
+            this.btnTaiKhoan.TabIndex = 9;
+            this.btnTaiKhoan.Text = "Tài Khoản";
+            this.btnTaiKhoan.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnTaiKhoan.UseAccentColor = false;
+            this.btnTaiKhoan.UseVisualStyleBackColor = false;
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.AutoSize = false;
+            this.btnThanhToan.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnThanhToan.BackColor = System.Drawing.Color.Transparent;
+            this.btnThanhToan.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnThanhToan.Depth = 0;
+            this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan.HighEmphasis = true;
+            this.btnThanhToan.Icon = ((System.Drawing.Image)(resources.GetObject("btnThanhToan.Icon")));
+            this.btnThanhToan.Location = new System.Drawing.Point(0, 362);
+            this.btnThanhToan.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnThanhToan.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnThanhToan.Size = new System.Drawing.Size(253, 54);
+            this.btnThanhToan.TabIndex = 7;
+            this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnThanhToan.UseAccentColor = false;
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            // 
+            // btnDatCho
+            // 
+            this.btnDatCho.AutoSize = false;
+            this.btnDatCho.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDatCho.BackColor = System.Drawing.Color.Transparent;
+            this.btnDatCho.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnDatCho.Depth = 0;
+            this.btnDatCho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatCho.HighEmphasis = true;
+            this.btnDatCho.Icon = ((System.Drawing.Image)(resources.GetObject("btnDatCho.Icon")));
+            this.btnDatCho.Location = new System.Drawing.Point(0, 254);
+            this.btnDatCho.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDatCho.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDatCho.Name = "btnDatCho";
+            this.btnDatCho.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnDatCho.Size = new System.Drawing.Size(253, 54);
+            this.btnDatCho.TabIndex = 5;
+            this.btnDatCho.Text = "Đặt Chỗ";
+            this.btnDatCho.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnDatCho.UseAccentColor = false;
+            this.btnDatCho.UseVisualStyleBackColor = false;
+            this.btnDatCho.Click += new System.EventHandler(this.btnDatCho_Click);
+            // 
+            // btnDichVu
+            // 
+            this.btnDichVu.AutoSize = false;
+            this.btnDichVu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDichVu.BackColor = System.Drawing.Color.Transparent;
+            this.btnDichVu.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnDichVu.Depth = 0;
+            this.btnDichVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDichVu.HighEmphasis = true;
+            this.btnDichVu.Icon = ((System.Drawing.Image)(resources.GetObject("btnDichVu.Icon")));
+            this.btnDichVu.Location = new System.Drawing.Point(0, 200);
+            this.btnDichVu.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDichVu.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDichVu.Name = "btnDichVu";
+            this.btnDichVu.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnDichVu.Size = new System.Drawing.Size(253, 54);
+            this.btnDichVu.TabIndex = 6;
+            this.btnDichVu.Text = "Dịch Vụ";
+            this.btnDichVu.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnDichVu.UseAccentColor = false;
+            this.btnDichVu.UseVisualStyleBackColor = false;
+            this.btnDichVu.Click += new System.EventHandler(this.btnDichVu_Click);
+            // 
+            // btnTour
+            // 
+            this.btnTour.AutoSize = false;
+            this.btnTour.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTour.BackColor = System.Drawing.Color.Transparent;
+            this.btnTour.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btnTour.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnTour.Depth = 0;
+            this.btnTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTour.HighEmphasis = true;
+            this.btnTour.Icon = ((System.Drawing.Image)(resources.GetObject("btnTour.Icon")));
+            this.btnTour.Location = new System.Drawing.Point(0, 146);
+            this.btnTour.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnTour.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnTour.Name = "btnTour";
+            this.btnTour.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnTour.Size = new System.Drawing.Size(253, 54);
+            this.btnTour.TabIndex = 4;
+            this.btnTour.Text = "Tour";
+            this.btnTour.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnTour.UseAccentColor = false;
+            this.btnTour.UseVisualStyleBackColor = false;
+            this.btnTour.Click += new System.EventHandler(this.btnTour_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.AutoSize = false;
+            this.btnHome.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnHome.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnHome.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnHome.Depth = 0;
+            this.btnHome.Font = new System.Drawing.Font("Microsoft JhengHei UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.Transparent;
+            this.btnHome.HighEmphasis = true;
+            this.btnHome.Icon = ((System.Drawing.Image)(resources.GetObject("btnHome.Icon")));
+            this.btnHome.Location = new System.Drawing.Point(0, 37);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnHome.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnHome.Name = "btnHome";
+            this.btnHome.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnHome.Size = new System.Drawing.Size(253, 72);
+            this.btnHome.TabIndex = 2;
+            this.btnHome.Text = "Home";
+            this.btnHome.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnHome.UseAccentColor = false;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
             // frmHome
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -764,8 +814,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TRANG CHỦ";
             this.Load += new System.EventHandler(this.frmHome_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -787,20 +835,14 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialButton btnTaiKhoan;
-        private MaterialSkin.Controls.MaterialButton btnThanhToan;
-        private MaterialSkin.Controls.MaterialButton btnDatCho;
-        private MaterialSkin.Controls.MaterialButton btnDichVu;
-        private MaterialSkin.Controls.MaterialButton btnTour;
-        private MaterialSkin.Controls.MaterialButton btnHome;
-        private System.Windows.Forms.Panel panel2;
-        private MaterialSkin.Controls.MaterialButton btnDangXuat;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Panel panel6;
@@ -841,6 +883,16 @@
         private System.Windows.Forms.Label lblCountSuccessed;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel2;
+        private MaterialSkin.Controls.MaterialButton btnChiTietChuyenDiDaDat;
+        private MaterialSkin.Controls.MaterialButton btnDangXuat;
+        private MaterialSkin.Controls.MaterialButton btnTaiKhoan;
+        private MaterialSkin.Controls.MaterialButton btnThanhToan;
+        private MaterialSkin.Controls.MaterialButton btnDatCho;
+        private MaterialSkin.Controls.MaterialButton btnDichVu;
+        private MaterialSkin.Controls.MaterialButton btnTour;
+        private MaterialSkin.Controls.MaterialButton btnHome;
+        private MaterialSkin.Controls.MaterialButton btnFeedBack;
     }
 }
 

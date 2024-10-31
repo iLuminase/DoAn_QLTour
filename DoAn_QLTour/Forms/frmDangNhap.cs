@@ -27,15 +27,8 @@ namespace DoAn_QLTour.Forms
             this.Hide(); // Ẩn Form Đăng Nhập
         }
 
-
         private void AuthenticateUser(string email, string password)
         {
-
-
-
-
-
-
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
@@ -52,7 +45,10 @@ namespace DoAn_QLTour.Forms
 
                             if (BCrypt.Net.BCrypt.Verify(password, hashedPassword))
                             {
-                               
+                              
+
+                                // Lưu email vào CurrentSession
+                                CurrentSession.LoggedInUserEmail = email;
 
                                 // Khởi tạo form chính với role của người dùng
                                 frmHome homeForm = new frmHome(roleID);
@@ -73,7 +69,6 @@ namespace DoAn_QLTour.Forms
                 }
             }
         }
-
 
         private void materialButtonDangNhap_Click(object sender, EventArgs e)
         {
@@ -119,5 +114,11 @@ namespace DoAn_QLTour.Forms
         {
            
         }
+        //Tao session luu phien dang nhap nguoi dung voi mail
+        public static class CurrentSession
+        {
+            public static string LoggedInUserEmail { get; set; }
+        }
     }
+
 }
