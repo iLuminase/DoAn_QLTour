@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Account.cs" />
     <Compile Include="Entities\ChiTietDatTour.cs" />
     <Compile Include="Entities\DatDichVu.cs" />
     <Compile Include="Entities\DatTour.cs" />
@@ -63,13 +64,24 @@
     <Compile Include="Entities\KhuyenMai.cs" />
     <Compile Include="Entities\ModelTourDB.cs" />
     <Compile Include="Entities\NhanVien.cs" />
+    <Compile Include="Entities\Role.cs" />
     <Compile Include="Entities\ThanhToan.cs" />
     <Compile Include="Entities\Tour.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
+    <None Include="obj\Release\QLTour.DAL.csproj.AssemblyReference.cache" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\QLTour.DAL.dll" />
+    <Content Include="bin\Debug\QLTour.DAL.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -82,6 +82,12 @@
     <Compile Include="Forms\frmDangKy.Designer.cs">
       <DependentUpon>frmDangKy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmDatDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDatDichVu.Designer.cs">
+      <DependentUpon>frmDatDichVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmDatTourPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,12 +105,6 @@
     </Compile>
     <Compile Include="Forms\frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmChiTietCuaToi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmChiTietCuaToi.Designer.cs">
-      <DependentUpon>frmChiTietCuaToi.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmQLTour.cs">
       <SubType>Form</SubType>
@@ -124,16 +124,34 @@
     <Compile Include="Forms\frmThemTour.Designer.cs">
       <DependentUpon>frmThemTour.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDichVu.cs">
+    <Compile Include="Forms\QLDatCho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDichVu.Designer.cs">
+    <Compile Include="Forms\QLDatCho.Designer.cs">
+      <DependentUpon>QLDatCho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDichVu.Designer.cs">
       <DependentUpon>frmDichVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\QuanLyDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QuanLyDichVu.Designer.cs">
+      <DependentUpon>QuanLyDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="function.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmDangKy.resx">
       <DependentUpon>frmDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDatDichVu.resx">
+      <DependentUpon>frmDatDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDatTourPanel.resx">
       <DependentUpon>frmDatTourPanel.cs</DependentUpon>
@@ -144,9 +162,6 @@
     <EmbeddedResource Include="Forms\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmChiTietCuaToi.resx">
-      <DependentUpon>frmChiTietCuaToi.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmQLTour.resx">
       <DependentUpon>frmQLTour.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,8 +171,14 @@
     <EmbeddedResource Include="Forms\frmThemTour.resx">
       <DependentUpon>frmThemTour.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDichVu.resx">
+    <EmbeddedResource Include="Forms\QLDatCho.resx">
+      <DependentUpon>QLDatCho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDichVu.resx">
       <DependentUpon>frmDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuanLyDichVu.resx">
+      <DependentUpon>QuanLyDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -169,6 +190,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="App.config" />
+    <None Include="bin\Debug\DoAn_QLTour.exe.config" />
+    <None Include="obj\Release\DoAn_QLTour.GUI.csproj.AssemblyReference.cache" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -189,6 +212,22 @@
       <Project>{347f55cc-e7a3-49bc-8563-ce051aca7e2e}</Project>
       <Name>QLTour.DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\DoAn_QLTour.exe" />
+    <Content Include="bin\Debug\DoAn_QLTour.pdb" />
+    <Content Include="TourImages\business-trip.png" />
+    <Content Include="TourImages\du-lich-phu-quoc.png" />
+    <Content Include="TourImages\hn_halong.jpg" />
+    <Content Include="TourImages\khu-du-lich-sao-bien.jpg" />
+    <Content Include="TourImages\nhatrang.jpg" />
+    <Content Include="TourImages\panelDangNhap.jpg" />
+    <Content Include="TourImages\Person.png" />
+    <Content Include="TourImages\travel-loginicon.jpg" />
+    <Content Include="TourImages\ve-tau-di-con-dao.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

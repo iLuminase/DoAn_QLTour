@@ -52,7 +52,7 @@ namespace DoAn_QLTour.Forms
 
                             if (BCrypt.Net.BCrypt.Verify(password, hashedPassword))
                             {
-                                MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                               
 
                                 // Khởi tạo form chính với role của người dùng
                                 frmHome homeForm = new frmHome(roleID);

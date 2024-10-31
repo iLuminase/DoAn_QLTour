@@ -241,6 +241,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "frmEditTour";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditTour";
             this.Load += new System.EventHandler(this.frmEditTour_Load);
             this.panel1.ResumeLayout(false);
